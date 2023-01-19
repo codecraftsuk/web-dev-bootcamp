@@ -2,7 +2,7 @@
     <img width="400" height="400" src="images/logo.png">
 </div>
 
-<h2 style="text-align: center; font-size: 3rem;"> CodeCrafts Web Development Bootcamp</h2>
+<h2 style="text-align: center; font-size: 3rem; border-bottom: none;"> CodeCrafts Web Development Bootcamp</h2>
 <br>
 
 
