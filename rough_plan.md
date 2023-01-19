@@ -328,6 +328,86 @@ Examples and practice: Provide examples of real-world JavaScript code and give s
 
 ### React
 
+```
+Basic JavaScript concepts such as variables, functions, and data structures.
+
+The Virtual DOM and how it differs from the actual DOM.
+
+Components, including stateful and stateless components, and how to create and manage them.
+
+JSX and how it is used to create React elements.
+
+Props and state, and how they are used to pass data between components.
+
+Event handling and how to use it to build interactive UI elements.
+
+Lifecycle methods and how to use them to control the behavior of components.
+
+How to use React's built-in hooks and custom hooks.
+
+How to use React Router for client-side routing.
+
+How to use third-party libraries and APIs in React applications.
+
+Best practices for debugging and troubleshooting React code.
+
+How to optimize and improve the performance of React applications.
+
+Understanding the basics of React-Native and React-VR for mobile and VR development respectively.
+
+How to use tools like Webpack, Babel, and create-react-app to set up and build React projects.
+
+How to test React components using Jest and Enzyme.
+
+Understanding how to integrate React with a back-end.
+
+How to deploy and maintain a React application in a production environment.
+
+Understanding the basics of GraphQL and how to use it with React.
+
+Understanding the basics of Redux, MobX and Context API for state management.
+
+Understanding the basics of Server-side rendering with React.
+```
+
+```
+What is React
+Setting Up the Development Environment 
+Your First React App
+Hello World
+Components
+Setting Up the Project
+Your First React Component
+Specifying Children
+Embedding Expressions
+Setting Attributes
+Rendering Classes Dynamically
+Rendering Lists
+Conditional Rendering
+Handling Events
+Binding Event Handlers
+Updating the State
+What Happens When State Changes 
+Passing Event Arguments
+Composing Components
+Passing Data to Components
+Passing Children
+Debugging React Apps
+Props vs State
+Raising and Handling Events
+Updating the State
+Single Source of Truth
+Removing the Local State
+Multiple Components in Sync 
+Lifting the State Up
+Stateless Functional Components
+Destructuring Arguments
+Lifecycle Hooks
+Mounting Phase 
+Updating Phase 
+Unmounting Phase
+```
+
 ## Week 6
 
 ### React 2/ Mini React Project?
@@ -366,7 +446,7 @@ Create a website using all of the tools learnt and host the website on GitHub.
 - Week 2-4: Front End
 - Week 5-6: React Framework
 - Week 6-10: Back End
-- Week 11 CD
+- Week 11 CI/CD
 
 ## Extra
 
@@ -383,3 +463,6 @@ HTML:
 
 CSS: 
 - https://www.youtube.com/watch?v=OXGznpKZ_sA
+
+JS:
+- 
