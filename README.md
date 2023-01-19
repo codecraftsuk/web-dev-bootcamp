@@ -1,5 +1,5 @@
 <div class="image" style="text-align: center;">
-    <img width="800" height="800" src="images/logo.png">
+    <img width="400" height="400" src="images/logo.png">
 </div>
 
 <h2 style="text-align: center; font-size: 5rem; border-bottom: none;"> CodeCrafts Web Development Bootcamp</h2>
