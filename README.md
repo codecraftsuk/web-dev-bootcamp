@@ -72,51 +72,55 @@ Regardless of whether you choose to take the course as a cohort or self-paced, y
 ---
 <a name="week-0"></a>
 ### [Week 0: Introduction](week_0)
-
+Students will learn about the course overview, objectives, and expectations. They will also be introduced to the tools and resources they will be using throughout the course.
 
 <a name="week-1"></a>
 ### [Week 1: Git](week_1)
-
+In this week, students will learn about version control and the basics of Git. They will learn how to create and manage repositories, make commits, and work with branches.
 
 <a name="week-2"></a>
 ### [Week 2: HTML/CSS](week_2)
-
+In this week, students will learn about the basics of HTML and CSS. They will learn how to create and structure web pages, and use CSS to style them.
 
 <a name="week-3"></a>
 ### [Week 3: JavaScript](week_3)
-
+In this week, students will be introduced to the basics of JavaScript. They will learn about variables, data types, control flow, and functions.
 
 <a name="week-4"></a>
 ### [Week 4: Milestone 1 - HTML/CSS/JS Project](week_4)
+In this week, students will work on their first project using the skills they have learned in HTML, CSS and JavaScript. They will learn how to build a complete web application using these technologies.
 
 <a name="week-5"></a>
 ### [Week 5: React](week_5)
-
+In this week, students will learn about React, a popular JavaScript library for building user interfaces. They will learn how to create reusable components, manage state and props, and work with hooks.
 
 <a name="week-6"></a>
 ### [Week 6: Milestone 2 - React Project](week_6)
+In this week, students will work on a project using React. They will learn how to build a complete web application using React and the skills they have learned.
 
 <a name="week-7"></a>
 ### [Week 7: Python](week_7)
+In this week, students will be introduced to the Python programming language. They will learn about variables, data types, control flow, and functions.
 
 <a name="week-8"></a>
 ### [Week 8: Django](week_8)
-
+In this week, students will learn about Django, a popular web framework for building web applications in Python. They will learn how to create views, models, and templates and how to handle forms and authentication.
 
 <a name="week-9"></a>
 ### [Week 9: Databases](week_9)
-
+In this week, students will learn about databases and how they are used in web applications. They will learn how to interact with databases using SQL and how to use Django's built-in database models.
 
 <a name="week-10"></a>
 ### [Week 10: Front End/Back End Integration](week_10)
-
+In this week, students will learn how to integrate the front end and back end of a web application. They will learn about RESTful API and how to make requests to the server.
 
 <a name="week-11"></a>
 ### [Week 11: CI/CD with GitHub Actions](week_11)
-
+In this week, students will learn about continuous integration and continuous deployment with GitHub Actions. They will learn how to set up a workflow to automate the testing and deployment of their code.
 
 <a name="week-12"></a>
 ### [Week 12: Final Project](week_12)
+In this week, students will work on their final project. They will apply all the skills and knowledge they have learned throughout the course to create a complete web application. They will also present their project to the class and receive feedback.
 
 
 # FAQ
