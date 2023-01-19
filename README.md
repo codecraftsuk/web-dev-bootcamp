@@ -1,4 +1,10 @@
-# CodeCrafts Web Development Bootcamp
+<div class="image" style="text-align: center;">
+    <img width="400" height="400" src="images/logo.png">
+</div>
+
+<h2 style="text-align: center; font-size: 3rem;"> CodeCrafts Web Development Bootcamp</h2>
+<br>
+
 
 ## Contents
 - Introduction
