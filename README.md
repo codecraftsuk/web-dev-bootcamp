@@ -1,7 +1,6 @@
 # CodeCrafts Web Development Bootcamp
 
 ## Contents
----
 - Introduction
 - How to take this course
 - Curriculum
@@ -10,7 +9,6 @@
 - Team
 
 ## Introduction
----
 
 ### Overview
 
@@ -28,7 +26,6 @@ This course is designed to be accessible to anyone with an interest in web devel
 
 
 ## How to take this course
----
 
 ### Cohort
 
@@ -38,7 +35,6 @@ This course is designed to be accessible to anyone with an interest in web devel
 
 
 ## Curriculum
----
 
 - Week 0: Introduction
 - Week 1: Git
@@ -55,14 +51,11 @@ This course is designed to be accessible to anyone with an interest in web devel
 - Week 12: final Project
 
 ## FAQ
----
 
 
 
 ## Code of Conduct
----
 
 ## Team
----
 
 
