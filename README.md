@@ -4,7 +4,10 @@
   <img width="400" height="400" src="images/logo.png">
 </p>
 
-<h1 align="center" >CodeCrafts Web Development Bootcamp</h1>
+
+<p style="font-size:4rem;">
+    CodeCrafts Web Development Bootcamp
+</p>
 <br>
 
 
