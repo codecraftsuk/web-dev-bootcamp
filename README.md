@@ -1,5 +1,3 @@
-
-
 <p align="center">
   <img width="300" height="300" src="images/logo.png">
 </p>
@@ -30,17 +28,30 @@ This course is designed to be accessible to anyone with an interest in web devel
 
 ### Technologies
 
+This course will cover several different technologies, including:
 
-
+- Git: a version control system that will help you manage your code and collaborate with other developers
+- HTML/CSS: the languages used to create the structure and design of web pages
+- JavaScript: a programming language that allows you to create interactive and dynamic web applications
+- React: a JavaScript library for building user interfaces
+- Python: a versatile programming language that is commonly used for web development, data analysis, and machine learning
+- Django: a web framework for Python that makes it easy to build and maintain web applications
+- Databases: how to store and retrieve data, using SQLite and PostgreSQL.
 
 
 # How to take this course
 
 ### Cohort
 
+The course is designed to be taken as a cohort, which means that you will be learning alongside other students and have the opportunity to collaborate and learn from each other. We have scheduled class times and activities that are designed to help you stay on track and make the most of your learning experience.
+
 ### Self-paced
 
+If you are unable to attend the cohort or prefer to learn at your own pace, the course is also available as a self-paced option. You will have access to all the same course materials and resources, but you will be able to work through the curriculum at your own speed. We recommend setting a schedule for yourself to ensure that you stay on track and make progress.
+
 ### Community
+
+Regardless of whether you choose to take the course as a cohort or self-paced, you will be part of a community of students and instructors who are all working towards the same goal. We encourage you to participate in class discussions and activities, and to reach out to your classmates and instructors for support when you need it. We also have a slack group for the students to communicate and share the knowledge.
 
 # Curriculum
 
@@ -109,10 +120,22 @@ This course is designed to be accessible to anyone with an interest in web devel
 
 # FAQ
 
+- How long will the course take to complete?
+The course is 12 weeks long and requires a significant time investment from students. The exact duration of the course will depend on your own schedule and pace of learning, but we recommend setting aside at least 10-15 hours per week for coursework.
 
+- Is there any prerequisite for the course?
+No, there are no prerequisites for the course. The course is designed to be accessible to anyone with an interest in web development.
+
+- What will I learn in this course?
+You will learn the essential tools and technologies to start building your own web applications. Topics covered include Git, HTML/CSS, JavaScript, React, Python, Django, databases, and deployment.
+
+- Will I get a certificate of completion at the end of the course?
+Yes, upon successful completion of the course, you will receive a certificate of completion.
 
 # Code of Conduct
 
+As a participant in this course, you are expected to behave in a professional and respectful manner at all times. This includes treating your classmates and instructors with respect, and refraining from any form of harassment or discrimination.
+
 # Team
 
-
+The course is taught by a team of experienced web developers and instructors who have a passion for teaching and helping others learn. Our instructors have a wealth of industry experience and are dedicated to helping you achieve your goals.
