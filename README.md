@@ -42,25 +42,70 @@ This course is designed to be accessible to anyone with an interest in web devel
 
 ### Community
 
-
 # Curriculum
 
-- [Week 0: Introduction](#week-1)
-- Week 1: Git
-- Week 2: HTML/CSS
-- Week 3: JavaScript
-- Week 4: Milestone 1 - HTML/CSS/JS Project
-- Week 5: React
-- Week 6: Milestone 2 - React Project
-- Week 7: Python
-- Week 8: Django
-- Week 9: Databases
-- Week 10: Front End/Back End Integration
-- Week 11: CI/CD with GitHub Actions
-- Week 12: final Project
+- [Week 0: Introduction](#week-0)
+- [Week 1: Git](#week-1)
+- [Week 2: HTML/CSS](#week-2)
+- [Week 3: JavaScript](#week-3)
+- [Week 4: Milestone 1 - HTML/CSS/JS Project](#week-4)
+- [Week 5: React](#week-5)
+- [Week 6: Milestone 2 - React Project](#week-6)
+- [Week 7: Python](#week-7)
+- [Week 8: Django](#week-8)
+- [Week 9: Databases](#week-9)
+- [Week 10: Front End/Back End Integration](#week-10)
+- [Week 11: CI/CD with GitHub Actions](#week-11)
+- [Week 12: final Project](#week-12)
+
+<a name="week-0"></a>
+### Week 0: Introduction
+
 
 <a name="week-1"></a>
-### [Week 0: Introduction](week_1)
+### Week 1: Git
+
+
+<a name="week-2"></a>
+### Week 2: HTML/CSS
+
+
+<a name="week-3"></a>
+### Week 3: JavaScript
+
+
+<a name="week-4"></a>
+### Week 4: Milestone 1 - HTML/CSS/JS Project
+
+<a name="week-5"></a>
+### Week 5: React
+
+
+<a name="week-6"></a>
+### Week 6: Milestone 2 - React Project
+
+<a name="week-7"></a>
+### Week 7: Python
+
+<a name="week-8"></a>
+### Week 8: Django
+
+
+<a name="week-9"></a>
+### Week 9: Databases
+
+
+<a name="week-10"></a>
+### Week 10: Front End/Back End Integration
+
+
+<a name="week-11"></a>
+### Week 11: CI/CD with GitHub Actions
+
+
+<a name="week-12"></a>
+### Week 12: final Project
+
 
 # FAQ
 
