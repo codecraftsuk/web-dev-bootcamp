@@ -16,16 +16,16 @@
 
 # Introduction
 
-## Overview
+### Overview
 
 Welcome to our web development bootcamp! Over the next 12 weeks, you will learn the essential tools and technologies to start building your own web applications. The curriculum is designed to give you a solid foundation in the key areas of web development, including Git, HTML/CSS, JavaScript, React, Python, Django, databases, and deployment. Each week will build upon the previous one, with two milestones along the way to test your skills and apply what you've learned. By the end of the bootcamp, you will have the skills to create your own projects and the confidence to start your journey as a web developer. Let's get started!
 
-## Prerequisites
+### Prerequisites
 
 This course is designed to be accessible to anyone with an interest in web development, regardless of prior experience. Therefore, there are no prerequisites required for enrollment. Whether you are a complete beginner or have some experience with coding, you will find the course content to be engaging and challenging at the same time. Our goal is to provide you with a comprehensive introduction to web development and guide you through the process of creating your own web applications. We look forward to welcoming you to the class and helping you achieve your goals.
 
 
-## Technologies
+### Technologies
 
 
 
@@ -33,11 +33,11 @@ This course is designed to be accessible to anyone with an interest in web devel
 
 # How to take this course
 
-## Cohort
+### Cohort
 
-## Self-paced
+### Self-paced
 
-## Community
+### Community
 
 
 # Curriculum
