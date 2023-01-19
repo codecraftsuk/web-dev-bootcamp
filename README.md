@@ -45,7 +45,7 @@ This course is designed to be accessible to anyone with an interest in web devel
 
 # Curriculum
 
-- Week 0: Introduction
+- [Week 0: Introduction](week_1)
 - Week 1: Git
 - Week 2: HTML/CSS
 - Week 3: JavaScript
@@ -58,6 +58,9 @@ This course is designed to be accessible to anyone with an interest in web devel
 - Week 10: Front End/Back End Integration
 - Week 11: CI/CD with GitHub Actions
 - Week 12: final Project
+
+
+### [Week 0: Introduction](week_1)
 
 # FAQ
 
