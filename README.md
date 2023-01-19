@@ -69,53 +69,54 @@ Regardless of whether you choose to take the course as a cohort or self-paced, y
 - [Week 11: CI/CD with GitHub Actions](#week-11)
 - [Week 12: final Project](#week-12)
 
+---
 <a name="week-0"></a>
-### Week 0: Introduction
+### [Week 0: Introduction](week_1)
 
 
 <a name="week-1"></a>
-### Week 1: Git
+### [Week 1: Git]
 
 
 <a name="week-2"></a>
-### Week 2: HTML/CSS
+### [Week 2: HTML/CSS](week_2)
 
 
 <a name="week-3"></a>
-### Week 3: JavaScript
+### [Week 3: JavaScript](week_3)
 
 
 <a name="week-4"></a>
-### Week 4: Milestone 1 - HTML/CSS/JS Project
+### [Week 4: Milestone 1 - HTML/CSS/JS Project](week_4)
 
 <a name="week-5"></a>
-### Week 5: React
+### [Week 5: React](week_5)
 
 
 <a name="week-6"></a>
-### Week 6: Milestone 2 - React Project
+### [Week 6: Milestone 2 - React Project](week_6)
 
 <a name="week-7"></a>
-### Week 7: Python
+### [Week 7: Python](week_7)
 
 <a name="week-8"></a>
-### Week 8: Django
+### [Week 8: Django](week_8)
 
 
 <a name="week-9"></a>
-### Week 9: Databases
+### [Week 9: Databases](week_9)
 
 
 <a name="week-10"></a>
-### Week 10: Front End/Back End Integration
+### [Week 10: Front End/Back End Integration](week_10)
 
 
 <a name="week-11"></a>
-### Week 11: CI/CD with GitHub Actions
+### [Week 11: CI/CD with GitHub Actions](week_11)
 
 
 <a name="week-12"></a>
-### Week 12: Final Project vbjkf
+### [Week 12: Final Project](week_12)
 
 
 # FAQ
