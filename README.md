@@ -71,11 +71,11 @@ Regardless of whether you choose to take the course as a cohort or self-paced, y
 
 ---
 <a name="week-0"></a>
-### [Week 0: Introduction](week_1)
+### [Week 0: Introduction](week_0)
 
 
 <a name="week-1"></a>
-### [Week 1: Git]
+### [Week 1: Git](week_1)
 
 
 <a name="week-2"></a>
