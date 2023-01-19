@@ -43,7 +43,7 @@ This course will cover several different technologies, including:
 
 ### Cohort
 
-The course is designed to be taken as a cohort, which means that you will be learning alongside other students and have the opportunity to collaborate and learn from each other. We have scheduled class times and activities that are designed to help you stay on track and make the most of your learning experience.
+The course is designed to be taken as a cohort, which means that you will be learning alongside other students and have the opportunity to collaborate and learn from each other. We have scheduled class times and activities that are designed to help you stay on track and make the most of your learning experience. Additionally, we will be communicating via a discord server called codecrafts_ for class discussions, activities and support.
 
 ### Self-paced
 
@@ -51,7 +51,7 @@ If you are unable to attend the cohort or prefer to learn at your own pace, the 
 
 ### Community
 
-Regardless of whether you choose to take the course as a cohort or self-paced, you will be part of a community of students and instructors who are all working towards the same goal. We encourage you to participate in class discussions and activities, and to reach out to your classmates and instructors for support when you need it. We also have a slack group for the students to communicate and share the knowledge.
+Regardless of whether you choose to take the course as a cohort or self-paced, you will be part of a community of students and instructors who are all working towards the same goal. We encourage you to participate in class discussions and activities via the discord server called codecrafts_, and to reach out to your classmates and instructors for support when you need it. Additionally, we also have a slack group for the students to communicate and share the knowledge.
 
 # Curriculum
 
