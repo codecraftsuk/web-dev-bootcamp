@@ -2,11 +2,11 @@
     <img width="400" height="400" src="images/logo.png">
 </div>
 
-<h2 style="text-align: center; font-size: 3rem; border-bottom: none;"> CodeCrafts Web Development Bootcamp</h2>
+<h2 style="text-align: center; font-size: 5rem; border-bottom: none;"> CodeCrafts Web Development Bootcamp</h2>
 <br>
 
 
-## Contents
+# Contents
 - Introduction
 - How to take this course
 - Curriculum
@@ -14,33 +14,33 @@
 - Code of Conduct
 - Team
 
-## Introduction
+# Introduction
 
-### Overview
+## Overview
 
 Welcome to our web development bootcamp! Over the next 12 weeks, you will learn the essential tools and technologies to start building your own web applications. The curriculum is designed to give you a solid foundation in the key areas of web development, including Git, HTML/CSS, JavaScript, React, Python, Django, databases, and deployment. Each week will build upon the previous one, with two milestones along the way to test your skills and apply what you've learned. By the end of the bootcamp, you will have the skills to create your own projects and the confidence to start your journey as a web developer. Let's get started!
 
-### Prerequisites
+## Prerequisites
 
 This course is designed to be accessible to anyone with an interest in web development, regardless of prior experience. Therefore, there are no prerequisites required for enrollment. Whether you are a complete beginner or have some experience with coding, you will find the course content to be engaging and challenging at the same time. Our goal is to provide you with a comprehensive introduction to web development and guide you through the process of creating your own web applications. We look forward to welcoming you to the class and helping you achieve your goals.
 
 
-### Technologies
+## Technologies
 
 
 
 
 
-## How to take this course
+# How to take this course
 
-### Cohort
+## Cohort
 
-### Self-paced
+## Self-paced
 
-### Community
+## Community
 
 
-## Curriculum
+# Curriculum
 
 - Week 0: Introduction
 - Week 1: Git
@@ -56,12 +56,12 @@ This course is designed to be accessible to anyone with an interest in web devel
 - Week 11: CI/CD with GitHub Actions
 - Week 12: final Project
 
-## FAQ
+# FAQ
 
 
 
-## Code of Conduct
+# Code of Conduct
 
-## Team
+# Team
 
 
