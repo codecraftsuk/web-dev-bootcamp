@@ -117,7 +117,6 @@ Chapter 10 - HTML Project
 ```
 
 
-## Week 3
 
 ### CSS
 
@@ -171,13 +170,13 @@ Chapter 24: Final Project
 ```
 
 
-## Week 4
+## Week 3
 
 ### Project demo using HTML CSS
 
-Show a project in which we build a full website with at least a few web pages. Show how you would use git for version control.
+Show a project in which we build a website with at least a few web pages. Show how you would use git for version control.
 
-## Week 5
+## Week 4
 
 ### Javascript
 
@@ -325,7 +324,13 @@ Examples and practice: Provide examples of real-world JavaScript code and give s
 
 ```
 
-## Week 6 
+## Week 65
+
+### React
+
+## Week 6
+
+### React 2
 
 ## Week 7
 
