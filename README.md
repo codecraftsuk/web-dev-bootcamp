@@ -115,7 +115,7 @@ Regardless of whether you choose to take the course as a cohort or self-paced, y
 
 
 <a name="week-12"></a>
-### Week 12: final Project
+### Week 12: Final Project vbjkf
 
 
 # FAQ
