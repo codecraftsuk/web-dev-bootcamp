@@ -4,7 +4,7 @@
   <img width="300" height="300" src="images/logo.png">
 </p>
 
-<h3 align="center" font-size:3em;>CodeCrafts Web Development Bootcamp</h3>
+<h3 align="center" font-size:3em; >CodeCrafts Web Development Bootcamp</h3>
 
 <br>
 
@@ -45,11 +45,11 @@ This course is designed to be accessible to anyone with an interest in web devel
 
 # Curriculum
 
-- Week 0: Introduction]
+- Week 0: Introduction
 - Week 1: Git
 - Week 2: HTML/CSS
-- Week 3: JavaScript
-- Week 4: Milestone 1 - HTML/CSS/JS/Git Project
+- Week 3: Milestone 1 - HTML/CSS/Git Project
+- Week 4: JavaScript
 - Week 5: React
 - Week 6: Milestone 2 - React Project
 - Week 7: Python
