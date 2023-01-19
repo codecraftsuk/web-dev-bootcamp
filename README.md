@@ -45,7 +45,7 @@ This course is designed to be accessible to anyone with an interest in web devel
 
 # Curriculum
 
-- [Week 0: Introduction](week_1)
+- [Week 0: Introduction](#week-1)
 - Week 1: Git
 - Week 2: HTML/CSS
 - Week 3: JavaScript
@@ -59,7 +59,7 @@ This course is designed to be accessible to anyone with an interest in web devel
 - Week 11: CI/CD with GitHub Actions
 - Week 12: final Project
 
-
+<a name="week-1"></a>
 ### [Week 0: Introduction](week_1)
 
 # FAQ
