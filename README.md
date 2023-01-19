@@ -1,8 +1,10 @@
-<div class="image" style="text-align: center;">
-    <img width="400" height="400" src="images/logo.png">
-</div>
 
-<h2 style="text-align: center; font-size: 5rem; border-bottom: none;"> CodeCrafts Web Development Bootcamp</h2>
+
+<p align="center">
+  <img width="400" height="400" src="images/logo.png">
+</p>
+
+<p align="center" style="font-size: 4rem" >CodeCrafts Web Development Bootcamp</p>
 <br>
 
 
