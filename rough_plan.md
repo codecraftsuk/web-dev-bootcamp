@@ -324,13 +324,13 @@ Examples and practice: Provide examples of real-world JavaScript code and give s
 
 ```
 
-## Week 65
+## Week 5
 
 ### React
 
 ## Week 6
 
-### React 2
+### React 2/ Mini React Project?
 
 ## Week 7
 
@@ -363,7 +363,8 @@ Create a website using all of the tools learnt and host the website on GitHub.
 ## Week Plan
 
 - Week 1: GitHub
-- Week 2-5: Front End
+- Week 2-4: Front End
+- Week 5-6: React Framework
 - Week 6-10: Back End
 - Week 11 CD
 
