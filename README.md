@@ -6,7 +6,7 @@
 
 
 
-<h3 align="center">Open Source Society University</h3>
+<h3 align="center">CodeCrafts Web Development Bootcamp</h3>
 
 <br>
 
