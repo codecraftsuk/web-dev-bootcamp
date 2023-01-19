@@ -5,9 +5,9 @@
 </p>
 
 
-<p style="font-size:4rem;">
-    CodeCrafts Web Development Bootcamp
-</p>
+
+<h3 align="center">Open Source Society University</h3>
+
 <br>
 
 
