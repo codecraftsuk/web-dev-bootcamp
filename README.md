@@ -39,7 +39,7 @@ This course will cover several different technologies, including:
 - Databases: how to store and retrieve data, using SQLite and PostgreSQL.
 - GitHub Actions: how to set up a continuous integration and continuous deployment environment for your website.
 
-
+<br>
 <p align="center">
 <a href="https://git-scm.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/izumin5210/emojipack-for-devicon/master/png/git.png" alt="git" width="40" height="40"/> </a>
 <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>
