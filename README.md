@@ -19,7 +19,7 @@
 
 ### Overview
 
-Welcome to our web development bootcamp! Over the next 12 weeks, you will learn the essential tools and technologies to start building your own web applications. The curriculum is designed to give you a solid foundation in the key areas of web development, including Git for version control, HTML/CSS, JavaScript and React as the front-end development, Python, Django and Databases for the backend development and finally, Github Actions for continuous integration and deployment. Each week will build upon the previous one, with two milestones along the way to test your skills and apply what you've learned. By the end of the bootcamp, you will have the skills to create your own projects and the confidence to start your journey as a web developer. Let's get started!
+Welcome to our web development bootcamp! Over the next 12 weeks, you will learn the essential tools and technologies to start building your own web applications. The curriculum is designed to give you a solid foundation in the key areas of web development, including Git for version control, HTML, CSS, JavaScript and React as the front-end development, Python, Django and Databases for the backend development and finally, Github Actions for continuous integration and deployment. Each week will build upon the previous one, with two milestones along the way to test your skills and apply what you've learned. By the end of the bootcamp, you will have the skills to create your own projects and the confidence to start your journey as a web developer. Let's get started!
 
 ### Prerequisites
 
@@ -48,11 +48,15 @@ This course will cover several different technologies, including:
 <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
 <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
 <a href="https://www.djangoproject.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/izumin5210/emojipack-for-devicon/master/png/django.png" alt="django" width="40" height="40"/> </a>
-<a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a>
 <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a>
 <a href="https://github.com/features/actions" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/izumin5210/emojipack-for-devicon/master/png/github.png" alt="github actions" width="40" height="40"/> </a>
 </p>
 <br>
+
+
+### Architectural Diagram
+
+![image](images/cc-webdev-architecture.png)
 
 # How to take this course
 
@@ -85,73 +89,73 @@ Regardless of whether you choose to take the course as a cohort or self-paced, y
 - [Week 12: final Project](#week-12)
 
 ---
-<a name="week-0"></a>
+<a name="week-0-introduction"></a>
 ### [Week 0: Introduction](week_0)
 - Learn about the course overview, objectives, and expectations
 - Introduction to the tools and resources used throughout the course
 
-<a name="week-1"></a>
+<a name="week-1-git"></a>
 ### [Week 1: Git](week_1)
 - Learn about version control and the basics of Git
 - Learn how to create and manage repositories
 - Learn how to make commits and work with branches
 
-<a name="week-2"></a>
+<a name="week-2-html-css"></a>
 ### [Week 2: HTML/CSS](week_2)
 - Learn about the basics of HTML and CSS
 - Learn how to create and structure web pages
 - Learn how to use CSS to style web pages
 
-<a name="week-3"></a>
+<a name="week-3-javascript"></a>
 ### [Week 3: JavaScript](week_3)
 - Introduction to the basics of JavaScript
 - Learn about variables, data types, control flow, and functions
 
-<a name="week-4"></a>
+<a name="week-4-milestone-1"></a>
 ### [Week 4: Milestone 1 - HTML/CSS/JS Project](week_4)
 - Work on a project using HTML, CSS and JavaScript
 - Learn how to build a complete web application using these technologies
 
-<a name="week-5"></a>
+<a name="week-5-react"></a>
 ### [Week 5: React](week_5)
 - Learn about React, a popular JavaScript library for building user interfaces
 - Learn how to create reusable components
 - Learn how to manage state and props and work with hooks
 
-<a name="week-6"></a>
+<a name="week-6-milestone2"></a>
 ### [Week 6: Milestone 2 - React Project](week_6)
 - Work on a project using React
 - Learn how to build a complete web application using React and the skills learned
 
-<a name="week-7"></a>
+<a name="week-7-python"></a>
 ### [Week 7: Python](week_7)
 - Introduction to the Python programming language
 - Learn about variables, data types, control flow, and functions
 
-<a name="week-8"></a>
+<a name="week-8-django"></a>
 ### [Week 8: Django](week_8)
 - Learn about Django, a popular web framework for building web applications in Python
 - Learn how to create views, models, and templates
 - Learn how to handle forms and authentication
 
-<a name="week-9"></a>
+<a name="week-9-databases"></a>
 ### [Week 9: Databases](week_9)
 - Learn about databases and how they are used in web applications
 - Learn how to interact with databases using SQL
 - Learn how to use Django's built-in database models
 
-<a name="week-10"></a>
+<a name="week-10-frontend-backend-integration"></a>
 ### [Week 10: Front End/Back End Integration](week_10)
 - Learn how to integrate the front end and back end of a web application
 - Learn about RESTful API
 - Learn how to make requests to the server
 
-<a name="week-11"></a>
+<a name="week-11-cicid-github-actions"></a>
 ### [Week 11: CI/CD with GitHub Actions](week_11)
 - Learn about continuous integration and continuous deployment with GitHub Actions
 - Learn how to set up a workflow to automate the testing and deployment of code
 
-<a name="week-12"></a>
+<a name="week-12-final-project"></a>
 ### [Week 12: Final Project](week_12)
 - Work on a final project
 - Apply skills and knowledge learned throughout the course to create a complete web application
