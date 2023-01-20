@@ -19,7 +19,7 @@
 
 ### Overview
 
-Welcome to our web development bootcamp! Over the next 12 weeks, you will learn the essential tools and technologies to start building your own web applications. The curriculum is designed to give you a solid foundation in the key areas of web development, including Git, HTML/CSS, JavaScript, React, Python, Django, databases, and deployment. Each week will build upon the previous one, with two milestones along the way to test your skills and apply what you've learned. By the end of the bootcamp, you will have the skills to create your own projects and the confidence to start your journey as a web developer. Let's get started!
+Welcome to our web development bootcamp! Over the next 12 weeks, you will learn the essential tools and technologies to start building your own web applications. The curriculum is designed to give you a solid foundation in the key areas of web development, including Git for version control, HTML/CSS, JavaScript and React as the front-end development, Python, Django and Databases for the backend development and finally, Github Actions for continuous integration and deployment. Each week will build upon the previous one, with two milestones along the way to test your skills and apply what you've learned. By the end of the bootcamp, you will have the skills to create your own projects and the confidence to start your journey as a web developer. Let's get started!
 
 ### Prerequisites
 
@@ -37,7 +37,21 @@ This course will cover several different technologies, including:
 - Python: a versatile programming language that is commonly used for web development, data analysis, and machine learning
 - Django: a web framework for Python that makes it easy to build and maintain web applications
 - Databases: how to store and retrieve data, using SQLite and PostgreSQL.
+- GitHub Actions: how to set up a continuos integration and continuous deployment environment for your website.
 
+
+<p align="center">
+<a href="https://git-scm.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/izumin5210/emojipack-for-devicon/master/png/git.png" alt="git" width="40" height="40"/> </a>
+<a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
+<a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
+<a href="https://www.djangoproject.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/izumin5210/emojipack-for-devicon/master/png/django.png" alt="django" width="40" height="40"/> </a>
+<a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a>
+<a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a>
+<a href="https://git-scm.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/izumin5210/emojipack-for-devicon/master/png/github.png" alt="github actions" width="40" height="40"/> </a>
+</p>
 
 # How to take this course
 
