@@ -89,7 +89,7 @@ Regardless of whether you choose to take the course as a cohort or self-paced, y
 - [Week 12: final Project](#week-12)
 
 ---
-<a name="week-0-introduction"></a>
+<a name="week-0"></a>
 ### [Week 0: Introduction](week_0_introduction)
 - Learn about the course overview, objectives, and expectations
 - Introduction to the tools and resources used throughout the course
