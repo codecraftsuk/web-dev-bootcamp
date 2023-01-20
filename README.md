@@ -90,56 +90,56 @@ Regardless of whether you choose to take the course as a cohort or self-paced, y
 
 ---
 <a name="week-0"></a>
-### [Week 0: Introduction](week_0_introduction)
+### [Week 0: Introduction](week_00_introduction)
 - Learn about the course overview, objectives, and expectations
 - Introduction to the tools and resources used throughout the course
 
 <a name="week-1"></a>
-### [Week 1: Git](week_1_git)
+### [Week 1: Git](week_01_git)
 - Learn about version control and the basics of Git
 - Learn how to create and manage repositories
 - Learn how to make commits and work with branches
 
 <a name="week-2"></a>
-### [Week 2: HTML/CSS](week_2_html_css)
+### [Week 2: HTML/CSS](week_02_html_css)
 - Learn about the basics of HTML and CSS
 - Learn how to create and structure web pages
 - Learn how to use CSS to style web pages
 
 <a name="week-3"></a>
-### [Week 3: JavaScript](week_3_javascript)
+### [Week 3: JavaScript](week_03_javascript)
 - Introduction to the basics of JavaScript
 - Learn about variables, data types, control flow, and functions
 
 <a name="week-4"></a>
-### [Week 4: Milestone 1 - HTML/CSS/JS Project](week_4_milestone_1)
+### [Week 4: Milestone 1 - HTML/CSS/JS Project](week_04_milestone_1)
 - Work on a project using HTML, CSS and JavaScript
 - Learn how to build a complete web application using these technologies
 
 <a name="week-5"></a>
-### [Week 5: React](week_5_react)
+### [Week 5: React](week_05_react)
 - Learn about React, a popular JavaScript library for building user interfaces
 - Learn how to create reusable components
 - Learn how to manage state and props and work with hooks
 
 <a name="week-6"></a>
-### [Week 6: Milestone 2 - React Project](week_6_milestone_2)
+### [Week 6: Milestone 2 - React Project](week_06_milestone_2)
 - Work on a project using React
 - Learn how to build a complete web application using React and the skills learned
 
 <a name="week-7"></a>
-### [Week 7: Python](week_7_python)
+### [Week 7: Python](week_07_python)
 - Introduction to the Python programming language
 - Learn about variables, data types, control flow, and functions
 
 <a name="week-8"></a>
-### [Week 8: Django](week_8_django)
+### [Week 8: Django](week_08_django)
 - Learn about Django, a popular web framework for building web applications in Python
 - Learn how to create views, models, and templates
 - Learn how to handle forms and authentication
 
 <a name="week-9"></a>
-### [Week 9: Databases](week_9_databses)
+### [Week 9: Databases](week_09_databses)
 - Learn about databases and how they are used in web applications
 - Learn how to interact with databases using SQL
 - Learn how to use Django's built-in database models
