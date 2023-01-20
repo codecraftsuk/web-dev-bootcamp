@@ -37,7 +37,7 @@ This course will cover several different technologies, including:
 - Python: a versatile programming language that is commonly used for web development, data analysis, and machine learning
 - Django: a web framework for Python that makes it easy to build and maintain web applications
 - Databases: how to store and retrieve data, using SQLite and PostgreSQL.
-- GitHub Actions: how to set up a continuos integration and continuous deployment environment for your website.
+- GitHub Actions: how to set up a continuous integration and continuous deployment environment for your website.
 
 
 <p align="center">
