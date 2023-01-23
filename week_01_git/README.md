@@ -43,4 +43,46 @@ Code tracking allows development teams to keep track of all changes made to a pr
 
 # 2. Making a GitHub Account
 
+1. Go to the GitHub website (https://github.com/)
+2. Click on the "Sign up" button in the top right corner of the page.
+3. Fill out the required fields (username, email, password) and click on the "Sign up for GitHub" button.
+5. Verify your email address by clicking on the link sent to the email address you provided.
+
+Once your email is verified, you can start creating repositories, contributing to other projects, and collaborating with others on GitHub.
+
 # 3. Installing Git Bash
+
+1. Go to the Git website (https://git-scm.com/) and download the version of Git Bash appropriate for your operating system by following the instructions on the page.
+2. To check if Git has been succesfully downloaded, you can run the command **git version**.
+
+If you are on Windows, you should download GitBash. On MacOS, downloading git should suffice as terminal can be used to access git.
+
+For more instructions, check out the video on this topic and follow the step by step instructions set out.
+
+# 4. Configuring Git
+
+Before you can commit changes to the repository you need to have your username and email configured.
+
+This can either be set in the scope of the repository you downloaded or set globally, so that it does not need to be configured for any other repository that you clone.
+
+The information that you enter will get tied to the commit and this task doesn’t need to be repeated every time you want to make a commit. This can be done as follows:
+
+```
+git config --global user.name "Your Name"
+
+git config --global user.email "your_email@example.com
+```
+where your email address is the email you used to create your github account.
+
+Again, you need to do this only once if you pass the --global option, because then Git will always use that information for anything you do on that system. If you want to override this with a different name or email address for specific projects, you can run the command without the --global option when you're in that project.
+
+5. Linking Git with GitHub
+
+In order to push local changes on a repository (work done via Git Bash/Terminal) to its remote counterpart (corresponding GitHub repository), you would usually have to enter your GitHub credentials to ensure you are interacting with the correct repository.
+
+Previous versions of Git required users to enter their username and password for every Git action performed which was not ideal.
+
+To avoid having to enter credentials every time, Git is capable of using SSH keys instead of traditional password authentication when pushing or pulling to remote repositories. SSH keys are used to authenticate secure connections by identifying the user interacting with the Git remote repository.
+
+Continue...
+
