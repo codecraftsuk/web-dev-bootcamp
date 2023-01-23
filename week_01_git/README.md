@@ -69,21 +69,20 @@ The information that you enter will get tied to the commit and this task doesnâ€
 
 ```
 git config --global user.name "Your Name"
-
 git config --global user.email "your_email@example.com
 ```
 where your email address is the email you used to create your github account.
 
 Again, you need to do this only once if you pass the --global option, because then Git will always use that information for anything you do on that system. If you want to override this with a different name or email address for specific projects, you can run the command without the --global option when you're in that project.
 
-5. Linking Git with GitHub
-
 In order to push local changes on a repository (work done via Git Bash/Terminal) to its remote counterpart (corresponding GitHub repository), you would usually have to enter your GitHub credentials to ensure you are interacting with the correct repository.
 
 Previous versions of Git required users to enter their username and password for every Git action performed which was not ideal.
 
-To avoid having to enter credentials every time, Git is capable of using SSH keys instead of traditional password authentication when pushing or pulling to remote repositories. SSH keys are used to authenticate secure connections by identifying the user interacting with the Git remote repository.
+To avoid having to enter credentials every time, there are many ways but in this case we will use the most up to date version i.e. Personal Access Tokens.
 
-Continue...
-PAT
-PATTT
+settings > developer settings > personal access tokens > tokens(classic) > generate new token > copy token > paste it as the password next time you push your code when it asks for credentials
+
+note: github password authentication is shutting down
+
+# 5. Making a repository
