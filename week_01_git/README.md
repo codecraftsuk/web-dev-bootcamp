@@ -85,4 +85,4 @@ Previous versions of Git required users to enter their username and password for
 To avoid having to enter credentials every time, Git is capable of using SSH keys instead of traditional password authentication when pushing or pulling to remote repositories. SSH keys are used to authenticate secure connections by identifying the user interacting with the Git remote repository.
 
 Continue...
-
+PAT
