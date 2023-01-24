@@ -168,3 +168,10 @@ The **-a** option stands for "all" and it is used to show hidden files and direc
 
 A **.git** folder. The **.git** folder is a special folder that is created when you initialize a Git repository. It contains the necessary files and information for Git to manage the repository and track changes to the files in it.
 
+# 3. Git Commands
+
+## 3.1
+
+## 3.2 
+
+## 3.3
