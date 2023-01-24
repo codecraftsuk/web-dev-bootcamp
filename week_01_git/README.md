@@ -63,7 +63,7 @@ After downloading Git Bash, you can open up the application and should look like
 
 On MacOS, if you simply search for the terminal by pressing the **Cmd** key and the **Space** key simultaneously and typing terminal, you can open up your command line and it should look like the following:
 
-
+![images](images/terminal.png)
 
 For more instructions, check out the video on this topic and follow the step by step instructions set out.
 
