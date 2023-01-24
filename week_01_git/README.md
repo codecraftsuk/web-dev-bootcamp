@@ -128,7 +128,7 @@ Once you have created the repo, you should come across the following page:
 
 Your repository is now remote on GitHub, but to access it locally on your machine, you would have to clone your repository which will be discussed in the following section.
 
-## 2.5 Cloning Repository
+## 2.5 Cloning a New Repository
 
 Cloning a repository means creating a copy of the repository on your local machine. This allows you to work on the code locally, make changes, and then push those changes back to the original repository on GitHub.
 
@@ -167,6 +167,13 @@ The **-a** option stands for "all" and it is used to show hidden files and direc
 ![image](images/dotgit.png)
 
 A **.git** folder. The **.git** folder is a special folder that is created when you initialize a Git repository. It contains the necessary files and information for Git to manage the repository and track changes to the files in it.
+
+## 2.6 Cloning an existing repository
+
+To clone an existing repository, you would first have to locate the repository on GitHub. In this case, you will have to locate the repository on github. We will use the following example:
+
+**find a repository that we can clone here**
+
 
 # 3. Git Commands
 
