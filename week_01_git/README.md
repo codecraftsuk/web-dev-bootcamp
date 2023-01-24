@@ -68,7 +68,9 @@ On MacOS, if you simply search for the terminal by pressing the **cmd** key and 
 
 2. To check if Git has been succesfully downloaded, you can run the command **git version** as follows:
 
-```git version```
+```
+git version
+```
 
 ![images](images/gitversion.png)
 
