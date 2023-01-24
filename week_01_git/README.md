@@ -2,11 +2,11 @@
 
 # 1. Introduction to GitHub and Git
 
-# What is GitHub and Git
+## 1.1 What is GitHub and Git
 
 GitHub is a web-based platform that uses Git, a distributed version control system, to manage and store code. Git allows developers to track changes to their code and collaborate with others on the same codebase. GitHub provides a user-friendly interface for developers to access and manage their Git repositories, as well as additional features like bug tracking, project management, and code review. In short, Git is the tool that powers version control, and GitHub is a platform built on top of Git that adds collaboration features and more. The difference in the way that they are used is that Git is a command-line tool whereas GitHub has a user-interface (www.github.com) that makes it more user friendly.
 
-## Version Control
+## 1.2 Version Control
 
 Version control is vital for managing software development projects. Being able to track changes to code allows developers to:
 
@@ -18,13 +18,13 @@ Version control is vital for managing software development projects. Being able 
 - Create code branches so that additions are made in isolation from stable code e.g. features are added in a test branch and then merged into the production branch that may be running the application
 - Integrate with CI/CD automation tools such that code will be built and tested as it is generated and pushed to the repository automatically
 
-## Repository
+## 1.3 Repository
 
 In Git, a repository (or "repo" for short) is a directory that contains all the files and metadata associated with a project. This includes both the current version of the project's files and the entire history of changes to those files. The repository is the fundamental unit in Git, as all version control operations, such as committing changes and branching, are performed on the repository. Each repository has a unique identifier, called a hash, that is generated based on the contents of the repository. A repository can be stored locally on a developer's machine or remotely on a server, such as GitHub. Developers can also clone a remote repository to create a local copy of it on their machine and make changes to it.
 
 ![image](images/repository.png)
 
-## Branching
+## 1.4 Branching
 
 Branching in Git allows developers to work on multiple versions of a project at the same time. A branch is a pointer to a specific commit in the repository's history, and it allows developers to make changes to the codebase without affecting the main branch (usually called "master").
 
@@ -36,12 +36,14 @@ Branching also enables developers to experiment with new ideas and to isolate th
 
 ![images](images/branching.png)
 
-## Code Tracking
+## 1.5 Code Tracking
 
 Code tracking allows development teams to keep track of all changes made to a project over time. This allows for greater organisation, as all additions to code are fully documented and attributed to the developer who made them.
 
 
-# 2. Making a GitHub Account
+# 2. Set-up
+
+## 2.1 Making a GitHub Account
 
 1. Go to the GitHub website (https://github.com/)
 2. Click on the "Sign up" button in the top right corner of the page.
@@ -50,10 +52,9 @@ Code tracking allows development teams to keep track of all changes made to a pr
 
 Once your email is verified, you can start creating repositories, contributing to other projects, and collaborating with others on GitHub.
 
-# 3. Installing Git Bash
+## 2.2 Installing Git Bash
 
 1. Go to the Git website (https://git-scm.com/) and download the version of Git Bash appropriate for your operating system by following the instructions on the page.
-2. To check if Git has been succesfully downloaded, you can run the command **git version**.
 
 If you are on Windows, you should download GitBash. On MacOS, downloading git should suffice as terminal can be used to access git. 
 
@@ -61,13 +62,21 @@ After downloading Git Bash, you can open up the application and should look like
 
 ![images](images/gitbash.png)
 
-On MacOS, if you simply search for the terminal by pressing the **Cmd** key and the **Space** key simultaneously and typing terminal, you can open up your command line and it should look like the following:
+On MacOS, if you simply search for the terminal by pressing the **cmd** key and the space bar key simultaneously and typing terminal, you can open up your command line and it should look like the following:
 
 ![images](images/terminal.png)
 
+2. To check if Git has been succesfully downloaded, you can run the command **git version** as follows:
+
+```git version```
+
+![images](images/gitversion.png)
+
+If you can see a version, then it has been installed successfully.
+
 For more instructions, check out the video on this topic and follow the step by step instructions set out.
 
-# 4. Configuring Git
+## 2.3 Configuring Git
 
 Before you can commit changes to the repository you need to have your username and email configured.
 
@@ -93,7 +102,9 @@ settings > developer settings > personal access tokens > tokens(classic) > gener
 
 note: github password authentication is shutting down
 
-# 5. Making a repository
+**FIX THIS PART**
+
+## 2.4 Making a repository
 
 To create a repository on GitHub, follow these steps:
 
@@ -115,7 +126,7 @@ Once you have created the repo, you should come across the following page:
 
 Your repository is now remote on GitHub, but to access it locally on your machine, you would have to clone your repository which will be discussed in the following section.
 
-# 6. Cloning Repository
+## 2.5 Cloning Repository
 
 Cloning a repository means creating a copy of the repository on your local machine. This allows you to work on the code locally, make changes, and then push those changes back to the original repository on GitHub.
 
