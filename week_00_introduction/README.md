@@ -9,3 +9,5 @@
 
 - Video
 - Notes
+
+- Download VSC.

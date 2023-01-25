@@ -142,7 +142,7 @@ git clone https://github.com/codecraftsuk/example.git
 
 ![image](images/gitclone.png)
 
-Where the **HTTPS** link can be copied from the blue rectangle, under the title **Quick setup** as shown in the image above. This is simply the URL of the git repository which allows you to access it. The repository will then be saved to the current working directory (folder) that you are in, and to get into that working directory you can use the **cd** command and in this case would be:
+Where the **HTTPS** link can be copied from the blue rectangle, under the title **Quick setup** as shown in the quick set-up screen. This is simply the URL of the git repository which allows you to access it. The repository will then be saved to the current working directory (folder) that you are in, and to get into that working directory you can use the **cd** command and in this case would be:
 
 ```
 cd example
@@ -158,7 +158,7 @@ As you can see from the image above, after the folder name **example**, there is
 ls -a
 ```
 
-The **ls -a*** command is used to list all files and directories in a directory, including hidden files and directories.
+The **ls -a** command is used to list all files and directories in a directory, including hidden files and directories.
 
 The **ls** command stands for "list" and is used to display the files and directories in a directory.
 
@@ -177,8 +177,41 @@ To clone an existing repository, you would first have to locate the repository o
 
 # 3. Git Commands
 
-## 3.1
+## 3.1 Commits
 
-## 3.2 
+When you commit a change in git, you are creating a new "snapshot" of your project that records the changes you have made to the code. This snapshot, or commit, includes a unique identifier (the "commit hash"), the author of the commit, the date and time of the commit, and a message describing the changes made. The commit is added to the project's history and can be used to track the evolution of the code over time.
 
-## 3.3
+To commit a change in git, you first need to stage the change by using the command **git add < file >** or **git add .** to stage all changes in the current directory. Then you can use the command **git commit -m "Commit message"** to commit the change with a specific commit message describing the change. Here is a demonstration on how to commit a change:
+
+1. Open your terminal/git bash and navigate to the local repository where you want to commit your changes. In this case, I would be using the example folder that I created on GitHub and cloned onto my local machine as shown above.
+
+![image](images/openrepo.png)
+
+2. Open up your repository on Visual Studio Code (VSC) and make a change to the repository. VSC can be opened using the command line by typing the following command:
+
+```
+code .
+```
+
+This should open up the VSC application, where you would see the following
+
+![image](images/vsc.png)
+
+3. By right clicking underneath the folder, you can create a new file. In this case I would right click underneath 'EXAMPLE' as seen in the top left side of the screen. Click create new file and name it **index.html**. Press enter and this should create the file and automatically open it up. 
+
+4. Now that you have an empty HTML file, you can add some sample code by simply typing the exclamation mark '!' and pressing enter on your keyboard.
+
+![image](images/samplehtml.png)
+
+5. At this point, you have created a new HTML file with some boilerplate code. It is now time to commit these changes to git and push these changes from your local machine to GitHub. To commit a change...
+
+
+## 3.2 Merging
+
+## 3.3 Branching
+
+## 3.4 Reverting
+
+## 3.5 Forking
+
+## 3.6 Pull Requests
