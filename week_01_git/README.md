@@ -168,12 +168,6 @@ The **-a** option stands for "all" and it is used to show hidden files and direc
 
 A **.git** folder. The **.git** folder is a special folder that is created when you initialize a Git repository. It contains the necessary files and information for Git to manage the repository and track changes to the files in it.
 
-## 2.6 Cloning an existing repository
-
-To clone an existing repository, you would first have to locate the repository on GitHub. In this case, you will have to locate the repository on github. We will use the following example:
-
-**find a repository that we can clone here**
-
 
 # 3. Git Commands
 
@@ -246,14 +240,81 @@ In the following example, a change was made in the **index.html** file and then 
 
 ![image](images/gitstatus.png)
 
-## 3.2 Merging
+## 3.2 Cloning
+
+We have discussed how to clone a repository when making our own repository on GitHub, then cloning it to our local machines. However, we will now cover how to clone an existing repository, which could already contain a codebase.
+
+To clone an existing repository:
+
+1. Locate the GitHub repository you would like to clone.
+
+**find a repository that we can clone here**
+
+## 3.3 Forking
+
+
+## 3.4 Branching
+
+As mentioned previously, branching in git is a way to create a separate line of development within a repository. This allows you to work on multiple features or bug fixes simultaneously without affecting the main codebase.
+
+Using the current **example** repository, we can check the different branches that we have by using the following command:
+
+```
+git branch
+```
+
+![image](images/gitbranch.png)
+
+As you can see, there is only one **main** branch at the moment. Creating another branch to add a new feature without affecting the **main** branch code can be done as follows:
+
+1. Create a new branch with the name **feature**
+
+```
+git branch <branch name>
+```
+
+![image](images/gitbranchname.png)
+
+2. As you can see, a new branch with the name **feature** has been created, but we are currently still in the **main** branch. Changing to the **feature** can be done by the following command:
+
+```
+git checkout <branch name>
+``` 
+
+![image](images/gitcheckout.png)
+
+
+3. Now that we are on the feature branch, let's open up VSC and make a new feature change to our current code.
+
+![image](images/h1tag.png)
+
+In this example, a title has been created in the body of the website using a **< h1 >** tag.
+
+4. With this change created in our feature branch, we can now commit and push these changes to GitHub.
+
+![image](images/gitbranchpush.png)
+
+There is an error message saying that teh curernt branch feature has no upstream branch. When you push changes to a branch, git compares the state of the local branch with the state of the upstream branch. If the upstream branch does not exist, git cannot determine where to push the changes.
+
+The suggested command **git push --set-upstream origin feature** is used to set the current branch (feature) as the upstream branch on the remote repository (origin) and push the changes to it. This command will create the branch on remote if it doesn't exist.
+
+5. Once the change has been made, you can visit the repository on GitHub and what has happened.
+
+![image](images/githubbranch.png)
+
+There are now 2 branches, and by clicking on the branches button. you can view which branches there are.
+
+![image](images/githubbranch2.png)
+
+To switch back to your **main** branch, you can simply use the **git checkout main ** command to switch back.
 
 
 
-## 3.3 Branching    
+## 3.3 Merging    
 
 ## 3.4 Reverting
 
-## 3.5 Forking
 
 ## 3.6 Pull Requests
+
+## 3.7 Ignoring Files
