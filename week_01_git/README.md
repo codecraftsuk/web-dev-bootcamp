@@ -312,8 +312,79 @@ To switch back to your **main** branch, you can simply use the **git checkout ma
 
 ## 3.3 Merging    
 
+Git merging is the process of taking the changes from one branch and applying them to another branch. This is often used when you have made changes to a separate branch and want to combine those changes with the main branch (often called "master" branch) of the code.
+
+In this exampke, a new **feature** branch was created and a change was made i.e. adding a title using the **h1 tag**. To merge this new feature that has been created to the main branch, the following steps can be taken:
+
+1. Switching to the branch that you want to merge the changes into (usually the main branch)
+
+![image](images/gitmerge1.png)
+
+2. Using the merge command to take the changes from the specified branch and apply them to the current branch.
+
+```
+git merge <branch name>
+```
+
+Where branch name in this case would be **feature**.
+
+![image](images/gitmergefeature.png)
+
+When git performs a merge, it compares the changes in the two branches and tries to combine them automatically. If there are no conflicts, the merge is completed successfully, and the changes from the other branch are now part of the current branch. However, if there are conflicts, git will not be able to automatically combine the changes, and you will need to resolve the conflicts manually before the merge can be completed.
+
+After merging changes from one branch to another, you typically need to push the changes to the remote repository. This is because the merge only affects your local repository, and the changes will not be reflected on the remote repository until they are pushed. 
+
+![image](images/gitpushmerge.png)
+
+After pushing your changes, you can check GitHub to see the changes remotely.
+
+To delete the new branch made, you can use the following command: 
+
+```
+git branch -d <branch_name>
+```
+![image](images/gitbranchdelete.png)
+
+## 3.4 Merge Conflicts
+
+Merge conflicts occur when more than one person has edited a file, and the line numbers that were edited are the same (i.e. 2 different developers have edited line 32 in a file). It can also happen if someone deleted a file that another person was working on.
+
+This conflict only affects the person performing the merge - the rest of the team wouldn't be affected by it.
+
+If a merge conflict happens in Git, it will automatically halt the merge process and mark the file(s) that are conflicting. It is then up to the developer to resolve them.
+
 ## 3.4 Reverting
 
+Reverting in git refers to the process of undoing changes that have been made to a branch or repository. This can be useful if you accidentally made changes that you didn't intend to, or if you need to go back to a previous version of the code.
+
+There are a couple of ways to revert changes in git, but the most common method is to use the **git revert** command. This command creates a new commit that undoes the changes made in a specific commit.
+
+Here is an example of how to use the **git revert** command:
+
+1. View the list of commits in the repository by using the **git log** command
+
+```
+git log
+```
+
+![image](images/gitlog.png)
+
+2. Find the commit that you want to revert, and note its SHA (a unique identifier for the commit).
+
+3. Use the command **git revert < SHA >** to create a new commit that undoes the changes made in the specified commit. In this example, we will commit to the previous with commit message "title added".
+
+
+![image](images/gitrevert.png)
+
+In this example, a merge conflict has occured. A merge conflict in git occurs when two branches have made different changes to the same lines of code. When git tries to merge these branches, it cannot automatically determine which changes to include, and it needs to prompt the user to resolve the conflict manually. To resolve this, open up the text editor and make the change manually.
+
+![image](images/mergeconflict.png)
+
+In this example, we can see that on the left side, there is an incoming commit, which is the revert to the older commit and the current commit. Below these two, there is the final result i.e. what you would like to push. In this instance, the **h1** tag was removed manually to replicate the older version and revert back to that version. Then, a new commit must be made to save changes.
+
+![image](images/revertfinish.png)
+
+A merge conflict usually does not happen when reverting, but in this instance it did, thus allowing you to see what a merge conflict is and how to deal with it.
 
 ## 3.6 Pull Requests
 
