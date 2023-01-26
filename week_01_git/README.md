@@ -306,7 +306,7 @@ There are now 2 branches, and by clicking on the branches button. you can view w
 
 ![image](images/githubbranch2.png)
 
-To switch back to your **main** branch, you can simply use the **git checkout main ** command to switch back.
+To switch back to your **main** branch, you can simply use the **git checkout main** command to switch back.
 
 
 
