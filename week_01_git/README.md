@@ -235,7 +235,20 @@ You can then verify the commit, by going onto the repository on GitHub and seein
 
 ![image](images/githubcomit.png)
 
+If you have made a change in the repository and you want to check the current status of your repository and see which files have been modified, you can do that by using the following command:
+
+```
+git status
+```
+
+In the following example, a change was made in the **index.html** file and then the **git status** command was run:
+
+
+![image](images/gitstatus.png)
+
 ## 3.2 Merging
+
+
 
 ## 3.3 Branching    
 
