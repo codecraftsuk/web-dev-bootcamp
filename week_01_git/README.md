@@ -203,12 +203,41 @@ This should open up the VSC application, where you would see the following
 
 ![image](images/samplehtml.png)
 
-5. At this point, you have created a new HTML file with some boilerplate code. It is now time to commit these changes to git and push these changes from your local machine to GitHub. To commit a change...
+5. At this point, you have created a new HTML file with some boilerplate code. It is now time to commit these changes to git and push these changes from your local machine to GitHub. To commit a change, you first have to stage the specific file that you want to commit. This can either be done by staging a specific file in the repository, or all of them at once:
 
+```
+git add <file>
+```
+
+For the changes made on a specific file, OR:
+
+```
+git add .
+```
+
+For all the changes made. 
+
+6. This tells git that you want to include the changes made in the file in the next commit. Once the files have been decided, then a message must be written to commit the change as it describes the changes that have been made. This can be done by the following command:
+
+```
+git commit -m "This is my commit message"
+```
+
+5. Finally, to push the change to GitHub, you can use the *push* command as follows:
+
+```
+git push
+```
+
+![image](images/gitpush.png)
+
+You can then verify the commit, by going onto the repository on GitHub and seeing if there are any changes, e.g:
+
+![image](images/githubcomit.png)
 
 ## 3.2 Merging
 
-## 3.3 Branching
+## 3.3 Branching    
 
 ## 3.4 Reverting
 
