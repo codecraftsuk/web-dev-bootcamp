@@ -157,14 +157,14 @@ body {
 ## 2.10. Styling a Web Page Title
 The title of a web page can be styled using the `<title>` element in the `<head>` of the HTML document and the font-family and color properties in CSS. For example:
 
-### HTML:
+HTML:
 ``` html
 <head>
   <title>My Web Page</title>
 </head>
 ```
 
-### CSS:
+CSS:
 
 ``` css
 title {
