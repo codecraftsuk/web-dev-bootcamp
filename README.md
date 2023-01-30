@@ -95,7 +95,7 @@ Regardless of whether you choose to take the course as a cohort or self-paced, y
 - Introduction to the tools and resources used throughout the course
 
 <a name="week-1"></a>
-### [Week 1: Git](week_01_git)
+### [Week 1: Git](week_01_git/)
 - Learn about version control and the basics of Git
 - Learn how to create and manage repositories
 - Learn how to make commits and work with branches
