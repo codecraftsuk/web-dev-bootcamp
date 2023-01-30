@@ -75,7 +75,7 @@ Regardless of whether you choose to take the course as a cohort or self-paced, y
 # Curriculum
 
 - [Week 0: Introduction](#week-0)
-- [Week 1: Git](#week-1/)
+- [Week 1: Git](#week-1)
 - [Week 2: HTML/CSS](#week-2)
 - [Week 3: JavaScript](#week-3)
 - [Week 4: Milestone 1 - HTML/CSS/JS Project](#week-4)
@@ -89,12 +89,12 @@ Regardless of whether you choose to take the course as a cohort or self-paced, y
 - [Week 12: Final Project](#week-12)
 
 ---
-<a name="week-0/"></a>
+<a name="week-0"></a>
 ### [Week 0: Introduction](week_00_introduction/)
 - Learn about the course overview, objectives, and expectations
 - Introduction to the tools and resources used throughout the course
 
-<a name="week-1/"></a>
+<a name="week-1"></a>
 ### [Week 1: Git](week_01_git/)
 - Learn about version control and the basics of Git
 - Learn how to create and manage repositories
