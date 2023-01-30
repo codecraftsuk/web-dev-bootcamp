@@ -246,11 +246,41 @@ We have discussed how to clone a repository when making our own repository on Gi
 
 To clone an existing repository:
 
-1. Locate the GitHub repository you would like to clone.
+1. Locate the GitHub repository you would like to clone. In this case, we will be using the following [repository](https://github.com/markodenic/web-development-resources)
 
-**find a repository that we can clone here**
+![image](images/cloning.png)
+
+2. By clicking on the green code button, the link of the repository can be copied and then cloned from the following command:
+
+```
+git clone <url>
+```
+
+This will create a new directory with the name of the repository, containing all the files and history of the repository. You can now navigate into the repository and start making changes or check out different branches.
 
 ## 3.3 Forking
+
+Forking is a feature in Git version control system that allows a user to create a copy of a repository in their own account. This allows the user to make changes to the code base and maintain their own version of the repository separate from the original repository.
+
+For example, if you find an open-source project hosted on Github that you'd like to contribute to, but don't have the permissions to directly push to the repository, you can fork the repository to your own Github account. Then, you can clone the repository to your local machine, make changes, and create a pull request back to the original repository.
+
+By forking the repository, you have your own independent version of the code that you can use, modify, and contribute back to the original repository if desired.
+
+To fork a repository on Github, follow these steps:
+
+1. Go to the repository you want to fork.
+
+In this example, we will fork the following [repository](https://github.com/markodenic/web-development-resources)
+
+
+2. Click the "Fork" button in the top-right corner of the repository page.
+
+![image](images/fork.png)
+
+3. Select the account you want to fork the repository to.
+4. Wait for Github to create the fork.
+5. Clone the forked repository to your local machine using git clone <repository-url>.
+6. You now have a copy of the repository in your own account and can make changes, create branches, and contribute back to the original repository if desired.
 
 
 ## 3.4 Branching
@@ -386,6 +416,24 @@ In this example, we can see that on the left side, there is an incoming commit, 
 
 A merge conflict usually does not happen when reverting, but in this instance it did, thus allowing you to see what a merge conflict is and how to deal with it.
 
-## 3.6 Pull Requests
+## 3.6 Extras
 
-## 3.7 Ignoring Files
+### 3.6.1 Pull Requests
+
+A pull request is a feature of Git version control system, used to propose changes to a repository maintained by someone else. It allows a user to submit changes they have made to a repository's code base to the repository owner for review and potentially inclusion in the main code base. The repository owner can review the changes, discuss with the submitter, and merge the changes if they are satisfied with the changes.
+
+To request a pull request, the following can be done:
+
+- Fork the repository you want to contribute to.
+- Clone the forked repository to your local machine.
+- Create a new branch to make changes in.
+- Make changes, commit, and push to the new branch.
+- On the repository’s Github page, create a pull request from the new branch to the original repository.
+- Include a descriptive title and explanation of changes.
+- Wait for the repository maintainer to review and merge the changes or provide feedback.
+
+### 3.6.2 Ignoring Files
+
+**.gitignore** is a file in a Git repository that specifies files or directories that Git should ignore, meaning it will not track changes to those files. This is useful for excluding files such as temporary files, build artifacts, or sensitive information that should not be tracked or committed to the repository.
+
+To create a **.gitignore** file, create a new file in your repository with the name **.gitignore** and add patterns (one per line) of files or directories you want to ignore. These patterns use wildcard characters to match multiple files or directories. 
