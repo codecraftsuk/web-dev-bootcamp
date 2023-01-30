@@ -86,7 +86,7 @@ Regardless of whether you choose to take the course as a cohort or self-paced, y
 - [Week 9: Databases](#week-9)
 - [Week 10: Front End/Back End Integration](#week-10)
 - [Week 11: CI/CD with GitHub Actions](#week-11)
-- [Week 12: final Project](#week-12)
+- [Week 12: Final Project](#week-12)
 
 ---
 <a name="week-0"></a>
