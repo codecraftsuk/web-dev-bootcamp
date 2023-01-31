@@ -46,8 +46,8 @@ Code tracking allows development teams to keep track of all changes made to a pr
 ## 2.1 Making a GitHub Account
 
 1. Go to the GitHub website (https://github.com/)
-2. Click on the "Sign up" button in the top right corner of the page.
-3. Fill out the required fields (username, email, password) and click on the "Sign up for GitHub" button.
+2. Click on the `Sign up` button in the top right corner of the page.
+3. Fill out the required fields (username, email, password) and click on the `Sign up for GitHub` button.
 5. Verify your email address by clicking on the link sent to the email address you provided.
 
 Once your email is verified, you can start creating repositories, contributing to other projects, and collaborating with others on GitHub.
@@ -112,13 +112,13 @@ To create a repository on GitHub, follow these steps:
 
 1. Log in to your GitHub account.
 
-2. Click the plus icon in the top right corner of the screen and select "New repository" from the drop-down menu.
+2. Click the plus icon in the top right corner of the screen and select `New repository` from the drop-down menu.
 
 3. Enter a name for your repository, and a brief description (optional).
 
 4. Choose whether you want your repository to be public or private. Public repositories are visible to anyone, while private repositories are only visible to you and the people you invite to collaborate.
 
-5. Click the "Create repository" button.
+5. Click the `Create repository` button.
 
 ![image](images/makerepo.png)
 
@@ -273,7 +273,7 @@ To fork a repository on Github, follow these steps:
 In this example, we will fork the following [repository](https://github.com/markodenic/web-development-resources)
 
 
-2. Click the "Fork" button in the top-right corner of the repository page.
+2. Click the `Fork` button in the top-right corner of the repository page.
 
 ![image](images/fork.png)
 
@@ -342,7 +342,7 @@ To switch back to your `main` branch, you can simply use the `git checkout main`
 
 ## 3.3 Merging    
 
-Git merging is the process of taking the changes from one branch and applying them to another branch. This is often used when you have made changes to a separate branch and want to combine those changes with the main branch (often called "master" branch) of the code.
+Git merging is the process of taking the changes from one branch and applying them to another branch. This is often used when you have made changes to a separate branch and want to combine those changes with the main branch (often called `master` branch) of the code.
 
 In this exampke, a new `feature` branch was created and a change was made i.e. adding a title using the `h1 tag`. To merge this new feature that has been created to the main branch, the following steps can be taken:
 
