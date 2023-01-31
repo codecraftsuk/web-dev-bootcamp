@@ -1,10 +1,10 @@
-<p align="center">
+<!-- <p align="center">
   <img width="300" height="300" src="images/logo.png">
 </p>
 
 <h3 align="center" font-size:3em; >CodeCrafts Web Development Bootcamp</h3>
 
-<br>
+<br> -->
 
 
 # Contents
