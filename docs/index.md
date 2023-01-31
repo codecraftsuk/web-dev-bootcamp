@@ -57,7 +57,7 @@ This course will cover several different technologies, including:
 ### Architectural Diagram
 
 <p align="center">
-  <img src="{{site.baseurl}}/_media/cc-webdev-architecture.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/cc-webdev-architecture.png">
 </p>
 
 # How to take this course
