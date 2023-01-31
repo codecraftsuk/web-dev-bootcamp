@@ -1,5 +1,4 @@
 
-
 # 1. Introduction to GitHub and Git
 
 ## 1.1 What is GitHub and Git
@@ -22,9 +21,15 @@ Version control is vital for managing software development projects. Being able 
 
 In Git, a repository (or "repo" for short) is a directory that contains all the files and metadata associated with a project. This includes both the current version of the project's files and the entire history of changes to those files. The repository is the fundamental unit in Git, as all version control operations, such as committing changes and branching, are performed on the repository. Each repository has a unique identifier, called a hash, that is generated based on the contents of the repository. A repository can be stored locally on a developer's machine or remotely on a server, such as GitHub. Developers can also clone a remote repository to create a local copy of it on their machine and make changes to it.
 
-<p align="center">
+<!-- <p align="center">
   <img src="images/repository.png">
-</p>
+</p> -->
+
+<img src="images/repository.png" 
+        alt="Picture" 
+        width="800" 
+        height="600" 
+        style="display: block; margin: 0 auto" />
 
 ## 1.4 Branching
 
