@@ -56,7 +56,9 @@ This course will cover several different technologies, including:
 
 ### Architectural Diagram
 
-![image](images/cc-webdev-architecture.png)
+<p align="center">
+  <img src="images/cc-webdev-architecture.png">
+</p>
 
 # How to take this course
 
