@@ -22,7 +22,7 @@ Version control is vital for managing software development projects. Being able 
 In Git, a repository (or "repo" for short) is a directory that contains all the files and metadata associated with a project. This includes both the current version of the project's files and the entire history of changes to those files. The repository is the fundamental unit in Git, as all version control operations, such as committing changes and branching, are performed on the repository. Each repository has a unique identifier, called a hash, that is generated based on the contents of the repository. A repository can be stored locally on a developer's machine or remotely on a server, such as GitHub. Developers can also clone a remote repository to create a local copy of it on their machine and make changes to it.
 
 <p align="center">
-  <img src="_media/week_01_git/repository.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/repository.png">
 </p>
 
 ## 1.4 Branching
@@ -64,13 +64,13 @@ If you are on Windows, you should download GitBash. On MacOS, downloading git sh
 After downloading Git Bash, you can open up the application and should look like the following:
 
 <p align="center">
-  <img src="../_media/week_01_git/gitbash.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/gitbash.png">
 </p>
 
 On MacOS, if you simply search for the terminal by pressing the **cmd** key and the space bar key simultaneously and typing terminal, you can open up your command line and it should look like the following:
 
 <p align="center">
-  <img src="../_media/week_01_git/terminal.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/terminal.png">
 </p>
 
 2. To check if Git has been succesfully downloaded, you can run the command **git version** as follows:
@@ -80,7 +80,7 @@ git version
 ```
 
 <p align="center">
-  <img src="../_media/week_01_git/gitversion.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/gitversion.png">
 </p>
 
 If you can see a version, then it has been installed successfully.
@@ -130,13 +130,13 @@ To create a repository on GitHub, follow these steps:
 5. Click the "Create repository" button.
 
 <p align="center">
-  <img src="../_media/week_01_git/makerepo.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/makerepo.png">
 </p>
 
 Once you have created the repo, you should come across the following page:
 
 <p align="center">
-  <img src="../_media/week_01_git/examplerepo.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/examplerepo.png">
 </p>
 
 Your repository is now remote on GitHub, but to access it locally on your machine, you would have to clone your repository which will be discussed in the following section.
@@ -154,7 +154,7 @@ git clone https://github.com/codecraftsuk/example.git
 ```
 
 <p align="center">
-  <img src="../_media/week_01_git/gitclone.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/gitclone.png">
 </p>
 
 Where the **HTTPS** link can be copied from the blue rectangle, under the title **Quick setup** as shown in the quick set-up screen. This is simply the URL of the git repository which allows you to access it. The repository will then be saved to the current working directory (folder) that you are in, and to get into that working directory you can use the **cd** command and in this case would be:
@@ -164,7 +164,7 @@ cd example
 ```
 
 <p align="center">
-  <img src="../_media/week_01_git/cd.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/cd.png">
 </p>
 
 Where **example** is the name of the directory in this case. For you it would be the name of the repository that you created on GitHub. 
@@ -182,7 +182,7 @@ The **ls** command stands for "list" and is used to display the files and direct
 The **-a** option stands for "all" and it is used to show hidden files and directories, which usually start with a dot (.) and are not displayed by default when using the ls command. Hence, by running this command you should see the following:
 
 <p align="center">
-  <img src="../_media/week_01_git/dotgit.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/dotgit.png">
 </p>
 
 A **.git** folder. The **.git** folder is a special folder that is created when you initialize a Git repository. It contains the necessary files and information for Git to manage the repository and track changes to the files in it.
@@ -199,7 +199,7 @@ To commit a change in git, you first need to stage the change by using the comma
 1. Open your terminal/git bash and navigate to the local repository where you want to commit your changes. In this case, I would be using the example folder that I created on GitHub and cloned onto my local machine as shown above.
 
 <p align="center">
-  <img src="../_media/week_01_git/openrepo.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/openrepo.png">
 </p>
 
 2. Open up your repository on Visual Studio Code (VSC) and make a change to the repository. VSC can be opened using the command line by typing the following command:
@@ -211,7 +211,7 @@ code .
 This should open up the VSC application, where you would see the following
 
 <p align="center">
-  <img src="../_media/week_01_git/vsc.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/vsc.png">
 </p>
 
 3. By right clicking underneath the folder, you can create a new file. In this case I would right click underneath 'EXAMPLE' as seen in the top left side of the screen. Click create new file and name it **index.html**. Press enter and this should create the file and automatically open it up. 
@@ -219,7 +219,7 @@ This should open up the VSC application, where you would see the following
 4. Now that you have an empty HTML file, you can add some sample code by simply typing the exclamation mark '!' and pressing enter on your keyboard.
 
 <p align="center">
-  <img src="../_media/week_01_git/samplehtml.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/samplehtml.png">
 </p>
 
 5. At this point, you have created a new HTML file with some boilerplate code. It is now time to commit these changes to git and push these changes from your local machine to GitHub. To commit a change, you first have to stage the specific file that you want to commit. This can either be done by staging a specific file in the repository, or all of them at once:
@@ -249,13 +249,13 @@ git push
 ```
 
 <p align="center">
-  <img src="../_media/week_01_git/gitpush.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/gitpush.png">
 </p>
 
 You can then verify the commit, by going onto the repository on GitHub and seeing if there are any changes, e.g:
 
 <p align="center">
-  <img src="../_media/week_01_git/githubcommit.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/githubcommit.png">
 </p>
 
 If you have made a change in the repository and you want to check the current status of your repository and see which files have been modified, you can do that by using the following command:
@@ -268,7 +268,7 @@ In the following example, a change was made in the **index.html** file and then 
 
 
 <p align="center">
-  <img src="../_media/week_01_git/gitstatus.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/gitstatus.png">
 </p>
 
 ## 3.2 Cloning
@@ -280,7 +280,7 @@ To clone an existing repository:
 1. Locate the GitHub repository you would like to clone. In this case, we will be using the following [repository](https://github.com/markodenic/web-development-resources)
 
 <p align="center">
-  <img src="../_media/week_01_git/cloning.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/cloning.png">
 </p>
 
 2. By clicking on the green code button, the link of the repository can be copied and then cloned from the following command:
@@ -309,7 +309,7 @@ In this example, we will fork the following [repository](https://github.com/mark
 2. Click the "Fork" button in the top-right corner of the repository page.
 
 <p align="center">
-  <img src="../_media/week_01_git/fork.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/fork.png">
 </p>
 
 3. Select the account you want to fork the repository to.
@@ -329,7 +329,7 @@ git branch
 ```
 
 <p align="center">
-  <img src="../_media/week_01_git/gitbranch.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/gitbranch.png">
 </p>
 
 As you can see, there is only one **main** branch at the moment. Creating another branch to add a new feature without affecting the **main** branch code can be done as follows:
@@ -341,7 +341,7 @@ git branch <branch name>
 ```
 
 <p align="center">
-  <img src="../_media/week_01_git/gitbranchname.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/gitbranchname.png">
 </p>
 
 2. As you can see, a new branch with the name **feature** has been created, but we are currently still in the **main** branch. Changing to the **feature** can be done by the following command:
@@ -351,14 +351,14 @@ git checkout <branch name>
 ``` 
 
 <p align="center">
-  <img src="../_media/week_01_git/gitcheckout.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/gitcheckout.png">
 </p>
 
 
 3. Now that we are on the feature branch, let's open up VSC and make a new feature change to our current code.
 
 <p align="center">
-  <img src="../_media/week_01_git/h1tag.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/h1tag.png">
 </p>
 
 In this example, a title has been created in the body of the website using a **< h1 >** tag.
@@ -366,7 +366,7 @@ In this example, a title has been created in the body of the website using a **<
 4. With this change created in our feature branch, we can now commit and push these changes to GitHub.
 
 <p align="center">
-  <img src="../_media/week_01_git/gitbranchpush.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/gitbranchpush.png">
 </p>
 
 There is an error message saying that teh curernt branch feature has no upstream branch. When you push changes to a branch, git compares the state of the local branch with the state of the upstream branch. If the upstream branch does not exist, git cannot determine where to push the changes.
@@ -376,13 +376,13 @@ The suggested command **git push --set-upstream origin feature** is used to set 
 5. Once the change has been made, you can visit the repository on GitHub and what has happened.
 
 <p align="center">
-  <img src="../_media/week_01_git/githubbranch.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/githubbranch.png">
 </p>
 
 There are now 2 branches, and by clicking on the branches button. you can view which branches there are.
 
 <p align="center">
-  <img src="../_media/week_01_git/githubbranch2.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/githubbranch2.png">
 </p>
 
 To switch back to your **main** branch, you can simply use the **git checkout main** command to switch back.
@@ -398,7 +398,7 @@ In this exampke, a new **feature** branch was created and a change was made i.e.
 1. Switching to the branch that you want to merge the changes into (usually the main branch)
 
 <p align="center">
-  <img src="../_media/week_01_git/gitmerge1.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/gitmerge1.png">
 </p>
 
 2. Using the merge command to take the changes from the specified branch and apply them to the current branch.
@@ -410,7 +410,7 @@ git merge <branch name>
 Where branch name in this case would be **feature**.
 
 <p align="center">
-  <img src="../_media/week_01_git/gitmergefeature.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/gitmergefeature.png">
 </p>
 
 When git performs a merge, it compares the changes in the two branches and tries to combine them automatically. If there are no conflicts, the merge is completed successfully, and the changes from the other branch are now part of the current branch. However, if there are conflicts, git will not be able to automatically combine the changes, and you will need to resolve the conflicts manually before the merge can be completed.
@@ -418,7 +418,7 @@ When git performs a merge, it compares the changes in the two branches and tries
 After merging changes from one branch to another, you typically need to push the changes to the remote repository. This is because the merge only affects your local repository, and the changes will not be reflected on the remote repository until they are pushed. 
 
 <p align="center">
-  <img src="../_media/week_01_git/gitpushmerge.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/gitpushmerge.png">
 </p>
 
 After pushing your changes, you can check GitHub to see the changes remotely.
@@ -429,7 +429,7 @@ To delete the new branch made, you can use the following command:
 git branch -d <branch_name>
 ```
 <p align="center">
-  <img src="../_media/week_01_git/gitbranchdelete.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/gitbranchdelete.png">
 </p>
 
 ## 3.4 Merge Conflicts
@@ -455,7 +455,7 @@ git log
 ```
 
 <p align="center">
-  <img src="../_media/week_01_git/gitlog.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/gitlog.png">
 </p>
 
 2. Find the commit that you want to revert, and note its SHA (a unique identifier for the commit).
@@ -464,19 +464,19 @@ git log
 
 
 <p align="center">
-  <img src="../_media/week_01_git/gitrevert.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/gitrevert.png">
 </p>
 
 In this example, a merge conflict has occured. A merge conflict in git occurs when two branches have made different changes to the same lines of code. When git tries to merge these branches, it cannot automatically determine which changes to include, and it needs to prompt the user to resolve the conflict manually. To resolve this, open up the text editor and make the change manually.
 
 <p align="center">
-  <img src="../_media/week_01_git/mergeconflict.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/mergeconflict.png">
 </p>
 
 In this example, we can see that on the left side, there is an incoming commit, which is the revert to the older commit and the current commit. Below these two, there is the final result i.e. what you would like to push. In this instance, the **h1** tag was removed manually to replicate the older version and revert back to that version. Then, a new commit must be made to save changes.
 
 <p align="center">
-  <img src="../_media/week_01_git/revertfinish.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_01_git/revertfinish.png">
 </p>
 
 A merge conflict usually does not happen when reverting, but in this instance it did, thus allowing you to see what a merge conflict is and how to deal with it.
