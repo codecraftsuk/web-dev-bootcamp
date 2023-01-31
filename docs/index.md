@@ -76,19 +76,19 @@ Regardless of whether you choose to take the course as a cohort or self-paced, y
 
 # Curriculum
 
-- [Week 0: Introduction](#week-0)
-- [Week 1: Git](#week-1)
-- [Week 2: HTML/CSS](#week-2)
-- [Week 3: JavaScript](#week-3)
-- [Week 4: Milestone 1 - HTML/CSS/JS Project](#week-4)
-- [Week 5: React](#week-5)
-- [Week 6: Milestone 2 - React Project](#week-6)
-- [Week 7: Python](#week-7)
-- [Week 8: Django](#week-8)
-- [Week 9: Databases](#week-9)
-- [Week 10: Front End/Back End Integration](#week-10)
-- [Week 11: CI/CD with GitHub Actions](#week-11)
-- [Week 12: Final Project](#week-12)
+- Week 0: Introduction
+- Week 1: Git
+- Week 2: HTML/CSS
+- Week 3: JavaScript
+- Week 4: Milestone 1 - HTML/CSS/JS Project
+- Week 5: React
+- Week 6: Milestone 2 - React Project
+- Week 7: Python
+- Week 8: Django
+- Week 9: Databases
+- Week 10: Front End/Back End Integration
+- Week 11: CI/CD with GitHub Actions
+- Week 12: Final Project
 
 ---
 <a name="week-0"></a>
