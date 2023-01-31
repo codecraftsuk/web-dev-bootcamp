@@ -175,7 +175,7 @@ A `.git` folder. The `.git` folder is a special folder that is created when you 
 
 When you commit a change in git, you are creating a new "snapshot" of your project that records the changes you have made to the code. This snapshot, or commit, includes a unique identifier (the "commit hash"), the author of the commit, the date and time of the commit, and a message describing the changes made. The commit is added to the project's history and can be used to track the evolution of the code over time.
 
-To commit a change in git, you first need to stage the change by using the command `git add < file >` or `git add .` to stage all changes in the current directory. Then you can use the command `git commit -m "Commit message"` to commit the change with a specific commit message describing the change. Here is a demonstration on how to commit a change:
+To commit a change in git, you first need to stage the change by using the command `git add <file>` or `git add .` to stage all changes in the current directory. Then you can use the command `git commit -m "Commit message"` to commit the change with a specific commit message describing the change. Here is a demonstration on how to commit a change:
 
 1. Open your terminal/git bash and navigate to the local repository where you want to commit your changes. In this case, I would be using the example folder that I created on GitHub and cloned onto my local machine as shown above.
 
@@ -217,7 +217,7 @@ For all the changes made.
 git commit -m "This is my commit message"
 ```
 
-5. Finally, to push the change to GitHub, you can use the push command as follows:
+5. Finally, to push the change to GitHub, you can use the `push` command as follows:
 
 ```bash
 git push
@@ -318,7 +318,7 @@ git checkout <branch name>
 
 ![image](images/h1tag.png)
 
-In this example, a title has been created in the body of the website using a `< h1 >` tag.
+In this example, a title has been created in the body of the website using a `<h1>` tag.
 
 4. With this change created in our feature branch, we can now commit and push these changes to GitHub.
 
@@ -401,7 +401,7 @@ git log
 
 2. Find the commit that you want to revert, and note its SHA (a unique identifier for the commit).
 
-3. Use the command `git revert < SHA >` to create a new commit that undoes the changes made in the specified commit. In this example, we will commit to the previous with commit message "title added".
+3. Use the command `git revert <SHA>` to create a new commit that undoes the changes made in the specified commit. In this example, we will commit to the previous with commit message "title added".
 
 
 ![image](images/gitrevert.png)
