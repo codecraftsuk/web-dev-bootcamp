@@ -25,11 +25,7 @@ In Git, a repository (or "repo" for short) is a directory that contains all the 
   <img src="images/repository.png">
 </p> -->
 
-<img src="./images/repository.png" 
-        alt="Picture" 
-        width="800" 
-        height="600" 
-        style="display: block; margin: 0 auto" />
+<img src="../week_01_git/images/repository.png" width="800" height="600" style="display: block; margin: 0 auto" />
 
 ## 1.4 Branching
 
