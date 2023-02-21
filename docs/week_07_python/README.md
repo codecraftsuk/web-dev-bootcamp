@@ -47,14 +47,23 @@ To run the python code, simply open up your terminal in Visual Studio Code which
 python hello.py
 ```
 
+When you type `python hello.py` in your console, a program called an interpreter, which you downloaded together with Python, reads through your file line by line, and executes each line of the code. This is different than languages like C or Java, which need to be compiled into machine code before they can be run.
+
 The `"Hello, World!"` program is a simple program that is often used as a first example when learning a new programming language. The purpose of the program is to output the string `"Hello, World!"` to the console, which is a basic way to demonstrate that the language is working correctly.
 
-In our "Hello, World!" program, we pass a single argument to the print function: the string "Hello, World!".
+In our `"Hello, World!"` program, we pass a single argument to the print function: the string `"Hello, World!"`.
 
-Strings are a fundamental data type in Python, and they are used to represent text. A string is a sequence of characters that are enclosed in quotes, either single quotes (') or double quotes ("). In our program, we use double quotes to enclose the string "Hello, World!".
+Strings are a fundamental data type in Python, and they are used to represent text. A string is a sequence of characters that are enclosed in quotes, either single quotes (') or double quotes ("). In our program, we use double quotes to enclose the string `"Hello, World!"`.
 
-When we run the "Hello, World!" program in Python, the print function outputs the string "Hello, World!" to the console. The console is a text-based interface where we can interact with the Python interpreter, and it is often used for debugging and testing programs.
+When we run the `"Hello, World!"` program in Python, the print function outputs the string `"Hello, World!"` to the console. The console is a text-based interface where we can interact with the Python interpreter, and it is often used for debugging and testing programs.
 
-Overall, the "Hello, World!" program is a simple and effective way to demonstrate the basic syntax and functionality of Python. It provides a foundation for learning more advanced concepts, such as variables, data types, and control structures, which are essential for writing more complex programs.
+Overall, the `"Hello, World!"` program is a simple and effective way to demonstrate the basic syntax and functionality of Python. It provides a foundation for learning more advanced concepts, such as variables, data types, and control structures, which are essential for writing more complex programs.
 
-# 2. Syntax
+# 2. Fundamentals
+
+## 2.1 Variables
+
+
+
+## 2.2 Data Types
+
