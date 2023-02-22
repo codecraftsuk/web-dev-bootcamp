@@ -63,7 +63,65 @@ Overall, the `"Hello, World!"` program is a simple and effective way to demonstr
 
 ## 2.1 Variables
 
+In programming, a variable is a container that stores a value. The value can be of different types, such as numbers, text, or other data. We can give a name to the variable, which allows us to refer to the value stored in the variable by that name.
 
+Think of a variable as a labeled box that can store different things. Just like a box, a variable can store different types of things, like numbers, text, or other data. The name of the variable is like a label on the box, which allows us to easily find and access the value stored inside.
+
+For example, let's say we want to store the number 10 in a variable called `my_variable`. We can do that with the following code:
+
+```python
+my_variable = 10
+```
+
+This assigns the value of 10 to the variable `my_variable`. Now, if we want to use that value in our code, we can simply refer to it by its variable name, like this:
+
+```python
+print(my_variable)
+```
+
+This will output the value of `my_variable`, which is 10.
+
+Variables are important because they allow us to store and manipulate data in our programs. By giving a name to a value, we can easily refer to it later in our code, and we can update or change the value as needed. In this way, variables make our code more flexible and easier to manage.
+
+Now lets look at an example where we eant to store more variables where we store different types of data.
+
+```python
+x = 100
+y = 1.742
+z = "This is a string."
+a = True
+b = None
+```
+
+Each variable is being stored, where the value on the left is is the variable name and the value on the right is the value that is being stored, and this is called variable declaration.
+
+In Python, we don't have to explicitly state the data type of a variable when we create it. The Python interpreter can usually determine the data type based on the value that we assign to the variable. This is known as "type inference".
 
 ## 2.2 Data Types
+
+ Data types are a way to classify different types of data that can be used in a program. They help us understand how data can be stored, processed, and manipulated in our programs. We have briefly discussed it when looking at the declaring variables, but now we look at more data types.
+
+ The most common types of data are as follows:
+
+ 1. **Integer**: An integer is a whole number, such as 1, 2, 3, -4, or 0. In Python, integers have no decimal point and can be positive or negative.
+ 
+ 2. **Float**: A float is a decimal number, such as 3.14, 2.5, or -0.5. In Python, floats have a decimal point and can be positive or negative.
+
+ 3. **String**: A string is a sequence of characters, such as "hello", "world", or "123". In Python, strings are enclosed in quotes, either single quotes ('...') or double quotes ("...").
+
+ 4. **Boolean**: A boolean is a binary value that is either true or false. In Python, the boolean values are represented as True and False.
+
+ 5. **NoneType** The NoneType data type represents the absence of a value, and it is often used to indicate that a variable or function has no value or that a value has not been initialized.
+
+
+Looking at the variable declaration above i.e. values `x`, `y`, `z`, `a` and `b`, the data types of these variables are as follows:
+
+1. `x` int: An integer
+2. `y` float: A decimal number
+3. `z` str: A string, or sequence of characters.
+4. `a` bool: A value that is either True or False
+5. `b` NoneType: A special value (None) indicating the absence of a value
+
+
+
 
