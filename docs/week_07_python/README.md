@@ -1290,18 +1290,330 @@ There are mamy more built-in functions and to see them, refer to the python docu
 
 ## 2.7 String Manipulation
 
+String manipulation refers to the process of modifying or transforming a given string in a desired way. In Python, strings are an essential data type that are used to represent text-based data. There are many scenarios where we may need to manipulate strings, such as cleaning up user inputs, formatting strings, parsing data from text files, or generating dynamic outputs for user interfaces. Python provides a variety of built-in methods and functions that enable us to perform different kinds of string manipulations. By using these methods, we can easily accomplish tasks such as splitting and joining strings, replacing or removing characters, converting cases, and checking for substring occurrences. By mastering string manipulation techniques, we can improve our ability to work with text-based data and develop more robust and effective Python programs.
+
+### 2.7.1 Single vs Double Quotes
+
+In Python, you can create strings using either single quotes or double quotes. Both are interchangeable and can be used to define a string. However, if your string contains an apostrophe, it is best to use double quotes to define the string, and vice versa. Here is an example below:
+
+```python
+print("Chris's dog jumped over the fence")
+```
+
+Output:
+
+```
+Chris's dog jumped over the fence
+```
+
+In this case, a singular apostrophe can be used inside the string as the string is covered by a double apostrophe. However, if not, it would have to be done as follows:
+
+```python
+print('I\'m happy')
+```
+
+Output:
+
+```
+I'm happy
+```
+
+### 2.7.2 Newline
+
+The `\n` characters are used to create a new line in a string. For example, if you want to print two sentences on separate lines, you can use `\n`.
+
+```python
+print("Hello\nWorld")
+```
+
+Output:
+
+```bash
+Hello
+World
+```
+
+### 2.7.3 Tabs
+
+The `\t` characters are used to create a tab in a string.  For example, if you want to create a tab space between two words, you can use \t.
+
+```python
+print("Hello\tWorld")
+```
+
+Output:
+
+```bash
+Hello World
+```
+
+### 2.7.4 Triple Quotations
 
 
-## 2.x Modules
+Triple quotes are used to create multiline strings in Python. Unlike single quotes or double quotes, triple quotes allow you to create strings that span multiple lines. To create a multiline string using triple quotes, you simply enclose the entire string in three consecutive single quotes ('''). You can also use three consecutive double quotes (""") to achieve the same effect.
 
-## 2.x Exceptions
-
-## 2.x Classes
+Triple quotes are particularly useful when you need to create long strings that span multiple lines, such as docstrings or large blocks of text. They allow you to easily include line breaks and formatting within your strings without having to use escape characters or concatenation. Additionally, triple-quoted strings can be used as a comment or to temporarily disable code.
 
 
+```python
+multiline_string = """This is a multiline string.
+It can span multiple lines
+without needing to use escape characters."""
+
+print(multiline_string)
+```
+
+Output:
+
+```bash
+This is a multiline string.
+It can span multiple lines
+without needing to use escape characters.
+```
+
+### 2.7.5 Built-in Functions
+
+Now, let's look at the many ways you can manipulate a string using built-in functions.
 
 
+1. **Concatenation**: Concatenation is the process of joining two or more strings together. In Python, you can concatenate strings using the `"+"` operator. For example:
 
+```python
+string1 = "Hello"
+string2 = "World"
+result = string1 + " " + string2
+print(result) # Output: "Hello World"
+```
+
+2. **Slicing**: Slicing is the process of selecting a portion of a string. In Python, you can slice a string using the square brackets `[]`. For example:
+
+```python
+string = "Hello World"
+result = string[0:5]
+print(result) # Output: "Hello"
+```
+
+3. **Upper** and **Lower** Case Conversion: In Python, you can convert a string to upper or lower case using the `upper()`and `lower()` methods. For example:
+
+```python
+string = "Hello World"
+result1 = string.upper()
+result2 = string.lower()
+print(result1) # Output: "HELLO WORLD"
+print(result2) # Output: "hello world"
+```
+
+4. **Replace**: The `replace()` method is used to replace a portion of a string with another string. For example:
+
+```python
+string = "Hello World"
+result = string.replace("World", "Universe")
+print(result) # Output: "Hello Universe"
+```
+
+5. **Split**: The `split()` method is used to split a string into a list of substrings based on a specified delimiter. For example:
+
+```python
+string = "Hello,World"
+result = string.split(",")
+print(result) # Output: ["Hello", "World"]
+```
+
+6. **Join**: The `join()` method is used to join a list of strings into a single string using a specified delimiter. For example:
+
+```python
+list = ["Hello", "World"]
+delimiter = " "
+result = delimiter.join(list)
+print(result) # Output: "Hello World"
+```
+7. **Upper**. The `upper()` method returns a new string with all characters in uppercase. It does not modify the original string. Example:
+
+```python
+s = "hello world"
+s_upper = s.upper()  # "HELLO WORLD"
+```
+8. **Lower**. The `lower()` method returns a new string with all characters in lowercase. It does not modify the original string. Example:
+
+```python
+s = "HeLLo WoRLd"
+s_lower = s.lower()  # "hello world"
+```
+
+There are many more built-in functions that can help you manipualte strings. To learn more about them, read the documentation on string manipulation.
+
+**More complex example**
+
+Here is an example of how the previously discussed string manipulation methods may be used:
+
+```python
+# Original string
+text = "   This is some text to manipulate!   "
+
+# Remove leading and trailing white space
+text = text.strip()
+
+# Convert all characters to lowercase
+text = text.lower()
+
+# Replace all occurrences of "some" with "new"
+text = text.replace("some", "new")
+
+# Split the string into a list of words
+words = text.split()
+
+# Loop through the list and capitalize the first letter of each word
+capitalized_words = []
+for word in words:
+    capitalized_words.append(word.capitalize())
+
+# Join the list of words back into a string
+text = " ".join(capitalized_words)
+
+# Add an exclamation mark to the end of the string
+text = text + "!"
+
+# Print the final string
+print(text)
+```
+
+This code snippet takes an original string, manipulates it in multiple ways, and then prints the final result. The steps involved are:
+
+- Remove leading and trailing white space using the `strip()` method.
+- Convert all characters to lowercase using the `lower()` method.
+- Replace all occurrences of "some" with "new" using the `replace()` method.
+- Split the string into a list of words using the `split()` method.
+- Loop through the list of words, capitalize the first letter of each word, and add the result to a new list using the `capitalize()` method.
+- Join the list of capitalized words back into a string using the `join()` method.
+- Add an exclamation mark to the end of the string.
+- Print the final result.
+
+The final output of this code would be:
+
+```bash
+New Text To Manipulate!
+```
+
+## 2.8 Modules
+
+### 2.8.1 What are Python modules?
+
+Python modules are pre-written code libraries that can be imported and used in your Python program. These modules can contain functions, variables, and classes that you can use to add functionality to your programs without having to write everything from scratch.
+
+
+### 2.8.2 How to use Python modules?
+
+To use a Python module, you need to first import it into your program using the import keyword. Once imported, you can use the functions and variables defined in the module by prefixing them with the module name. For example, if you want to use the math module to calculate the square root of a number, you would use the code `import math` at the top of your file, then `math.sqrt(number)` to calculate the square root. Here is an example of how to import a built-in python module:
+
+```python
+import random
+
+# Generate a random number between 1 and 10
+num = random.randint(1, 10)
+print(num)
+```
+
+
+### 2.8.3 Common Python modules
+
+Python comes with a number of built-in modules that you can use, such as the math module, which provides functions for mathematical operations, or the os module, which provides functions for interacting with the operating system. There are also many third-party modules available that you can install and use in your programs, such as NumPy for scientific computing, Flask for web development, or Pygame for game development.
+
+### 2.8.4 Installing Python modules
+
+To install third-party Python modules, you can use a package manager such as pip. Pip allows you to easily search for, install, and manage Python packages. To install a package using pip, you can use the command `pip install package_name`. For example, to install the NumPy package, you would use the command `pip install numpy`. Here is an example on how to install and use a python module:
+
+```python
+# First, you need to install the module using pip
+# pip install requests
+
+import requests
+
+# Make a GET request to a URL and print the response content
+response = requests.get('https://www.google.com')
+print(response.content)
+```
+
+### 2.8.5 Creating your own modules
+
+You can also create your own Python modules to organize your code and make it more reusable. To create a module, simply save your code to a .py file and import it into your program using the import keyword. You can then use the functions and variables defined in your module just like any other module.
+
+
+**More complex example**
+
+```python
+import math
+import random
+
+# Generate a random number between 1 and 100
+random_number = random.randint(1, 100)
+print("Random number: ", random_number)
+
+# Calculate the square root of the random number
+sqrt_num = math.sqrt(random_number)
+print("Square root of random number: ", sqrt_num)
+```
+
+In this example, we're importing two modules: `math` and `random`. The random module is used to generate a random integer between 1 and 100, while the `math` module is used to calculate the square root of that random integer. We then print both the random number and its square root.
+
+
+## 2.9 Exceptions
+
+In programming, an exception is an event that disrupts the normal flow of the program's instructions. When an exception occurs, the program will stop executing unless the exception is handled. Python provides a way to handle exceptions using try-except blocks.
+
+### 2.9.1 Try and Except
+
+To handle exceptions in Python, we use a try-except block. A try block is where we put the code that we think might cause an exception. The except block is where we handle the exception. Here's the basic syntax of a try-except block:
+
+```python
+try:
+   # code that might cause an exception
+except ExceptionType:
+   # code to handle the exception
+```
+
+The `try` block executes normally until an exception occurs. If an exception occurs, the code inside the `try` block stops executing, and the code inside the `except` block is executed. The `except` block catches the exception and allows the program to continue running. Here's an example of try-except:
+
+```python
+try:
+    numerator = int(input("Enter the numerator: "))
+    denominator = int(input("Enter the denominator: "))
+    result = numerator / denominator
+    print("Result: ", result)
+except ValueError:
+    print("Please enter valid integers for the numerator and denominator.")
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+```
+
+In this example, we use try-except to handle potential errors that might occur when dividing two numbers. If the user enters a non-integer value for either the numerator or denominator, a `ValueError` will be raised. If the user enters 0 for the denominator, a `ZeroDivisionError` will be raised. By using try-except, we can gracefully handle these errors and provide helpful feedback to the user
+
+
+### 2.9.2 Types of Exceptions
+
+In Python, there are many types of exceptions that can occur. Here are some common exceptions:
+
+- `TypeError`: raised when an operation or function is applied to an object of inappropriate type.
+- `ValueError`: raised when a built-in operation or function receives an argument that has the right type but an inappropriate value.
+- `NameError`: raised when a local or global name is not found.
+- `IOError`: raised when an I/O operation (such as reading or writing to a file) fails.
+
+### 2.9.3 Raising Exceptions
+
+We can also raise exceptions ourselves using the `raise` keyword. Here's an example:
+
+```python
+x = -1
+
+if x < 0:
+    raise ValueError("x cannot be negative")
+```
+
+This will raise a `ValueError` exception with the message "x cannot be negative".
+
+Exception handling is an important part of writing robust and reliable code in Python. By using try-except blocks and raising exceptions, we can write code that gracefully handles errors and allows the program to continue running.
+
+
+## 2.10 Classes
 
 
 
