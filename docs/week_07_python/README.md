@@ -1612,8 +1612,340 @@ This will raise a `ValueError` exception with the message "x cannot be negative"
 
 Exception handling is an important part of writing robust and reliable code in Python. By using try-except blocks and raising exceptions, we can write code that gracefully handles errors and allows the program to continue running.
 
-
 ## 2.10 Classes
+
+### 2.10.1 Introduction to Classes
+
+Python is an object-oriented programming language. This means that it provides features that support object-oriented programming (OOP). One of the most important features of Python is the ability to define classes, which are templates for creating objects. Classes define the properties and methods of objects, and allow you to create new instances of those objects.
+
+### 2.10.2 What is a Class?
+
+A class is a blueprint for creating objects. It defines a set of attributes and methods that describe the behavior of the objects created from it.
+
+In Python, a class is defined using the `class` keyword, followed by the name of the class. By convention, class names are capitalized. For example:
+
+```python
+class MyClass:
+    pass
+```
+
+This defines a new class named `MyClass`. The `pass` keyword is used to indicate that the class is empty, but it can be replaced with any valid Python code.
+
+### 2.10.3 What is an Object?
+
+An object is an instance of a class. It is created from the blueprint defined by the class. Every object has its own set of attributes, which are specific to that object, and its own methods, which allow it to perform actions.
+
+To create an object in Python, you use the `class` keyword followed by the name of the class, followed by parentheses. For example:
+
+```python
+my_object = MyClass()
+```
+
+This creates a new instance of the `MyClass` class and assigns it to the variable `my_object`.
+
+### 2.10.4 Class Attributes
+
+A class can have attributes, which are properties that are common to all instances of the class. Class attributes are defined inside the class definition, but outside any methods.
+
+```python
+class MyClass:
+    class_attribute = "Hello, World!"
+```
+
+This defines a class named `MyClass` with a class attribute named `class_attribute`.
+
+### 2.10.5 Instance Attributes
+
+An instance attribute is a property that is specific to an instance of a class. Instance attributes are defined inside the `__init__()` method of the class.
+
+```python
+class MyClass:
+    def __init__(self, instance_attribute):
+        self.instance_attribute = instance_attribute
+```
+
+This defines a class named `MyClass` with an instance attribute named `instance_attribute`.
+
+
+### 2.10.6 Methods
+
+A method is a function that is associated with a class. It can be called on an instance of the class, and can access the instance attributes and class attributes of that instance.
+
+Methods are defined inside the class definition, just like functions, but they have a special first parameter called `self`. This parameter refers to the instance of the class that the method is being called on.
+
+```python
+class MyClass:
+    class_attribute = "Hello, World!"
+    
+    def __init__(self, instance_attribute):
+        self.instance_attribute = instance_attribute
+        
+    def instance_method(self):
+        print("This is an instance method.")
+        
+    @classmethod
+    def class_method(cls):
+        print("This is a class method.")
+        
+    @staticmethod
+    def static_method():
+        print("This is a static method.")
+```
+
+This defines a class named `MyClass` with three methods: `instance_method()`, `class_method()`, and `static_method()`.
+
+- `instance_method()` is an instance method, which can be called on an instance of the class.
+
+- `class_method()` is a class method, which can be called on the class itself. It has a special first parameter called cls, which refers to the class.
+
+- `static_method()` is a static method, which is not associated with any instance or class. It is like a regular function, but it is defined inside the class.
+
+
+### 2.10.7 Inheritance
+
+Inheritance is a powerful feature of object-oriented programming. It allows you to create new classes based on existing ones, inheriting their attributes and methods while also adding new ones or overriding existing ones. This allows for code reusability, modularity, and flexibility.
+
+Inheritance is based on the concept of a parent-child relationship, where the parent class is the base class from which the child classes inherit attributes and methods. The child classes are also known as derived classes.
+
+To inherit from a parent class, you simply define the child class and include the parent class name in parentheses after the child class name. For example, if we have a parent class called "Animal", we can define a child class called "Dog" that inherits from "Animal" like this:
+
+```python
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def make_sound(self):
+        pass
+
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)
+        self.breed = breed
+
+    def make_sound(self):
+        return "Woof!"
+```
+
+In this example, the `Dog` class inherits the `__init__` method and `make_sound` method from the `Animal` class. However, the `Dog` class also has its own `__init__` method that takes an additional argument for the `breed` and overrides the `make_sound` method to return "Woof!".
+
+The `super()` function is used to call the parent class's `__init__` method to initialize the inherited attributes.
+
+We can create instances of the `Animal` and `Dog` classes and call their methods like this:
+
+```python
+animal = Animal("Unknown")
+dog = Dog("Fido", "Labrador")
+
+print(animal.name)  # Output: Unknown
+print(dog.name)  # Output: Fido
+print(dog.breed)  # Output: Labrador
+
+print(animal.make_sound())  # Output: None
+print(dog.make_sound())  # Output: Woof!
+```
+
+In this example, we create an instance of the `Animal` class and the `Dog` class. We can access the `name` attribute of both instances, but only the `Dog` instance has a `breed` attribute. We can also call the `make_sound` method of both instances, but the `Dog` instance returns "Woof!" while the `Animal` instance returns `None` because it doesn't have an implementation of the method.
+
+In conclusion, inheritance is a powerful and essential feature of object-oriented programming. It allows for code reusability, modularity, and flexibility. By defining parent classes with shared attributes and methods, we can create child classes that inherit those attributes and methods while also adding new ones or overriding existing ones.
+
+**More Complex Example**
+
+Let's consider an example of a bank account management system. We can create a class called `BankAccount` that represents a customer's bank account. Here's an example implementation:
+
+```python
+class BankAccount:
+    def __init__(self, account_number, balance=0):
+        self.account_number = account_number
+        self.balance = balance
+    
+    def deposit(self, amount):
+        self.balance += amount
+    
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print("Insufficient funds")
+        else:
+            self.balance -= amount
+    
+    def display_balance(self):
+        print(f"Account number: {self.account_number}\nBalance: {self.balance}")
+```
+
+In this implementation, we define the `BankAccount` class with an `__init__` method that takes in an `account_number` and `balance` as arguments. `balance` is an optional argument that defaults to 0 if no balance is specified.
+
+We then define three methods: `deposit`, `withdraw`, and `display_balance`. The `deposit` method adds the specified `amount` to the account's balance, the `withdraw` method subtracts the specified `amount` from the account's balance, but only if the balance is sufficient. If not, it prints an error message. The `display_balance` method simply displays the account's current balance and account number.
+
+With this class, we can create instances of `BankAccount` for each customer and manage their accounts. Here's an example usage:
+
+```python
+# create a new bank account with account number 123 and initial balance of 1000
+account1 = BankAccount(123, 1000)
+
+# deposit 500 into account1
+account1.deposit(500)
+
+# withdraw 200 from account1
+account1.withdraw(200)
+
+# display the balance of account1
+account1.display_balance()
+```
+
+This will output:
+
+```bash
+Account number: 123
+Balance: 1300
+```
+
+In this way, we can use classes to model real-world systems and objects and provide a structured and organized way to manage them.
+
+
+
+## 2.11 Reading and Writing Files
+
+Reading and writing files is a common task in programming. In Python, it's easy to read and write files using built-in functions.
+
+### 2.11.1 Opening a File
+
+To open a file, you use the built-in `open()` function. The `open()` function takes two arguments: the path to the file and the mode in which you want to open the file. The mode can be "r" for reading, "w" for writing (which will erase the file's contents), "a" for appending, "x" for creating a new file, or "b" for binary mode.
+
+Here's an example of opening a file for reading:
+
+```python
+file = open("example.txt", "r")
+```
+
+### 2.11.2 Reading a File
+
+Once you've opened a file for reading, you can read its contents using various methods. The most common method is `read()`, which returns the entire contents of the file as a string. You can also use `readline()` to read one line at a time or `readlines()` to read all the lines of the file into a list.
+
+```python
+file = open("example.txt", "r")
+content = file.read()
+print(content)
+```
+
+This will print the contents of the file to the console.
+
+```python
+file = open("example.txt", "r")
+line = file.readline()
+while line:
+    print(line)
+    line = file.readline()
+```
+
+This will print all the lines of the file to the console as a list.
+
+
+To read a file line by line, we can use a loop and the `readline()` method.
+
+```python
+file = open("example.txt", "r")
+for line in file:
+    print(line)
+file.close()
+```
+
+
+
+### 2.11.3 Writing to a File
+
+To write to a file, you open it in "w" or "a" mode and use the `write()` method to write to it. If you're writing multiple lines, you can use the `writelines()` method.
+
+```python
+file = open("example.txt", "w")
+file.write("This is a test.")
+file.close()
+```
+
+This will erase the contents of the file and write "This is a test." to it.
+
+```python
+file = open("example.txt", "a")
+file.write("This is another test.")
+file.close()
+```
+
+This will append "This is another test." to the end of the file.
+
+To write to a file line by line, we can use a loop and the `write()` method.
+
+```python
+lines = ["This is line 1.\n", "This is line 2.\n", "This is line 3.\n"]
+file = open("example.txt", "w")
+for line in lines:
+    file.write(line)
+file.close()
+```
+
+
+
+### 2.11.4 Closing a File
+
+It's important to always close a file after you're done with it. You can do this using the `close()` method.
+
+```python
+file = open("example.txt", "r")
+content = file.read()
+file.close()
+```
+
+This will close the file after reading its contents.
+
+### 2.11.5 Using "with" Statement
+
+Another way to work with files is to use the with statement. This ensures that the file is closed properly, even if an error occurs.
+
+```python
+with open("example.txt", "r") as file:
+    content = file.read()
+```
+
+This will read the contents of the file and automatically close it when the `with` block is exited.
+
+
+### 2.11.6 Handling Exceptions
+
+When working with files, it's important to handle exceptions that may occur. For example, if you try to open a file that doesn't exist, you'll get a `FileNotFoundError`. You can handle this exception using a try-except block.
+
+```python
+try:
+    with open("example.txt", "r") as file:
+        content = file.read()
+except FileNotFoundError:
+    print("File not found.")
+```
+
+This will print "File not found." if the file doesn't exist.
+
+**More Complex Example**
+
+Let's say we have a file called "input.txt" that contains a list of names, one name per line. We want to read in the file, sort the names alphabetically, and then write the sorted names to a new file called "output.txt". Here's how we can do it:
+
+```python
+# Open the input file for reading
+with open('input.txt', 'r') as f:
+    # Read in all the names and store them in a list
+    names = f.read().splitlines()
+
+# Sort the names alphabetically
+names.sort()
+
+# Open the output file for writing
+with open('output.txt', 'w') as f:
+    # Write the sorted names to the output file, one name per line
+    for name in names:
+        f.write(name + '\n')
+```
+
+In this example, we first open the input file for reading using the `open()` function and the `'r'` mode. We then read in all the names from the file using the `read()` method and split them into a list using the `splitlines()` method. We close the file automatically using a with statement.
+
+Next, we sort the names alphabetically using the `sort()` method.
+
+Finally, we open the output file for writing using the `open(`) function and the `'w'` mode. We then write the sorted names to the file using a for loop and the `write()` method, making sure to add a newline character (`'\n'`) after each name. We close the file automatically using a `with` statement.
+
 
 
 
