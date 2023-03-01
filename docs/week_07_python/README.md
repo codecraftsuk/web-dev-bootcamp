@@ -1,4 +1,7 @@
-<script src="docs/prism-python.js"></script>
+<!-- Loading Docsify -->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+<!-- Adding json syntax highlighting -->
+<script src="//cdn.jsdelivr.net/npm/prismjs@1.22/components/prism-python.js"></script>
 
 # 1. Introduction to Python
 
