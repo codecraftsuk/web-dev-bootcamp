@@ -1,3 +1,6 @@
+<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+
 # 1. Introduction to Python
 
 ## 1.1 What is Python
@@ -1973,3 +1976,15 @@ Finally, we open the output file for writing using the `open(`) function and the
 
 
 ## 3.1 Variables
+
+1. What is the output of the following code?
+
+```python
+x = 5
+y = 3
+print("The value of x is", x, "and the value of y is", y)
+```
+
+<details>
+Answer
+</details>
