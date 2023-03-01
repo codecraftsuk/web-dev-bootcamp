@@ -1,5 +1,4 @@
-<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.js"></script>
-<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+<script src="docs/prism-python.js"></script>
 
 # 1. Introduction to Python
 
