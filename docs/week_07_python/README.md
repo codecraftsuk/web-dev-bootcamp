@@ -1,8 +1,3 @@
-<!-- Loading Docsify -->
-<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-<!-- Adding json syntax highlighting -->
-<script src="//cdn.jsdelivr.net/npm/prismjs@1.22/components/prism-python.js"></script>
-
 # 1. Introduction to Python
 
 ## 1.1 What is Python
@@ -1987,6 +1982,8 @@ y = 3
 print("The value of x is", x, "and the value of y is", y)
 ```
 
-<details>
-Answer
+<details> 
+  <summary>Answer </summary>
+   "The value of x is 5 and the value of y is 3"
 </details>
+
