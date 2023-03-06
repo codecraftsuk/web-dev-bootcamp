@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+  <style>
+    /* Style the quiz container */
+    .quiz-container {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    /* Style the quiz question */
+    .quiz-question {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* Style the quiz options */
+    .quiz-option {
+      margin-bottom: 10px;
+    }
+
+    /* Style the quiz submit button */
+    .quiz-submit {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Style the quiz result */
+    .quiz-result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <div class="quiz-question">
+      1. What does HTML stand for?
+    </div>
+    <div class="quiz-option">
+      <label>
+        <input type="radio" name="q1" value="a"> Hyper Text Markup Language
+      </label>
+    </div>
+    <div class="quiz-option">
+      <label>
+        <input type="radio" name="q1" value="b"> Hyperspace Terminal Management Language
+      </label>
+    </div>
+    <div class="quiz-option">
+      <label>
+        <input type="radio" name="q1" value="c"> High Temperature Microwave Laser
+      </label>
+    </div>
+    <button class="quiz-submit">Submit</button>
+    <div class="quiz-result"></div>
+  </div>
+  
+  <script>
+    // Get the quiz container element
+    const quizContainer = document.querySelector('.quiz-container');
+  
+    // Get the submit button element
+    const submitButton = quizContainer.querySelector('.quiz-submit');
+  
+    // Get the quiz result element
+    const quizResult = quizContainer.querySelector('.quiz-result');
+  
+    // Define the correct answer
+    const correctAnswer = 'a';
+  
+    // Add a click event listener to the submit button
+    submitButton.addEventListener('click', () => {
+      // Get the selected answer
+      const selectedAnswer = quizContainer.querySelector('input[name="q1"]:checked').value;
+  
+      // Check if the selected answer is correct
+      if (selectedAnswer === correctAnswer) {
+        quizResult.textContent = 'Correct!';
+      } else {
+        quizResult.textContent = 'Incorrect.';
+      }
+    });
+  </script>  
+</body>
+    

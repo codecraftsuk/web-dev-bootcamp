@@ -11,3 +11,7 @@
 - Notes
 
 - Download VSC.
+
+### 3. Quiz
+
+To take the quiz, go to [quiz](./quiz/index.html).
