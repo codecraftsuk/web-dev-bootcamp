@@ -1985,6 +1985,7 @@ print("The value of x is", x, "and the value of y is", y)
 </details>
 
 <br>
+
 2. Write a Python program that asks the user to enter their name and age, and then prints out a message saying "Hello [name], you are [age] years old."
 
 <details>
@@ -1999,6 +2000,7 @@ print(f'Hello {name}, you are {age} years old.')
 </details>
 
 <br>
+
 3. Write a Python program that calculates the area of a rectangle with a width of 8 and a height of 12, and prints out the result.
 
 <details>
@@ -2014,6 +2016,7 @@ print("The area of the rectangle is:", area)
 
 
 <br>
+
 4. Write a program that takes a string input from the user and prints out the length of the string.
 
 <details>
@@ -2028,6 +2031,7 @@ print("The length of the string is:", length)
 
 
 <br>
+
 5. Write a program that takes a string input from the user and checks if it is a palindrome (i.e. reads the same backwards as forwards), and prints out either "Yes" or "No" depending on the result.
 
 <details>
@@ -2070,7 +2074,7 @@ print("The letter grade is:", letter_grade)
 </details>
 
 <br>
-7. Write a program that takes a dictionary of names and ages as input from the user, and prints out the name and age of the oldest person in the dictionary.
+am that takes a dictionary of names and ages as input from the user, and prints out the name and age of the oldest person in the dictionary.
 
 <details>
     <summary>Answer</summary>
@@ -2102,7 +2106,8 @@ print("The oldest person is {} and their age is {}.".format(oldest_name, oldest_
 </details>
 
 <br>
-8. Write a Python program that takes a list of integers as input from the user and prints out the sum of all even numbers in the list.
+
+7. Write a Python program that takes a list of integers as input from the user and prints out the sum of all even numbers in the list.
 
 <details>
     <summary>Answer</summary>
@@ -2122,7 +2127,8 @@ print("The sum of all even numbers in the list is:", sum)
 </details>
 
 <br>
-9. Write a Python program that takes an integer as input from the user and checks if it is a prime number. Define a function called is_prime() that takes the integer as an argument and returns True if it is a prime number, and False otherwise. If the number is prime, print out "The number is prime." If it is not prime, print out "The number is not prime."
+
+8. Write a Python program that takes an integer as input from the user and checks if it is a prime number. Define a function called is_prime() that takes the integer as an argument and returns True if it is a prime number, and False otherwise. If the number is prime, print out "The number is prime." If it is not prime, print out "The number is not prime."
 
 <details>
     <summary>Answer</summary>
@@ -2150,7 +2156,8 @@ else:
 </details>
 
 <br>
-10. Write a Python program that takes two integers as input from the user and performs division on them. However, if the user inputs a zero as the second integer, handle the ZeroDivisionError exception and print out "Cannot divide by zero." Otherwise, print out the result of the division.
+
+9. Write a Python program that takes two integers as input from the user and performs division on them. However, if the user inputs a zero as the second integer, handle the ZeroDivisionError exception and print out "Cannot divide by zero." Otherwise, print out the result of the division.
 
 <details>
     <summary>Answer</summary>
@@ -2171,7 +2178,8 @@ while True:
 </details>
 
 <br>
-11. Write a Python program that defines a class called "Rectangle" with attributes "length" and "width". The class should have methods to calculate the area and perimeter of the rectangle. Then, create an object of the Rectangle class with length of 5 and width of 3. Call the area and perimeter methods and print out the results.
+
+10. Write a Python program that defines a class called "Rectangle" with attributes "length" and "width". The class should have methods to calculate the area and perimeter of the rectangle. Then, create an object of the Rectangle class with length of 5 and width of 3. Call the area and perimeter methods and print out the results.
 
 (Hint: the area of a rectangle is calculated by multiplying length by width, and the perimeter is calculated by adding twice the length and twice the width.)
 
