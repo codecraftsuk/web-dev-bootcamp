@@ -2195,7 +2195,7 @@ print("Area:", rect.area())
 print("Perimeter:", rect.perimeter())
 ```
 </details>
-<br>
+
 
 ## 3.1 Challenge 1
 
