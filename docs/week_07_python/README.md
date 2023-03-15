@@ -1987,3 +1987,9 @@ print("The value of x is", x, "and the value of y is", y)
    "The value of x is 5 and the value of y is 3"
 </details>
 
+2. Write a Python program that asks the user to enter their name and age, and then prints out a message saying "Hello [name], you are [age] years old."
+
+```python
+user_input = input('')
+```
+
