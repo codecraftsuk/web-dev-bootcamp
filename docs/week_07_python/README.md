@@ -1972,8 +1972,6 @@ Finally, we open the output file for writing using the `open(`) function and the
 # 3. Pracice Questions
 
 
-## 3.1 Variables
-
 1. What is the output of the following code?
 
 ```python
@@ -1981,15 +1979,264 @@ x = 5
 y = 3
 print("The value of x is", x, "and the value of y is", y)
 ```
-
 <details> 
-  <summary>Answer </summary>
-   "The value of x is 5 and the value of y is 3"
+    <summary>Answer </summary>
+    "The value of x is 5 and the value of y is 3"
 </details>
 
+<br>
 2. Write a Python program that asks the user to enter their name and age, and then prints out a message saying "Hello [name], you are [age] years old."
 
+<details>
+    <summary>Answer</summary>
+
 ```python
-user_input = input('')
+name = input('Enter your name: ')
+age = input('Enter your age: ')
+
+print(f'Hello {name}, you are {age} years old.')
+```
+</details>
+
+<br>
+3. Write a Python program that calculates the area of a rectangle with a width of 8 and a height of 12, and prints out the result.
+
+<details>
+    <summary>Answer</summary>
+
+```python
+width = 8
+height = 12
+area = width * height
+print("The area of the rectangle is:", area)
+```
+</details>
+
+
+<br>
+4. Write a program that takes a string input from the user and prints out the length of the string.
+
+<details>
+    <summary>Answer</summary>
+
+```python
+string_input = input("Enter a string: ")
+length = len(string_input)
+print("The length of the string is:", length)
+```
+</details>
+
+
+<br>
+5. Write a program that takes a string input from the user and checks if it is a palindrome (i.e. reads the same backwards as forwards), and prints out either "Yes" or "No" depending on the result.
+
+<details>
+    <summary>Answer</summary>
+
+```python
+string = input("Enter a string: ")
+reverse_string = string[::-1] # slice the string to reverse it
+if string == reverse_string:
+    print("Yes")
+else:
+    print("No")
 ```
 
+We use slicing to reverse the string by setting `reverse_string` equal to string with a step of -1 (i.e. every character from the end to the beginning).
+</details>
+
+<br>
+6. Write a Python program that takes a user input of a grade and prints out the corresponding letter grade based on the following scale: 90-100 is an A, 80-89 is a B, 70-79 is a C, 60-69 is a D, and anything below 60 is an F.
+
+<details>
+    <summary>Answer</summary>
+
+```python
+grade = int(input("Enter the grade: "))
+
+if grade >= 90:
+    letter_grade = "A"
+elif grade >= 80:
+    letter_grade = "B"
+elif grade >= 70:
+    letter_grade = "C"
+elif grade >= 60:
+    letter_grade = "D"
+else:
+    letter_grade = "F"
+
+print("The letter grade is:", letter_grade)
+```
+</details>
+
+<br>
+7. Write a program that takes a dictionary of names and ages as input from the user, and prints out the name and age of the oldest person in the dictionary.
+
+<details>
+    <summary>Answer</summary>
+
+```python
+# take input from user
+name_age = {}
+
+n = int(input("Enter the number of people: "))
+
+for i in range(n):
+    name = input("Enter the name: ")
+    age = int(input("Enter the age: "))
+    name_age[name] = age
+
+# find the oldest person
+oldest_name = ""
+oldest_age = 0
+
+for name, age in name_age.items():
+    if age > oldest_age:
+        oldest_name = name
+        oldest_age = age
+
+# print the result
+print("The oldest person is {} and their age is {}.".format(oldest_name, oldest_age))
+
+```
+</details>
+
+<br>
+8. Write a Python program that takes a list of integers as input from the user and prints out the sum of all even numbers in the list.
+
+<details>
+    <summary>Answer</summary>
+
+```python
+num_list = input("Enter a list of numbers, separated by commas: ")
+num_list = num_list.split(",")
+sum = 0
+
+for num in num_list:
+    if int(num) % 2 == 0:
+        sum += int(num)
+
+print("The sum of all even numbers in the list is:", sum)
+```
+
+</details>
+
+<br>
+9. Write a Python program that takes an integer as input from the user and checks if it is a prime number. Define a function called is_prime() that takes the integer as an argument and returns True if it is a prime number, and False otherwise. If the number is prime, print out "The number is prime." If it is not prime, print out "The number is not prime."
+
+<details>
+    <summary>Answer</summary>
+
+```python
+def is_prime(num):
+    if num <= 1:
+        return False
+    elif num == 2:
+        return True
+    else:
+        for i in range(2, num):
+            if num % i == 0:
+                return False
+        return True
+
+num = int(input("Enter a number: "))
+
+if is_prime(num):
+    print("The number is prime.")
+else:
+    print("The number is not prime.")
+
+```
+</details>
+
+<br>
+10. Write a Python program that takes two integers as input from the user and performs division on them. However, if the user inputs a zero as the second integer, handle the ZeroDivisionError exception and print out "Cannot divide by zero." Otherwise, print out the result of the division.
+
+<details>
+    <summary>Answer</summary>
+
+```python
+while True:
+    try:
+        num1 = int(input("Enter the first number: "))
+        num2 = int(input("Enter the second number: "))
+        result = num1 / num2
+        print("Result of division: ", result)
+        break
+    except ValueError:
+        print("Please enter valid integers.")
+    except ZeroDivisionError:
+        print("Cannot divide by zero.")
+```
+</details>
+
+<br>
+11. Write a Python program that defines a class called "Rectangle" with attributes "length" and "width". The class should have methods to calculate the area and perimeter of the rectangle. Then, create an object of the Rectangle class with length of 5 and width of 3. Call the area and perimeter methods and print out the results.
+
+(Hint: the area of a rectangle is calculated by multiplying length by width, and the perimeter is calculated by adding twice the length and twice the width.)
+
+<details>
+    <summary>Answer</summary>
+
+```python
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+    
+    def area(self):
+        return self.length * self.width
+    
+    def perimeter(self):
+        return 2 * (self.length + self.width)
+
+rect = Rectangle(5, 3)
+print("Area:", rect.area())
+print("Perimeter:", rect.perimeter())
+```
+</details>
+<br>
+
+## 3.1 Challenge 1
+
+Rock, Paper, Scissors is a classic game that many people have played since childhood. In this game, two players each choose one of the three options (rock, paper, or scissors), and the winner is determined based on the rules: rock beats scissors, scissors beats paper, and paper beats rock. In this programming exercise, you will create a simple Rock, Paper, Scissors game using Python.
+<details>
+    <summary>Answer</summary>
+
+```python
+import random
+
+class RockPaperScissors:
+    def __init__(self):
+        self.choices = ["rock", "paper", "scissors"]
+    
+    def play(self):
+        print("Welcome to Rock-Paper-Scissors!")
+        user_choice = input("Please choose rock, paper, or scissors: ")
+        computer_choice = random.choice(self.choices)
+        print(f"Computer chooses {computer_choice}")
+        if user_choice == computer_choice:
+            print("It's a tie!")
+        elif user_choice == "rock":
+            if computer_choice == "scissors":
+                print("You win!")
+            else:
+                print("Computer wins!")
+        elif user_choice == "paper":
+            if computer_choice == "rock":
+                print("You win!")
+            else:
+                print("Computer wins!")
+        elif user_choice == "scissors":
+            if computer_choice == "paper":
+                print("You win!")
+            else:
+                print("Computer wins!")
+        else:
+            print("Invalid input. Please try again.")
+        
+game = RockPaperScissors()
+game.play()
+```
+
+</details>
