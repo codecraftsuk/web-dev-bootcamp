@@ -570,27 +570,27 @@ There are several types of data structures in Python, some of which include:
 
 1. Lists: A list is a collection of items that are ordered and changeable. Lists are created using square brackets and individual items are separated by commas. For example:
 
-```python
-fruits = ['apple', 'banana', 'orange']
-```
+    ```python
+    fruits = ['apple', 'banana', 'orange']
+    ```
 
 2. Tuples: A tuple is similar to a list, but it is immutable, meaning that its values cannot be changed once it is created. Tuples are created using parentheses and individual items are separated by commas. For example:
 
-```python
-colors = ('red', 'green', 'blue')
-```
+    ```python
+    colors = ('red', 'green', 'blue')
+    ```
 
 3. Dictionaries: A dictionary is a collection of key-value pairs where each key is unique. Dictionaries are created using curly braces and individual items are separated by commas. For example:
 
-```python
-person = {'name': 'John', 'age': 30, 'gender': 'male'}
-```
+    ```python
+    person = {'name': 'John', 'age': 30, 'gender': 'male'}
+    ```
 
 4. Sets: A set is a collection of unique items that are unordered. Sets are created using curly braces or the set() function. For example:
 
-```python
-numbers = {1, 2, 3, 4, 5}
-```
+    ```python
+    numbers = {1, 2, 3, 4, 5}
+    ```
 
 Each of these data structures has its own strengths and weaknesses and can be used in different ways depending on the specific needs of the program. For example, lists can be used to store and manipulate large amounts of data, while dictionaries are often used to represent objects or entities with multiple attributes.
 
@@ -989,48 +989,48 @@ Python provides several useful methods for working with dictionaries. Here are s
 
 1. `clear()`: Removes all key-value pairs from the dictionary.
 
-```python
-my_dict = {"name": "John", "age": 30}
-my_dict.clear()
-print(my_dict)  # Output: {}
-```
+    ```python
+    my_dict = {"name": "John", "age": 30}
+    my_dict.clear()
+    print(my_dict)  # Output: {}
+    ```
 
 2. `copy()`: Returns a shallow copy of the dictionary.
 
-```python
-my_dict = {"name": "John", "age": 30}
-new_dict = my_dict.copy()
-print(new_dict)  # Output: {"name": "John", "age": 30}
-```
+    ```python
+    my_dict = {"name": "John", "age": 30}
+    new_dict = my_dict.copy()
+    print(new_dict)  # Output: {"name": "John", "age": 30}
+    ```
 
 3. `get(key, default)`: Returns the value of the specified key. If the key does not exist, it returns the specified default value.
 
-```python
-my_dict = {"name": "John", "age": 30}
-print(my_dict.get("name"))  # Output: "John"
-print(my_dict.get("address", "Unknown"))  # Output: "Unknown"
-```
+    ```python
+    my_dict = {"name": "John", "age": 30}
+    print(my_dict.get("name"))  # Output: "John"
+    print(my_dict.get("address", "Unknown"))  # Output: "Unknown"
+    ```
 
 4. `items()`: Returns a list of key-value pairs in the dictionary.
 
-```python
-my_dict = {"name": "John", "age": 30}
-print(my_dict.items())  # Output: [("name", "John"), ("age", 30)]
-```
+    ```python
+    my_dict = {"name": "John", "age": 30}
+    print(my_dict.items())  # Output: [("name", "John"), ("age", 30)]
+    ```
 
 5. `keys()`: Returns a list of all keys in the dictionary.
 
-```python
-my_dict = {"name": "John", "age": 30}
-print(my_dict.keys())  # Output: ["name", "age"]
-```
+    ```python
+    my_dict = {"name": "John", "age": 30}
+    print(my_dict.keys())  # Output: ["name", "age"]
+    ```
 
 6. `values()`: Returns a list of all values in the dictionary.
 
-```python
-my_dict = {"name": "John", "age": 30}
-print(my_dict.values())  # Output: ["John", 30]
-```
+    ```python
+    my_dict = {"name": "John", "age": 30}
+    print(my_dict.values())  # Output: ["John", 30]
+    ```
 
 To see more dictionary methods, read the python documentation.
 
@@ -1272,38 +1272,38 @@ Here are some examples of some more built-in functions in Python:
 
 1. `len()` - returns the length of an object (e.g. string, list, tuple, etc.)
 
-```python
-my_string = "Hello World!"
-my_list = [1, 2, 3, 4, 5]
+    ```python
+    my_string = "Hello World!"
+    my_list = [1, 2, 3, 4, 5]
 
-print(len(my_string)) # Output: 12
-print(len(my_list)) # Output: 5
-```
+    print(len(my_string)) # Output: 12
+    print(len(my_list)) # Output: 5
+    ```
 
 2. `max()` and `min()` - returns the maximum and minimum value in a sequence
 
-```python
-my_list = [5, 10, 15, 20]
+    ```python
+    my_list = [5, 10, 15, 20]
 
-print(max(my_list)) # Output: 20
-print(min(my_list)) # Output: 5
-```
+    print(max(my_list)) # Output: 20
+    print(min(my_list)) # Output: 5
+    ```
 
 3. `range()` - generates a sequence of numbers
 
-```python
-# Using only stop argument
-for num in range(5):
-    print(num) # Output: 0 1 2 3 4
-    
-# Using start and stop arguments
-for num in range(2, 7):
-    print(num) # Output: 2 3 4 5 6
-    
-# Using start, stop, and step arguments
-for num in range(0, 11, 2):
-    print(num) # Output: 0 2 4 6 8 10
-```
+    ```python
+    # Using only stop argument
+    for num in range(5):
+        print(num) # Output: 0 1 2 3 4
+        
+    # Using start and stop arguments
+    for num in range(2, 7):
+        print(num) # Output: 2 3 4 5 6
+        
+    # Using start, stop, and step arguments
+    for num in range(0, 11, 2):
+        print(num) # Output: 0 2 4 6 8 10
+    ```
 
 There are mamy more built-in functions and to see them, refer to the python documentation.
 
@@ -1397,67 +1397,67 @@ Now, let's look at the many ways you can manipulate a string using built-in func
 
 1. **Concatenation**: Concatenation is the process of joining two or more strings together. In Python, you can concatenate strings using the `"+"` operator. For example:
 
-```python
-string1 = "Hello"
-string2 = "World"
-result = string1 + " " + string2
-print(result) # Output: "Hello World"
-```
+    ```python
+    string1 = "Hello"
+    string2 = "World"
+    result = string1 + " " + string2
+    print(result) # Output: "Hello World"
+    ```
 
 2. **Slicing**: Slicing is the process of selecting a portion of a string. In Python, you can slice a string using the square brackets `[]`. For example:
 
-```python
-string = "Hello World"
-result = string[0:5]
-print(result) # Output: "Hello"
-```
+    ```python
+    string = "Hello World"
+    result = string[0:5]
+    print(result) # Output: "Hello"
+    ```
 
 3. **Upper** and **Lower** Case Conversion: In Python, you can convert a string to upper or lower case using the `upper()`and `lower()` methods. For example:
 
-```python
-string = "Hello World"
-result1 = string.upper()
-result2 = string.lower()
-print(result1) # Output: "HELLO WORLD"
-print(result2) # Output: "hello world"
-```
+    ```python
+    string = "Hello World"
+    result1 = string.upper()
+    result2 = string.lower()
+    print(result1) # Output: "HELLO WORLD"
+    print(result2) # Output: "hello world"
+    ```
 
 4. **Replace**: The `replace()` method is used to replace a portion of a string with another string. For example:
 
-```python
-string = "Hello World"
-result = string.replace("World", "Universe")
-print(result) # Output: "Hello Universe"
-```
+    ```python
+    string = "Hello World"
+    result = string.replace("World", "Universe")
+    print(result) # Output: "Hello Universe"
+    ```
 
 5. **Split**: The `split()` method is used to split a string into a list of substrings based on a specified delimiter. For example:
 
-```python
-string = "Hello,World"
-result = string.split(",")
-print(result) # Output: ["Hello", "World"]
-```
+    ```python
+    string = "Hello,World"
+    result = string.split(",")
+    print(result) # Output: ["Hello", "World"]
+    ```
 
 6. **Join**: The `join()` method is used to join a list of strings into a single string using a specified delimiter. For example:
 
-```python
-list = ["Hello", "World"]
-delimiter = " "
-result = delimiter.join(list)
-print(result) # Output: "Hello World"
-```
+    ```python
+    list = ["Hello", "World"]
+    delimiter = " "
+    result = delimiter.join(list)
+    print(result) # Output: "Hello World"
+    ```
 7. **Upper**. The `upper()` method returns a new string with all characters in uppercase. It does not modify the original string. Example:
 
-```python
-s = "hello world"
-s_upper = s.upper()  # "HELLO WORLD"
-```
+    ```python
+    s = "hello world"
+    s_upper = s.upper()  # "HELLO WORLD"
+    ```
 8. **Lower**. The `lower()` method returns a new string with all characters in lowercase. It does not modify the original string. Example:
 
-```python
-s = "HeLLo WoRLd"
-s_lower = s.lower()  # "hello world"
-```
+    ```python
+    s = "HeLLo WoRLd"
+    s_lower = s.lower()  # "hello world"
+    ```
 
 There are many more built-in functions that can help you manipualte strings. To learn more about them, read the documentation on string manipulation.
 
