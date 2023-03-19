@@ -378,5 +378,133 @@ So far, we have learned how to retrieve and display data from a model that we cr
 
 ## 2.7 Creating a Django Form
 
+Django forms are a built-in part of the Django framework and are used to handle user input. They provide an easy and efficient way to collect data from users and validate it on the server side. Django forms are based on Python classes, and they can be used to create HTML forms that can be rendered in templates. They can also be used to create custom form fields, validate form data, and handle form submissions. Using Django forms can save a lot of time and effort by taking care of common form-handling tasks, such as data validation and sanitization, automatically.
 
+The first step in creating our form is to create a `forms.py` file in our application. The following code demonstrated a form that takes in two fields; the title of the todo and the status of whether the todo is completed or not.
+
+```python
+todoapp/forms.py
+
+from django import forms
+from .models import Todo
+
+class TodoForm(forms.ModelForm):
+    class Meta:
+        model = Todo
+        fields = ['title', 'completed']
+```
+
+In this example, we import the `forms` module from Django, as well as the `Todo` model from our `models.p`y file. We then create a `TodoForm` class that inherits from `forms.ModelForm`.
+
+Inside the `Meta` class, we specify the model to use (`Todo`) and the fields to include in the form (`title` and `completed`). This tells Django to automatically generate the form fields based on the model fields.
+
+Now we can use this `TodoForm` class in our views to render the form and handle form submissions. In order to take data from the user using this form, we need to create a html file that allows us to do so. In `templates/app`, create a new file called `forms.html` and create the form as such:
+
+```html
+templates/app/forms.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <div id="header">
+        <h1>Form</h1>
+    </div>
+    
+    <div id="form">
+        <h2>Create a new Todo</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</body>
+</html>
+```
+
+In this code, The `method` attribute specifies the HTTP method used to submit the form data to the server, which in this case is `POST`. The` {% csrf_token %}` template tag outputs a hidden input field with a CSRF token, which is a security measure to prevent Cross-Site Request Forgery (CSRF) attacks. The `{{ form.as_p }}` template tag outputs the form fields as paragraphs (`<p>` elements)
+
+
+We also need to create a new function in our `views.py` file so that we can render the form onto our html page as well as our html page, as shown below:
+
+```python
+todoapp/views.py
+
+from django.shortcuts import render, redirect
+from .models import Todo
+from .forms import TodoForm
+
+def home(request):
+    # Retrieve all Todo objects from the database
+    todos = Todo.objects.all()
+    
+    # Pass the todos to the template as context
+    context = {'todos': todos}
+    return render(request, 'app/home.html', context)
+
+def form(request):
+    # Check if the request method is POST
+    if request.method == 'POST':
+        # Create a form instance with the POST data
+        form = TodoForm(request.POST)
+        # Check if the form is valid
+        if form.is_valid():
+            # Save the form data to the database
+            form.save()
+            # Redirect to the same page after submission
+            return redirect('form')
+    # If the request method is GET
+    else:
+        # Create a blank form instance
+        form = TodoForm()
+
+    context = {'form': form}
+    return render(request, 'app/forms.html', context)
+```
+
+Our `form` function  handles a GET and a POST request for a form. Here is what this code does:
+
+1. If the request method is POST, then it creates a `TodoForm` instance with the data in the POST request.
+2. It checks if the form is valid. If the form is valid, it saves the form data to the database and redirects the user to the same page (`form`).
+3. If the request method is GET, then it creates a blank `TodoForm` instance.
+4. It creates a dictionary named `context` with the `form` instance as a value associated with the key `form`.
+5. It renders the `forms.html` template with the `context` dictionary as a context instance.
+
+
+Finally, we need to add a new url for the form page as follows:
+
+```python
+todoapp/urls.py
+
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),
+    path('form/', views.form, name='form'),
+]   
+```
+
+Now, we can check out our new page by going to the url `localhost:5000/form/`
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/form.png">
+</p>
+
+To see whether the form has worked and added a new row in our model, we can go back to the base url i.e. `localhost:5000/` and view the table.
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/formcreateddata.png">
+</p>
+
+We have successfully created a form that allows for a user to input a todo which will be saved and displayed in the main todo table. However, what if we wanted to edit and delete the current todos that we have? We will explore that next.
 
