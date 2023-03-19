@@ -173,6 +173,8 @@ templates/app/home.html
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>
 <body>
@@ -276,4 +278,105 @@ To use the Django Admin, follow these steps:
 
 3. Log in with your superuser account credentials.
 
-4. Once you are logged in, you should see the Django Admin dashboard. It will show you all the available models in your project. Verify our model has been created by ...
+4. Once you are logged in, you should see the Django Admin dashboard. 
+
+Before you can see your model in Django Admin, you need to register your mdoel by locating the `todoapp/admin.py` file and adding the following code:
+
+```python
+todoapp/admin.py
+
+from django.contrib import admin
+from .models import Todo
+
+admin.site.register(Todo)
+```
+
+This registers the `Todo` model with the Django Admin so that it will appear in the interface. Now in the dashboard you should see the model as follows:
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/modelinadmin.png">
+</p>
+
+From the admin page, we can add and edit data in our model. Let us add a row of data in our table and then render it onto our HTML page.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/rowaddedadmin.png">
+</p>
+
+Now, let us modify our `home` view function so that we can read in this data from our `Todo` model.
+
+```python
+todoapp/views.py
+
+from django.shortcuts import render
+from .models import Todo
+
+def home(request):
+    # Retrieve all Todo objects from the database
+    todos = Todo.objects.all()
+    
+    # Pass the todos to the template as context
+    context = {'todos': todos}
+    return render(request, 'app/home.html', context)
+```
+
+In the code above, we first import the `Todo` model from `models.py`. Then, we retrieve all `Todo` objects from the database using the `objects.all()` method. Finally, we pass the `todos` queryset to the template as context.
+
+Now that our `home` view is able to retrieve all the data from the database, we need to be able to render the data onto our html page. Open `templates/app/home.html` and modfiy the code to the following:
+
+```html
+templates/app/home.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <div id="header">
+        <h1>My Todo List</h1>
+    </div>
+
+    <div id="list">
+        <h2>Items:</h2>
+        <table>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Created At</th>
+                <th>Completed</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for todo in todos %}
+              <tr>
+                <td>{{ todo.title }}</td>
+                <td>{{ todo.created_at }}</td>
+                <td>{{ todo.completed }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+        </table>          
+    </div>
+</body>
+</html>
+```
+
+In this example, we have added a table with the table rows of our data that we have defined in our model. Then we rendered our data for each column using a for loop written in Django template, whereby we accessed each column after the `.`.
+
+The double curly braces indicate that `todo.title`, `todo.created_at`, and `todo.completed` are dynamic variables that will be populated with values from the `Todo` model. When the template is rendered, these variables will be replaced with the actual values from the `Todo` objects that are passed to the template context. This will render the following onto our pagge:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/firsttable.png">
+</p>
+
+So far, we have learned how to retrieve and display data from a model that we created using Django Admin. However, in a real-world application, we will be getting data from users through forms, which we will cover next.
+
+## 2.7 Creating a Django Form
+
+
+
