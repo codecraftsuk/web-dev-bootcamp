@@ -17,7 +17,7 @@ Before creating a Django project, the first step would be to create a python vir
     python -m venv venv
     ```
 
-    This will create a folder with the name `venv` that essentially has all the necessary files to run python.
+    This will create a directory with the name `venv` that essentially has all the necessary files to run python.
 
 2.  To activate this new virtual environment created, run the following command:
 
@@ -63,7 +63,7 @@ In this demo, we will create a Todo application which allows the user to have CR
     python manage.py startapp todoapp
     ```
 
-    This will create a folder called `todoapp`, containing the following files:
+    This will create a directory called `todoapp`, containing the following files:
 
     - `models.py`: This file is used to define the data models for your application.
     - `views.py`: This file is used to define the views (i.e. the functions that handle HTTP requests) for your application.
@@ -102,5 +102,178 @@ In this demo, we will create a Todo application which allows the user to have CR
 
 At this point, all the boilerplate files have been created, and now it is time to start creating the todo application.
 
-## 2.3 Views
+## 2.3 Creating Our First View
 
+In Django, a view is a Python function that processes a web request and returns an HTTP response.
+
+When a user visits a URL on a Django-powered website, Django uses a URL dispatcher to route the request to the appropriate view. The view then processes the request by performing any necessary database queries or calculations, and returns an HTTP response to the client. It is time to write our first view. In the `todoapp/views.py` file, write the following:
+
+```python
+todoapp/views.py
+
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("Hello, world. This is the index function, which is rendering this string")
+```
+
+This is the simplest view possible in Django whereby we are returning a Http response with the string demosntrated. To call the view, we need to map it to a URL - and for this we need a URLconf which we have created in `todoapp/urls.py`.
+
+In the` todoapp/urls.py` file include the following code:
+
+```python
+todoapp/urls.py
+
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+```
+
+In this code,  we are using the `path` function in Django to define URL patterns for a Django application. The next line in the code says that in this current directory, we want to import the views.py file. Finally, we are creating a URL pattern to map our view to a URL.
+
+The next step is to link the `todoapp/urls.py` file to the `todoproject/urls.py` file. This is because the `todoproejct/urls.py` file is the URL config file for the Django project and what we have done so far is creatd a new application in the project and linked it to the project. However, we also need to link the app URLs to the main Django project. In the `todoproejct/urls.py`, you should see that there’s already a path called admin which we’ll go over later. For now, add the `todoapp` urls to the `todoproject` urls as follows:
+
+```python
+todoproject/urls.py
+
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include("todoapp.urls"))
+]
+```
+This sets the default base URL i.e. `localhost:5000/` to be rendered onto the `todoapp` urls and in the `todoapp` urls, you can see that the path `''` also maps the index function to `localhost:5000/` i.e. the base url. If your Django proejct is running, refresh the page or go to `localhost:5000/`. If your Django project is not running, make sure you are in your virtual environment and run the server as shown above. The following page should be seen.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/firstwebpage.png">
+</p>
+
+We now know that in Django, we can return a Http reponse and display a web page using a function created in the views file which is mapped onto a url in urls file. How about if we want to render a HTML page? To do this, the first step would be to create a directory called `templates` and in `todoapp` directory, another directory called `app`. Additionally, for the CSS, we can create a directory called `static` and inside it `css`, demonstrated as follows:
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/directoryforhtmlcss.png">
+</p>
+
+## 2.4 Rendering a HTML Page
+
+Before we create any files, for our todo app, we will have a homepage that will have the todo lists with CRUD functioanlity. Hence, we will rename the `index` function to `home` and edit the urls application urls file to rename our view function name. Now, we will create a html file in `templates/app` called `home.html`. In `home.html`, we will write some basic code which will display our home page.
+
+
+```html
+templates/app/home.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <div id="header">
+        <h1>My Todo List</h1>
+    </div>
+
+    <div id="list">
+        <h2>Items:</h2>
+    </div>
+</body>
+</html>
+```
+
+
+```python
+todoapp/views.py
+
+from django.shortcuts import render
+
+def home(request):
+    return render(request, 'app/home.html')
+```
+
+
+
+```python
+todoapp/urls.py
+
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),
+]   
+```
+
+Outcome:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/todowithhtmlrender.png">
+</p>
+
+The key difference in the view this time around is that rather than using hte `HttpResponse` function to render a string, we used the built in `render` to render the request and our html file. Now that we understand how to render a html page into our views, lets move onto how to add data into our views.
+
+
+## 2.5 Creating a Django Model
+
+In Django, a model is a Python class that represents a database table. Models define the structure of the data that will be stored in the database and provide an interface for accessing and manipulating that data.
+
+Each attribute of a model class represents a field in the corresponding database table. The field types define the kind of data that can be stored in the database, such as text, numbers, dates, or relationships to other tables.
+
+Django uses an Object-Relational Mapping (ORM) system to interact with the database, so developers can work with models as Python objects, rather than writing raw SQL queries.
+
+We will create a Django model that store the following data from the user:
+
+- `title` which is a CharField that represents the title of the todo item. It has a maximum length of 200 characters.
+
+- `created_at` which is a DateTimeField that represents the date and time when the todo item was created. It is automatically set to the current date and time when a new todo item is created.
+
+- `completed` which is a BooleanField that represents whether the todo item has been completed or not. It defaults to False.
+
+In our `todoapp/models.py` file, we can create this table as follows:
+
+```python
+todoapp/models.py
+
+from django.db import models
+
+class Todo(models.Model):
+    title = models.CharField(max_length=200)
+    created_at = models.DateTimeField(auto_now_add=True)
+    completed = models.BooleanField(default=False)
+```
+
+Once we have defined our model, we will need to create a migration to apply the changes to the database schema. This can be done using Django's manage.py command-line tool:
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+These commands will create a new migration file in the `todoapp/migrations` directory and apply the changes to the database. Hence, we have now created a new table in our database which will need to be populated by user input. Before that, we can verify the table has been made by using Django Admin.
+
+## 2.6 Using Django Admin
+
+Django Admin is a built-in application in the Django web framework that provides an administration interface for managing your application's data. It is a powerful tool that allows you to manage your project's data through a web-based interface, without needing to write any views or templates.
+
+With the Django Admin, you can create, read, update, and delete records in your database, as well as perform more advanced tasks like running database queries, exporting data to CSV or Excel, and managing users and groups. The Django Admin automatically generates forms and tables based on your model definitions, making it easy to get started and reducing the amount of code you need to write. 
+
+To use the Django Admin, follow these steps:
+
+1. Make sure you have created a superuser account. You can create one by running the command `python manage.py createsuperuser`. This will prompt you for a username, email address (optional), and password.
+
+2. Open your web browser and navigate to `http://localhost:8000/admin/`. You should see a login page.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/adminlogin.png">
+</p>
+
+3. Log in with your superuser account credentials.
+
+4. Once you are logged in, you should see the Django Admin dashboard. It will show you all the available models in your project. Verify our model has been created by ...
