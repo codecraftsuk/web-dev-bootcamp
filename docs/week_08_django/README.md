@@ -399,7 +399,7 @@ In this example, we import the `forms` module from Django, as well as the `Todo`
 Inside the `Meta` class, we specify the model to use (`Todo`) and the fields to include in the form (`title` and `completed`). This tells Django to automatically generate the form fields based on the model fields.
 
 Now we can use this `TodoForm` class in our views to render the form and handle form submissions. In order to take data from the user using this form, we need to create a html file that allows us to do so. In `templates/app`, create a new file called `forms.html` and create the form as such:
-<!-- 
+
 ```html
 templates/app/forms.html
 
@@ -419,7 +419,7 @@ templates/app/forms.html
     <div id="form">
         <h2>Create a new Todo</h2>
         <form method="post">
-            {% csrf_token %}
+            {% TEST_token %}
             {{ form.as_p }}
             <button type="submit">Save</button>
         </form>
@@ -428,7 +428,7 @@ templates/app/forms.html
 </html>
 ```
 
-In this code, The `method` attribute specifies the HTTP method used to submit the form data to the server, which in this case is `POST`. The` {% csrf_token %}` template tag outputs a hidden input field with a CSRF token, which is a security measure to prevent Cross-Site Request Forgery (CSRF) attacks. The `{{ form.as_p }}` template tag outputs the form fields as paragraphs (`<p>` elements) -->
+In this code, The `method` attribute specifies the HTTP method used to submit the form data to the server, which in this case is `POST`. The` {% TEST_token %}` template tag outputs a hidden input field with a CSRF token, which is a security measure to prevent Cross-Site Request Forgery (CSRF) attacks. The `{{ form.as_p }}` template tag outputs the form fields as paragraphs (`<p>` elements)
 
 
 We also need to create a new function in our `views.py` file so that we can render the form onto our html page as well as our html page, as shown below:
