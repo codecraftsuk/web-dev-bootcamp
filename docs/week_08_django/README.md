@@ -438,7 +438,7 @@ templates/app/forms.html
 </html>
 ```
 
-**Note for studnets:** In the code block above, use `{% %}` for the `csrf_token`. The brackets have been changed to avoid conflicts in this documentation.
+**Note for studnets:** In the code block above, replace the inner `{}` with `%%` for the `csrf_token` like in previous examples e.g.:`{% for %}`. The brackets have been changed to avoid conflicts in this documentation.
 
 In this code, The `method` attribute specifies the HTTP method used to submit the form data to the server, which in this case is `POST`. The `{{ csrf_token }}` template tag outputs a hidden input field with a CSRF token, which is a security measure to prevent Cross-Site Request Forgery (CSRF) attacks. The `{{ form.as_p }}` template tag outputs the form fields as paragraphs (`<p>` elements)
 
