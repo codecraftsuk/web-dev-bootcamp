@@ -1,13 +1,3 @@
----
-layout: post
-title: "Django Notes: Forms and CSRF Tokens"
-date: "2023-04-17"
-tags: [django, forms, jekyll]
-lcb: "{"
----
-
-
-
 # 1. Introduction to Django
 
 ## 1.1 What is Django
