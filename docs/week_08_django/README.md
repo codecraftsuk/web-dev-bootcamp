@@ -1,3 +1,14 @@
+---
+layout: post
+title: "Django Notes: Forms and CSRF Tokens"
+date: "2023-04-17"
+tags: [django, forms, jekyll]
+lcb: "{"
+rcb: "}"
+---
+
+
+
 # 1. Introduction to Django
 
 ## 1.1 What is Django
@@ -419,7 +430,7 @@ templates/app/forms.html
     <div id="form">
         <h2>Create a new Todo</h2>
         <form method="post">
-            (% csrf_token %)
+            {{ page.lcb }}% csrf_token %{{ page.rcb }}
             {{ form.as_p }}
             <button type="submit">Save</button>
         </form>
