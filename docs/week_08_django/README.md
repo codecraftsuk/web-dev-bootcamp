@@ -401,31 +401,31 @@ Inside the `Meta` class, we specify the model to use (`Todo`) and the fields to 
 Now we can use this `TodoForm` class in our views to render the form and handle form submissions. In order to take data from the user using this form, we need to create a html file that allows us to do so. In `templates/app`, create a new file called `forms.html` and create the form as such:
 
 ```html
-templates/app/forms.html
+  templates/app/forms.html
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forms</title>
-</head>
-<body>
-    <div id="header">
-        <h1>Form</h1>
-    </div>
-    
-    <div id="form">
-        <h2>Create a new Todo</h2>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Save</button>
-        </form>
-    </div>
-</body>
-</html>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Forms</title>
+  </head>
+  <body>
+      <div id="header">
+          <h1>Form</h1>
+      </div>
+      
+      <div id="form">
+          <h2>Create a new Todo</h2>
+          <form method="post">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button type="submit">Save</button>
+          </form>
+      </div>
+  </body>
+  </html>
 ```
 
 In this code, The `method` attribute specifies the HTTP method used to submit the form data to the server, which in this case is `POST`. The` {% csrf_token %}` template tag outputs a hidden input field with a CSRF token, which is a security measure to prevent Cross-Site Request Forgery (CSRF) attacks. The `{{ form.as_p }}` template tag outputs the form fields as paragraphs (`<p>` elements)
