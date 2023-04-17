@@ -419,7 +419,7 @@ templates/app/forms.html
     <div id="form">
         <h2>Create a new Todo</h2>
         <form method="post">
-            {% \csrf_token %}
+            {% -csrf_token- %}
             {{ form.as_p }}
             <button type="submit">Save</button>
         </form>
@@ -427,9 +427,9 @@ templates/app/forms.html
 </body>
 </html>
 ```
-Note: Do not include the `\` when using `csrf_token`.
+Note: Do not include the `-` when using `csrf_token`.
 
-In this code, The `method` attribute specifies the HTTP method used to submit the form data to the server, which in this case is `POST`. The` {% \csrf_token %}` template tag outputs a hidden input field with a CSRF token, which is a security measure to prevent Cross-Site Request Forgery (CSRF) attacks. The `{{ form.as_p }}` template tag outputs the form fields as paragraphs (`<p>` elements)
+In this code, The `method` attribute specifies the HTTP method used to submit the form data to the server, which in this case is `POST`. The` {% -csrf_token- %}` template tag outputs a hidden input field with a CSRF token, which is a security measure to prevent Cross-Site Request Forgery (CSRF) attacks. The `{{ form.as_p }}` template tag outputs the form fields as paragraphs (`<p>` elements)
 
 
 We also need to create a new function in our `views.py` file so that we can render the form onto our html page as well as our html page, as shown below:
