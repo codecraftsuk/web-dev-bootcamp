@@ -419,7 +419,7 @@ templates/app/forms.html
     <div id="form">
         <h2>Create a new Todo</h2>
         <form method="post">
-            {% raw %}{% csrf_token %}{% endraw %}
+            &#123;% csrf_token %&#125;
             {{ form.as_p }}
             <button type="submit">Save</button>
         </form>
