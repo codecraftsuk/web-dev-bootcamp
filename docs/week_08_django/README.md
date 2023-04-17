@@ -400,9 +400,9 @@ Inside the `Meta` class, we specify the model to use (`Todo`) and the fields to 
 
 Now we can use this `TodoForm` class in our views to render the form and handle form submissions. In order to take data from the user using this form, we need to create a html file that allows us to do so. In `templates/app`, create a new file called `forms.html` and create the form as such:
 
-
 ```html
 templates/app/forms.html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -415,11 +415,14 @@ templates/app/forms.html
     <div id="header">
         <h1>Form</h1>
     </div>
+    
     <div id="form">
         <h2>Create a new Todo</h2>
         <form method="post">
+          {% raw %}
             {% csrf_token %}
             {{ form.as_p }}
+          {% endraw %}
             <button type="submit">Save</button>
         </form>
     </div>
