@@ -427,6 +427,7 @@ templates/app/forms.html
 </body>
 </html>
 ```
+test
 
 In this code, The `method` attribute specifies the HTTP method used to submit the form data to the server, which in this case is `POST`. The` {% `csrf_token` %}` template tag outputs a hidden input field with a CSRF token, which is a security measure to prevent Cross-Site Request Forgery (CSRF) attacks. The `{{ form.as_p }}` template tag outputs the form fields as paragraphs (`<p>` elements)
 
