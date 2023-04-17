@@ -4,7 +4,6 @@ title: "Django Notes: Forms and CSRF Tokens"
 date: "2023-04-17"
 tags: [django, forms, jekyll]
 lcb: "{"
-rcb: "}"
 ---
 
 
@@ -430,7 +429,7 @@ templates/app/forms.html
     <div id="form">
         <h2>Create a new Todo</h2>
         <form method="post">
-            {{ page.lcb }}% csrf_token %{{ page.rcb }}
+            {{ csrf_token }}
             {{ form.as_p }}
             <button type="submit">Save</button>
         </form>
@@ -438,9 +437,10 @@ templates/app/forms.html
 </body>
 </html>
 ```
-Note: Replace `(% csrf_token %)` brackets with `{}` on the outside.
 
-In this code, The `method` attribute specifies the HTTP method used to submit the form data to the server, which in this case is `POST`. The `(% csrf_token %)` template tag outputs a hidden input field with a CSRF token, which is a security measure to prevent Cross-Site Request Forgery (CSRF) attacks. The `{{ form.as_p }}` template tag outputs the form fields as paragraphs (`<p>` elements)
+**Note for studnets:** In the code block above, use `{% %}` for the `csrf_token`. The brackets have been changed to avoid conflicts in this documentation.
+
+In this code, The `method` attribute specifies the HTTP method used to submit the form data to the server, which in this case is `POST`. The `{{ csrf_token }}` template tag outputs a hidden input field with a CSRF token, which is a security measure to prevent Cross-Site Request Forgery (CSRF) attacks. The `{{ form.as_p }}` template tag outputs the form fields as paragraphs (`<p>` elements)
 
 
 We also need to create a new function in our `views.py` file so that we can render the form onto our html page as well as our html page, as shown below:
