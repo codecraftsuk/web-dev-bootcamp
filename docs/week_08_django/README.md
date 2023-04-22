@@ -935,10 +935,12 @@ By adding this styling and adding the following class to the main tag i.e. `<mai
 ```html
 templates/app/base.html
 
+{% raw %}  # do not include this
 <main class="content-wrapper">
     {% block content %}
     {% endblock %}
 </main>
+{% endraw %}  # do not include this
 ```
 <p align="center">
   <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/basecss.png">
