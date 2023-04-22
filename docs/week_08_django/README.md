@@ -403,6 +403,7 @@ Now we can use this `TodoForm` class in our views to render the form and handle 
 ```html
 templates/app/forms.html
 
+{% raw %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -426,11 +427,12 @@ templates/app/forms.html
     </div>
 </body>
 </html>
+{% endraw %}
 ```
 
-**Note for students:** In the code block above, replace the inner `{}` with `%%` for the `csrf_token` like in previous examples with the for loops. The brackets have been changed to avoid conflicts in this documentation.
+**Note for students:** Do not include the `{% raw %}{% endraw %}` tags in your code. This is simply used to help render the code onto the notes page without causing issues rendering the documentation.
 
-In this code, The `method` attribute specifies the HTTP method used to submit the form data to the server, which in this case is `POST`. The `{{ csrf_token }}` template tag outputs a hidden input field with a CSRF token, which is a security measure to prevent Cross-Site Request Forgery (CSRF) attacks. The `{{ form.as_p }}` template tag outputs the form fields as paragraphs (`<p>` elements)
+In this code, The `method` attribute specifies the HTTP method used to submit the form data to the server, which in this case is `POST`. The `csrf_token` template tag outputs a hidden input field with a CSRF token, which is a security measure to prevent Cross-Site Request Forgery (CSRF) attacks. The `{{ form.as_p }}` template tag outputs the form fields as paragraphs (`<p>` elements)
 
 
 We also need to create a new function in our `views.py` file so that we can render the form onto our html page as well as our html page, as shown below:
@@ -627,6 +629,7 @@ To provide a user interface for editing or deleting a Todo item, HTML templates 
 
 ```html
 templates/app/edit.html
+
 {% raw %}
 <!DOCTYPE html>
 <html lang="en">
@@ -654,11 +657,11 @@ templates/app/edit.html
 {% endraw %}
 ```
 
-***Note for students***: make the same adjustment with the `csrf_token`, where the inner brackets are `%`.
 
 ```html
 templates/app/delete.html
 
+{% raw %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -676,6 +679,7 @@ templates/app/delete.html
     </form>
 </body>
 </html>
+{% endraw %}
 ```
 The final step to make sure that when the buttons are clicked on `home.html`, they redirect to their respective changes, is to edit the href for each button created in `home.html`
 
