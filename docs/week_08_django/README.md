@@ -403,7 +403,7 @@ Now we can use this `TodoForm` class in our views to render the form and handle 
 ```html
 templates/app/forms.html
 
-{% raw %}
+{% raw %}  # do not include this
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -427,7 +427,7 @@ templates/app/forms.html
     </div>
 </body>
 </html>
-{% endraw %}
+{% endraw %}  # do not include this
 ```
 
 **Note for students:** Do not include the `{% raw %}{% endraw %}` tags in your code. This is simply used to help render the code onto the notes page without causing issues rendering the documentation.
@@ -630,7 +630,7 @@ To provide a user interface for editing or deleting a Todo item, HTML templates 
 ```html
 templates/app/edit.html
 
-{% raw %}
+{% raw %}  # do not include this
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -654,14 +654,14 @@ templates/app/edit.html
     </form>
 </body>
 </html>
-{% endraw %}
+{% endraw %}  # do not include this
 ```
 
 
 ```html
 templates/app/delete.html
 
-{% raw %}
+{% raw %}  # do not include this
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -679,14 +679,14 @@ templates/app/delete.html
     </form>
 </body>
 </html>
-{% endraw %}
+{% endraw %}  # do not include this
 ```
 The final step to make sure that when the buttons are clicked on `home.html`, they redirect to their respective changes, is to edit the href for each button created in `home.html`
 
 ```html
 templates/app/home.html
 
-{% raw %}
+{% raw %} # do not include this
 {% for todo in todos %}
 <tr>
   <td>{{ todo.title }}</td>
@@ -698,7 +698,7 @@ templates/app/home.html
   </td>
 </tr>
 {% endfor %}
-{% endraw %}
+{% endraw %}  # do not include this
 ```
 
 Now, when the edit and delete buttons are clicked, the following pages are rendered:
@@ -720,6 +720,7 @@ The last part left for this website is to be able to navigate from our homepage,
 In the `templates/app` folder, create a html file called `base.html`.
 
 ```html
+{% raw %}  # do not include this
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -743,6 +744,7 @@ In the `templates/app` folder, create a html file called `base.html`.
     </main>
 </body>
 </html>
+{% endraw %}  # do not include this
 ```
 
 The `base.html` file is used to create a base template that can be extended by other templates. It contains the basic structure of the HTML file, such as the `<!DOCTYPE html>` declaration, the `html`, `head`, and `body` tags. The template language used in Django is used to define `blocks` of content that can be overridden by other templates that extend the base template.
@@ -765,6 +767,7 @@ where, in between block content and end block, the webpage will be enclosed in. 
 ```html
 templates/app/home.html
 
+{% raw %}  # do not include this
 {% extends "app/base.html" %}
 {% block content %}
 <!DOCTYPE html>
@@ -809,6 +812,7 @@ templates/app/home.html
 </body>
 </html>
 {% endblock %}
+{% endraw %}  # do not include this
 ```
 
 Now, we should expect that a nav bar to be rendered on this page, followed by the `home.html` content.
@@ -832,6 +836,7 @@ After creating the css file, we will need to link it to the `base.html` file so 
 ```html
 templates/app/base.html
 
+{% raw %}  # do not include this
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -857,6 +862,7 @@ templates/app/base.html
     </main>
 </body>
 </html>
+{% endraw %}  # do not include this
 ```
 
 In the head of the `base.html` file, we added the Django template for loading a static file alongside the link tag to link the stylesheet to the html. 
