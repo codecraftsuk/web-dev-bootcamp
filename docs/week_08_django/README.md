@@ -814,3 +814,122 @@ Now, the functionality of the application is finished, all is left is to add som
 
 ## 3.0 Adding CSS
 
+We can add CSS styling to each page of the website as we wish, but for this demo, we will only add styling to the nav i.e. the `base.html` file. From this, we will learn how to add css to any web page.
+
+The css files are contained inside the `static/css` folder as that is where will look for these files. Hence, for the `base.html` file, we will create a `base.css` file to go with it. 
+
+After creating the css file, we will need to link it to the `base.html` file so that the styling can be rendered onto that page. That can be done by simply loading the static file onto the html page as follows:
+
+```html
+templates/app/base.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper content-wrapper">
+            <div class="logo"><a href="{% url 'home' %}">TODO APP</a></div>
+            <div class="nav-links">
+                <a href="{% url 'form' %}">ADD TODO</a>            
+            </div>
+        </div>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
+```
+
+In the head of the `base.html` file, we added the Django template for loading a static file alongside the link tag to link the stylesheet to the html. 
+
+Now that the files are linked, let's add some styling to the nav bar.
+
+```css
+static/css/base.css
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+nav {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,74,186,1) 49%, rgba(76,76,189,1) 50%, rgba(48,62,97,1) 100%);
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  
+  nav a {
+    color: #f1f1f1;
+    text-decoration: none;
+    margin-right: 1em;
+    font-size: .9rem;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .logo a {
+    float: left;
+    font-size: 1.3em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav a:hover, nav .btn:hover, .logo:hover {
+    opacity: 0.7;
+  }
+  
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+```
+
+By adding this styling and adding the following class to the main tag i.e. `<main class="content-wrapper">` tag in the `base.html` file, we have the follwoing styled page:
+
+```html
+templates/app/base.html
+
+<main class="content-wrapper">
+    {% block content %}
+    {% endblock %}
+</main>
+```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/basecss.png">
+</p>
+
+The class `content-wrapper` created a max-width margin of 900px, hence, we also added it to the main tag to make sure the content is aligned with the nav bar. 
+
+Now that is the website complete!
+
+
