@@ -653,7 +653,7 @@ templates/app/edit.html
 </html>
 ```
 
-Note: make the same adjustment with the `csrf_token`, where the inner brackets are `%`.
+***Note for students***: make the same adjustment with the `csrf_token`, where the inner brackets are `%`.
 
 ```html
 templates/app/delete.html
