@@ -510,3 +510,194 @@ To see whether the form has worked and added a new row in our model, we can go b
 
 We have successfully created a form that allows for a user to input a todo which will be saved and displayed in the main todo table. However, what if we wanted to edit and delete the current todos that we have? We will explore that next.
 
+## 2.8 Editing and Deleting Existing Data
+
+The first thing we need to do to be able to edit or delete our data is to create buttons that will allow us to do so. Hence, in `home.html` where we rendered the data headings and rows, we can add another header called `actions` and two buttons called `edit` and `delete` as shown below:
+
+```html
+templates/app/home.html
+
+<thead>
+  <tr>
+    <th>Title</th>
+    <th>Created At</th>
+    <th>Completed</th>
+    <th>Actions</th>
+  </tr>
+</thead>
+<tbody>
+  {% for todo in todos %}
+  <tr>
+    <td>{{ todo.title }}</td>
+    <td>{{ todo.created_at }}</td>
+    <td>{{ todo.completed }}</td>
+    <td>
+      <a class="edit-btn" href="">Edit</a>
+      <a class="delete-btn" href="">Delete</a>
+    </td>
+  </tr>
+  {% endfor %}
+</tbody>
+```
+
+This will create another column in the data table with two buttons.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/buttons.png">
+</p>
+
+At the very moment, thw two buttons do not do anything as the `href` is not redirecting to any links. Hence, we need to create two views that can handle both the edit and delete functionality.
+
+```python
+todoapp/views.py
+
+def delete(request, id):
+    # Retrieve the Todo object with the specified id
+    todo = Todo.objects.get(id=id)
+    
+    # Check if the request method is POST
+    if request.method == 'POST':
+        # If it is, delete the Todo object from the database
+        todo.delete()
+        # Redirect to the home page after deletion
+        return redirect('home')
+    
+    # If the request method is GET, display a confirmation page
+    context = {'todo': todo}
+    return render(request, 'app/delete.html', context)
+```
+
+The function takes two arguments: the request object, which contains information about the current request being made, and the `id` of the todo item that we want to delete.
+
+First, we retrieve the todo item with the specified `id` from the database using the `get()` method on the Todo model.
+
+Next, we check whether the request method is a POST request. If it is, it means that the user has submitted a form to delete the todo item. In this case, we call the `delete()` method on the todo object to remove it from the database, and then redirect the user to the home page using the `redirect()` function.
+
+If the request method is not POST, it means that the user is trying to view the confirmation page to delete the todo item. In this case, we render the `delete.html` template and pass in the todo object as context so that we can display information about it on the confirmation page.
+
+Likewise, the same can be done for the edit button:
+
+```python
+todoapp/views.py
+
+def edit(request, id):
+    # Retrieve the Todo object with the specified id
+    todo = Todo.objects.get(id=id)
+    
+    # Check if the request method is POST
+    if request.method == 'POST':
+        # If it is, create a form instance with the POST data and the retrieved Todo object
+        form = TodoForm(request.POST, instance=todo)
+        
+        # Check if the form is valid
+        if form.is_valid():
+            # Save the form data to the database
+            form.save()
+            # Redirect to the home page after submission
+            return redirect('home')
+    
+    # If the request method is GET, display the form with the retrieved Todo object pre-filled
+    else:
+        form = TodoForm(instance=todo)
+    
+    # Pass the form and Todo object to the template as context
+    context = {'form': form, 'todo': todo}
+    return render(request, 'app/edit.html', context)
+```
+The `edit` function retrieves a `Todo` object with a specific `id` from the database and displays a form to edit its data. If the request method is POST, the function creates a form instance with the POST data and the retrieved `Todo` object, validates the form data, saves it to the database, and redirects to the home page. If the request method is GET, the function displays the form with the retrieved `Todo` object pre-filled. The function passes the form and `Todo` object to the template as context.
+
+Once the views for both edit and delete are created, corresponding URLs need to be defined to map the user's request to the appropriate view.
+
+```python
+todoapp/urls.py
+
+urlpatterns = [
+    path('', views.home, name='home'),
+    path('form/', views.form, name='form'),
+    path('edit/<int:id>/', views.edit, name='edit'), 
+    path('delete/<int:id>/', views.delete, name='delete'),
+]   
+```
+
+The URL pattern for edit view is defined as` edit/<int:id>/`, where `<int:id>` captures the `id` of the `Todo` object to be edited. Similarly, the URL pattern for delete view is defined as `delete/<int:id>/,` where `<int:id>` captures the `id` of the `Todo` object to be deleted.
+
+When a URL is requested that matches either of these URL patterns, Django will call the corresponding view function with the `id` captured from the URL pattern as an argument. This `id` is used by the view function to retrieve the relevant `Todo` object from the database, and perform the appropriate action (update or delete) based on the request method.
+
+To provide a user interface for editing or deleting a Todo item, HTML templates need to be created and rendered when the corresponding buttons are clicked by the user. These templates will display the necessary information and provide forms for submitting any changes made by the user.
+
+```html
+templates/app/edit.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+  <section id="hero">
+    <div class="content-wrapper">
+        <h1>Edit Todo</h1>
+    </div>
+    </section>
+    
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Update">
+      <a href="{% url 'home' %}"><input type="button" value="Return"></a>
+    </form>
+</body>
+</html>
+```
+
+```html
+templates/app/delete.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete</title>
+</head>
+<body>
+  <h3>Are you sure you want to delete the todo: {{ todo.title }}?</h3>
+  <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Confirm">
+        <a href="{% url 'home' %}"><input type="button" value="Deny"></a>
+    </form>
+</body>
+</html>
+```
+The final step to make sure that when the buttons are clicked on `home.html`, they redirect to their respective changes, is to edit the href for each button created in `home.html`
+
+```html
+templates/app/home.html
+
+{% for todo in todos %}
+<tr>
+  <td>{{ todo.title }}</td>
+  <td>{{ todo.created_at }}</td>
+  <td>{{ todo.completed }}</td>
+  <td>
+    <a class="edit-btn" href="{% url 'edit' todo.id %}">Edit</a>
+    <a class="delete-btn" href="{% url 'delete' todo.id %}">Delete</a>
+  </td>
+</tr>
+{% endfor %}
+```
+
+Now, when the edit and delete buttons are clicked, the following pages are rendered:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/edit-example.png">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/delete-example.png">
+</p>
