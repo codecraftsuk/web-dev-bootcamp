@@ -695,9 +695,9 @@ templates/app/home.html
 Now, when the edit and delete buttons are clicked, the following pages are rendered:
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/edit-example.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/edit-todo.png">
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/delete-example.png">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/delete-todo.png">
 </p>
