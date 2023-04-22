@@ -749,7 +749,7 @@ In the `templates/app` folder, create a html file called `base.html`.
 
 The `base.html` file is used to create a base template that can be extended by other templates. It contains the basic structure of the HTML file, such as the `<!DOCTYPE html>` declaration, the `html`, `head`, and `body` tags. The template language used in Django is used to define `blocks` of content that can be overridden by other templates that extend the base template.
 
-For example, the `{% block title %}{% endblock %}` block in the head section can be overridden by a child template by defining a new block with the same name. Similarly, the `{% block content %}{% endblock %}` block in the main section can be overridden to define the main content of the page.
+For example, the `block title` and `endblock` block in the head section can be overridden by a child template by defining a new block with the same name. Similarly, the `block content` and `endblock` block in the main section can be overridden to define the main content of the page.
 
 When a child template extends the `base.html` file, it essentially inherits all of its content and can override any block defined in the parent template. This makes it easier to reuse common elements of a website across multiple pages. For example, if you have a header and footer that appear on every page, you can define them in the `base.html` file and then extend that file in each child template to include the header and footer on every page. In this scenario, we will havea a nav bar in every section.
 
