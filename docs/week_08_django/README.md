@@ -627,7 +627,7 @@ To provide a user interface for editing or deleting a Todo item, HTML templates 
 
 ```html
 templates/app/edit.html
-
+{% raw %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -644,13 +644,14 @@ templates/app/edit.html
     </section>
     
     <form method="post">
-      {{ csrf_token }}
+      {% csrf_token %}
       {{ form.as_p }}
       <input type="submit" value="Update">
       <a href="{% url 'home' %}"><input type="button" value="Return"></a>
     </form>
 </body>
 </html>
+{% endraw %}
 ```
 
 ***Note for students***: make the same adjustment with the `csrf_token`, where the inner brackets are `%`.
