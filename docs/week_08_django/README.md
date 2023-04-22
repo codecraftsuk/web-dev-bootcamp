@@ -756,6 +756,7 @@ When a child template extends the `base.html` file, it essentially inherits all 
 To extend this `base.html` file to the rest of the html files created, simply add the following to each html file:
 
 ```html
+{% raw %}  # do not include this
 {% extends "app/base.html" %}
 {% block content %}
 
