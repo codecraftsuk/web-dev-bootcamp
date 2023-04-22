@@ -686,6 +686,7 @@ The final step to make sure that when the buttons are clicked on `home.html`, th
 ```html
 templates/app/home.html
 
+{% raw %}
 {% for todo in todos %}
 <tr>
   <td>{{ todo.title }}</td>
@@ -697,6 +698,7 @@ templates/app/home.html
   </td>
 </tr>
 {% endfor %}
+{% endraw %}
 ```
 
 Now, when the edit and delete buttons are clicked, the following pages are rendered:
