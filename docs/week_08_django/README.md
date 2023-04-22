@@ -1,9 +1,6 @@
 # 1. Introduction to Django
 
-## 1.1 What is Django
-
-## 1.2 Setting up Django Environment
-
+Django is a high-level Python web framework that is widely used for building web applications. It follows the model-view-controller (MVC) architectural pattern, which separates the application's data, user interface, and control logic into three distinct components. Django provides many built-in features, including an object-relational mapper (ORM) for interacting with databases, a powerful URL routing system, a templating engine for rendering HTML pages, and an easy-to-use administration interface for managing application data. Django also emphasizes security, scalability, and maintainability, making it an excellent choice for building complex web applications. With its comprehensive documentation, large community, and rich ecosystem of third-party packages, Django is a versatile and robust framework that can help developers quickly create sophisticated web applications.
 
 # 2. Fundamentals
 
