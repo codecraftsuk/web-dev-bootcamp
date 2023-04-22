@@ -701,3 +701,116 @@ Now, when the edit and delete buttons are clicked, the following pages are rende
 <p align="center">
   <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/delete-todo.png">
 </p>
+
+Now we have full CRUD functionality, where we can `create` new data using our form, `read` data on our home page which reads from our database, `update` and `delete` our exisitng data.
+
+The last part left for this website is to be able to navigate from our homepage, which renders the `Todos` to our form, which allows us create new `Todos`. To do this, we will create a nav bar that will allow us to access each page and the easiest way to ensure the nav bar is rendered on every single page is to create a `base.html` adn extend the html elements needed for a nav bar onto all of our other html pages.
+
+## 2.9 Creating a Nav Bar and Extending HTML
+
+In the `templates/app` folder, create a html file called `base.html`.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper content-wrapper">
+            <div class="logo"><a href="{% url 'home' %}">TODO APP</a></div>
+            <div class="nav-links">
+                <a href="{% url 'form' %}">ADD TODO</a>            
+            </div>
+        </div>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
+```
+
+The `base.html` file is used to create a base template that can be extended by other templates. It contains the basic structure of the HTML file, such as the `<!DOCTYPE html>` declaration, the `html`, `head`, and `body` tags. The template language used in Django is used to define `blocks` of content that can be overridden by other templates that extend the base template.
+
+For example, the `{% block title %}{% endblock %}` block in the head section can be overridden by a child template by defining a new block with the same name. Similarly, the `{% block content %}{% endblock %}` block in the main section can be overridden to define the main content of the page.
+
+When a child template extends the `base.html` file, it essentially inherits all of its content and can override any block defined in the parent template. This makes it easier to reuse common elements of a website across multiple pages. For example, if you have a header and footer that appear on every page, you can define them in the `base.html` file and then extend that file in each child template to include the header and footer on every page. In this scenario, we will havea a nav bar in every section.
+
+To extend this `base.html` file to the rest of the html files created, simply add the following to each html file:
+
+```html
+{% extends "app/base.html" %}
+{% block content %}
+
+{% endblock %}
+```
+
+where, in between block content and end block, the webpage will be enclosed in. An example of this is shown below:
+
+```html
+templates/app/home.html
+
+{% extends "app/base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <div id="header">
+        <h1>My Todo List</h1>
+    </div>
+
+    <div id="list">
+        <h2>Items:</h2>
+        <table>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Created At</th>
+                <th>Completed</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for todo in todos %}
+              <tr>
+                <td>{{ todo.title }}</td>
+                <td>{{ todo.created_at }}</td>
+                <td>{{ todo.completed }}</td>
+                <td>
+                  <a class="edit-btn" href="{% url 'edit' todo.id %}">Edit</a>
+                  <a class="delete-btn" href="{% url 'delete' todo.id %}">Delete</a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+        </table>          
+    </div>
+</body>
+</html>
+{% endblock %}
+```
+
+Now, we should expect that a nav bar to be rendered on this page, followed by the `home.html` content.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/navbarextended.png">
+</p>
+
+Follow this template and add it to each html page to get the nav bar onto every page.
+
+Now, the functionality of the application is finished, all is left is to add some styling using css.
+
+## 3.0 Adding CSS
+
