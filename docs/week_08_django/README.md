@@ -14,9 +14,17 @@ Before creating a Django project, the first step would be to create a python vir
     python -m venv venv
     ```
 
-    This will create a directory with the name `venv` that essentially has all the necessary files to run python.
+    This will create a directory with the name `venv` that essentially has all the necessary files to run python. 
 
-2.  To activate this new virtual environment created, run the following command:
+2. Open up visual studio code:
+
+    ```bash
+    code .
+    ```
+
+    You should see in this repository that there is a folder called `venv`.
+
+3.  To activate this new virtual environment created, run the following command:
 
     If you are on Linux or MacOS
 
@@ -32,13 +40,13 @@ Before creating a Django project, the first step would be to create a python vir
 
     At this point, you should see `(venv)` appear at the beginning of your terminal prompt, indicating that you are now working within the virtual environment.
 
-3. Now that the virtual environment is created, it is time to download the dependencies needed to run Django. It is good practise to create a `requirements.txt` file to put all your dependencies inside. Create a new text file as such and type `Django` and save.
+4. Now that the virtual environment is created, it is time to download the dependencies needed to run Django. It is good practise to create a `requirements.txt` file to put all your dependencies inside. Create a new text file as such and type `Django` and save.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/django-requirements.png">
 </p>
 
-4. Install Django by running the following `pip` command:
+5. Install Django by running the following `pip` command:
 
     ```bash
     pip install -r requirements.txt
