@@ -24,7 +24,7 @@ Before creating a Django project, the first step would be to create a python vir
 
     You should see in this repository that there is a folder called `venv`.
 
-3.  To activate this new virtual environment created, run the following command:
+3.  To activate this new virtual environment created, run the following command in the terminal on VSC:
 
     If you are on Linux or MacOS
 
