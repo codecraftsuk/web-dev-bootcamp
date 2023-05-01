@@ -40,7 +40,7 @@ Before creating a Django project, the first step would be to create a python vir
 
     At this point, you should see `(venv)` appear at the beginning of your terminal prompt, indicating that you are now working within the virtual environment.
 
-4. Now that the virtual environment is created, it is time to download the dependencies needed to run Django. It is good practise to create a `requirements.txt` file to put all your dependencies inside. Create a new text file as such and type `Django` and save.
+4. Now that the virtual environment is created, it is time to download the dependencies needed to run Django. It is good practise to create a `requirements.txt` file to put all your dependencies inside. Create a new text file as such and type `Django` inside the `requirements.txt` file and save the file.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_08_django/django-requirements.png">
