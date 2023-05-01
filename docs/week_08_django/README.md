@@ -18,8 +18,16 @@ Before creating a Django project, the first step would be to create a python vir
 
 2.  To activate this new virtual environment created, run the following command:
 
+    If you are on Linux or MacOS
+
     ```bash
     source venv/bin/activate
+    ```
+
+    If you are on windows, use:
+
+    ```bash
+    source venv/Scripts/activate
     ```
 
     At this point, you should see `(venv)` appear at the beginning of your terminal prompt, indicating that you are now working within the virtual environment.
