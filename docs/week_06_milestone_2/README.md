@@ -54,7 +54,7 @@ Step 7: Completing a todo
 - `handleCompleteTodo` will take the `id` of the todo as an argument which the user intends to complete.
 - Map out the todos, find the todo which matches the `id` and and update the todo object in array.
 
-# ADD MORE FESTURES!!!!
+Step 8: Styling
 
 # 1. Setting up the React Environment locally
 
@@ -462,7 +462,6 @@ const handleCompleteTodo = (id) => {
     return todo;
   });
   setTodos(updatedTodos);
-  console.log(updatedTodos);
 };
 ```
 
@@ -550,7 +549,6 @@ function App() {
       return todo;
     });
     setTodos(updatedTodos);
-    console.log(updatedTodos);
   };
 
   return (
@@ -577,3 +575,181 @@ Your application should look like this:
 <p align="center">
   <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_06_milestone_2/completedtodo.png">
 </p>
+
+# 8. Styling
+
+To make the app some what look better lets add some styles to the to the App.css files
+Copy and paste these styles into the App.css file:
+
+```css
+/* Center the content of body */
+body {
+  display: flex;
+  justify-content: center;
+}
+
+/* the styles for App component */
+.App {
+  font-family: sans-serif;
+  width: 500px;
+}
+
+/* styles for completed todo */
+.completed {
+  text-decoration: line-through;
+  color: red;
+}
+
+/* styles of children of form */
+form * {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* text input styles */
+form input {
+  width: calc(100% - 140px);
+  margin-right: 10px;
+}
+
+/* form add button styles */
+form button {
+  width: 100px;
+}
+
+/* Todo component styles */
+.App div {
+  width: 100%;
+  background-color: rgb(221, 218, 218);
+  padding: 20px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+/* Todo X button styles */
+.App div button {
+  border: none;
+  padding: 5px;
+  background-color: transparent;
+  color: red;
+  font-size: 1.3rem;
+  width: 20px;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+```
+
+Add a "App" `className` to the `div` in App component and also `h1` tag with your app name:
+
+```jsx
+  <div className="App">
+      <h1>My Todo App</h1>
+      <TodoForm handleFormSubmit={handleFormSubmit} />
+```
+
+Overall, your App component should look like this:
+
+```jsx
+function App() {
+  const [todos, setTodos] = useState([]);
+
+  const handleFormSubmit = (newTodo) => {
+    const obj = { id: todos.length + 1, completed: false, text: newTodo };
+    setTodos([...todos, obj]);
+  };
+
+  const handleDeleteTodo = (id) => {
+    const filteredTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(filteredTodos);
+  };
+
+  const handleCompleteTodo = (id) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        todo.completed = !todo.completed;
+      }
+      return todo;
+    });
+    setTodos(updatedTodos);
+    console.log(updatedTodos);
+  };
+
+  return (
+    <div className="App">
+      <h1>My Todo App</h1>
+      <TodoForm handleFormSubmit={handleFormSubmit} />
+
+      {todos.map((todo) => (
+        <Todo
+          key={todo.id}
+          todoText={todo.text}
+          id={todo.id}
+          handleDeleteTodo={handleDeleteTodo}
+          handleCompleteTodo={handleCompleteTodo}
+          completed={todo.completed}
+        />
+      ))}
+    </div>
+  );
+}
+```
+
+your Todo component should look something like:
+
+```jsx
+const Todo = ({
+  todoText,
+  id,
+  handleDeleteTodo,
+  handleCompleteTodo,
+  completed,
+}) => {
+  console.log(completed);
+  return (
+    <div
+      className={completed ? "completed" : ""}
+      onDoubleClick={() => handleCompleteTodo(id)}
+    >
+      {todoText} <button onClick={() => handleDeleteTodo(id)}>X</button>
+    </div>
+  );
+};
+```
+
+your TodoForm should like this:
+
+```jsx
+const TodoForm = ({ handleFormSubmit }) => {
+  const [todo, setTodo] = useState();
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    if (todo) return handleFormSubmit(todo);
+  };
+
+  return (
+    <form onSubmit={onSubmit}>
+      <input
+        value={todo}
+        onChange={(e) => setTodo(e.target.value)}
+        type="text"
+        placeholder="New Todo"
+      />
+      <button type="submit">Add</button>
+    </form>
+  );
+};
+```
+
+The final application should look like this:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_06_milestone_2/finalproject.png">
+</p>
+
+# Home work for you
+
+Take this application and add more features to it, for example the app is missing functionality to update the text of the todo, maybe you can add another method to the App component to loop over all the items in the todos array and find the todo that matches the `id` which will be passed in as `argument`, if todo's `id` matches the args `id` then update the text which will be passed in as the second argument.
+
+Play around with the application, with the code, add `console.log` all over the application and see for yourself how it all works.
