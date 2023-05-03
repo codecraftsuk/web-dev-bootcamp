@@ -33,16 +33,26 @@ Step 3: Create the TodoForm component
 Step 4: Manage state in the App component
 
 - Inside the "App" component, add a state object that contains a "todos" array
-- Pass the "todos" array as a prop to the "Todo" component
 - Add a method to the "App" component that takes a new todo item as an argument and adds it to the "todos" array
 - Pass the method as a prop to the "TodoForm" component
-- Modify the "onSubmit" event handler in the "TodoForm" component to call the method with the value of the input field as an argument
 
 Step 5: Render the todos
 
 - Import the "Todo" component in the "App.js" file
 - Inside the "Todo" component, map over the "todos" array and return a list item for each item in the array
 - Add a key prop to each list item that is set to the index of the item in the array
+
+Step 6: Delete a todo
+
+- Inside the "App" component, add another method called "handleDeleteTodo"
+- `handleDeleteTodo` will take the `id` of the todo as an argument which the user intends to delete.
+- Filter out the todo which matches the `id` and set the todos state to new filtered todos.
+
+Step 7: Completing a todo
+
+- Inside the "App" component, add another method called "handleCompleteTodo"
+- `handleCompleteTodo` will take the `id` of the todo as an argument which the user intends to complete.
+- Map out the todos, find the todo which matches the `id` and and update the todo object in array.
 
 # ADD MORE FESTURES!!!!
 
@@ -240,4 +250,330 @@ save and now you will see a simple form with text field and a button on the scre
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_06_milestone_2/todoform.png">
+</p>
+
+# 4. Manage the State in App.js
+
+1. Inside the "App" component, import useState and add a state object that contains a "todos" array
+
+```jsx
+const [todos, setTodos] = useState([]);
+```
+
+Note - again we are going to initialize the state with an empty array
+
+2. Add a method to the "App" component that takes a new todo item as an argument and adds it to the "todos" array
+
+```jsx
+const handleFormSubmit = (newTodo) => {
+  const obj = { id: todos.length + 1, completed: false, text: newTodo };
+  setTodos([...todos, obj]);
+};
+```
+
+- `id` will be used for `key` prop rendering the list. The reason why we are setting it `todos.length + 1` is because to make to sure the id is unique.
+- by default the todo will not be completed.
+
+3. Pass the method as a prop to the "TodoForm" component
+
+```jsx
+<TodoForm handleFormSubmit={handleFormSubmit} />
+```
+
+so far, you should have something like this in App.js:
+
+```jsx
+import React, { useState } from "react";
+
+function App() {
+  const [todos, setTodos] = useState([]);
+
+  const handleFormSubmit = (newTodo) => {
+    const obj = { id: todos.length + 1, completed: false, text: newTodo };
+    setTodos([...todos, obj]);
+  };
+
+  return (
+    <div>
+      <TodoForm handleFormSubmit={handleFormSubmit} />
+    </div>
+  );
+}
+```
+
+# 5. Render `todos`
+
+1. Import the "Todo" component in the "App.js" file
+2. Under the "TodoForm" component, map over the "todos" array and return a `Todo` component for each item in the array
+
+```jsx
+{
+  todos.map((todo) => <Todo todoText={todo.text} />);
+}
+```
+
+3. Add a key prop to each list item that is set to the todo text.
+
+```jsx
+<Todo key={todo.id} todoText={todo.text} />
+```
+
+Note - It is a bad practice to have the todo text as key or even the array index as a key. The todo text is a bad because the array could have multiple items with the same text meaning multiple components with the same key. Array Indexes are bad because when the the order changes the whole list will be re-rendered.
+The key should be unique, in most cases it would be the id returned by the Backend or Database.
+
+App component should be something that looks like:
+
+```jsx
+function App() {
+  const [todos, setTodos] = useState([]);
+
+  const handleFormSubmit = (newTodo) => {
+    const obj = { id: todos.length + 1, completed: false, text: newTodo };
+    setTodos([...todos, obj]);
+  };
+
+  return (
+    <div>
+      <TodoForm handleFormSubmit={handleFormSubmit} />
+
+      {todos.map((todo) => (
+        <Todo key={todo.id} todoText={todo.text} />
+      ))}
+    </div>
+  );
+}
+```
+
+So far your application should look something like this:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_06_milestone_2/todolist.png">
+</p>
+
+# 6. Delete a Todo
+
+1. Inside the Todo component add a button to trigger the deletion of todo
+
+```jsx
+const Todo = ({ todoText }) => {
+  return (
+    <div>
+      {todoText} <button>X</button>
+    </div>
+  );
+};
+```
+
+2. The Todo component should also now be taking in the `id` as a prop as we will need it for passing it to the deletion handler. We need to pass in the id from when we are mapping over the todos in App component
+
+```jsx
+<Todo key={todo.id} todoText={todo.text} id={todo.id} />
+```
+
+3. Take in another prop called "handleDeleteTodo", add the event prop (onClick) for the function and pass the `id` of todo to the function
+
+```jsx
+const Todo = ({ todoText, id, handleDeleteTodo }) => {
+  return (
+    <div>
+      {todoText} <button onClick={() => handleDeleteTodo(id)}>X</button>
+    </div>
+  );
+};
+```
+
+4. Inside the "App" component, add another method called "handleDeleteTodo" and pass it to the Todo Component
+5. `handleDeleteTodo` will take the `id` of the todo as an argument which the user intends to delete.
+6. Filter out the todo which matches the `id` and set the todos state to new filtered todos.
+
+```jsx
+const handleDeleteTodo = (id) => {
+  console.log("hi");
+  const filteredTodos = todos.filter((todo) => todo.id !== id);
+  setTodos(filteredTodos);
+};
+```
+
+App component should like this:
+
+```jsx
+function App() {
+  const [todos, setTodos] = useState([]);
+
+  const handleFormSubmit = (newTodo) => {
+    const obj = { id: todos.length + 1, completed: false, text: newTodo };
+    setTodos([...todos, obj]);
+  };
+
+  const handleDeleteTodo = (id) => {
+    console.log("hi");
+    const filteredTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(filteredTodos);
+  };
+
+  return (
+    <div>
+      <TodoForm handleFormSubmit={handleFormSubmit} />
+
+      {todos.map((todo) => (
+        <Todo
+          key={todo.id}
+          todoText={todo.text}
+          id={todo.id}
+          handleDeleteTodo={handleDeleteTodo}
+        />
+      ))}
+    </div>
+  );
+}
+```
+
+your app should look something like this:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_06_milestone_2/deletetodo.png">
+</p>
+
+# 7. Completing a Todo
+
+1. Inside the Todo component take in another prop function called `handleCompleteTodo`
+2. Add `handleCompleteTodo` to the `div` as a double-click event (onDoubleClick)
+
+```jsx
+const Todo = ({ todoText, id, handleDeleteTodo, handleCompleteTodo }) => {
+  return (
+    <div onDoubleClick={() => handleCompleteTodo(id)}>
+      {todoText} <button onClick={() => handleDeleteTodo(id)}>X</button>
+    </div>
+  );
+};
+```
+
+3. Inside the "App" component, add another method called "handleCompleteTodo" and pass it to the Todo component
+4. `handleCompleteTodo` will take the `id` of the todo as an argument which the user intends to complete.
+5. Map out the todos, find the todo which matches the `id` and and update the todo object in array.
+
+```jsx
+const handleCompleteTodo = (id) => {
+  const updatedTodos = todos.map((todo) => {
+    if (todo.id === id) {
+      todo.completed = !todo.completed;
+    }
+    return todo;
+  });
+  setTodos(updatedTodos);
+  console.log(updatedTodos);
+};
+```
+
+- we are looping over the todos and searching for one that matches the `id`
+- when we find one that matches, we simply invert the value of `completed` property, simply by putting `!` in front of the the current value. if current value is true it will be inverted to false and false to true.
+
+6. Apply css class to the div if the todo is completed.
+
+   - Pass the `completed` prop to Todo Component
+
+   ```jsx
+   {
+     todos.map((todo) => (
+       <Todo
+         key={todo.id}
+         todoText={todo.text}
+         id={todo.id}
+         handleDeleteTodo={handleDeleteTodo}
+         handleCompleteTodo={handleCompleteTodo}
+         completed={todo.completed}
+       />
+     ));
+   }
+   ```
+
+   - Take in the `completed` prop in Todo component and apply a `className` to the `div`.
+
+   ```jsx
+   const Todo = ({
+     todoText,
+     id,
+     handleDeleteTodo,
+     handleCompleteTodo,
+     completed,
+   }) => {
+     return (
+       <div
+         className={completed ? "completed" : ""}
+         onDoubleClick={() => handleCompleteTodo(id)}
+       >
+         {todoText} <button onClick={() => handleDeleteTodo(id)}>X</button>
+       </div>
+     );
+   };
+   ```
+
+   Note - we are checking if the `completed` is `true`, if its we will apply 'completed` class to the div, if not we will add an empty string to class, in other words no class name.
+
+   - in App.css add styles for the `completed` class.
+
+   ```css
+   .completed {
+     text-decoration: line-through;
+     color: red;
+   }
+   ```
+
+   - In App.js file make sure you have imported the css file.
+
+   ```jsx
+   import "./App.css";
+   ```
+
+App component should look like this:
+
+```jsx
+function App() {
+  const [todos, setTodos] = useState([]);
+
+  const handleFormSubmit = (newTodo) => {
+    const obj = { id: todos.length + 1, completed: false, text: newTodo };
+    setTodos([...todos, obj]);
+  };
+
+  const handleDeleteTodo = (id) => {
+    const filteredTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(filteredTodos);
+  };
+
+  const handleCompleteTodo = (id) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        todo.completed = !todo.completed;
+      }
+      return todo;
+    });
+    setTodos(updatedTodos);
+    console.log(updatedTodos);
+  };
+
+  return (
+    <div>
+      <TodoForm handleFormSubmit={handleFormSubmit} />
+
+      {todos.map((todo) => (
+        <Todo
+          key={todo.id}
+          todoText={todo.text}
+          id={todo.id}
+          handleDeleteTodo={handleDeleteTodo}
+          handleCompleteTodo={handleCompleteTodo}
+          completed={todo.completed}
+        />
+      ))}
+    </div>
+  );
+}
+```
+
+Your application should look like this:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/codecraftsuk/web-dev-bootcamp/main/docs/_media/week_06_milestone_2/completedtodo.png">
 </p>

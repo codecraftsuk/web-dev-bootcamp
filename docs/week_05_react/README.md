@@ -162,6 +162,38 @@ In this example, we're defining a new function called MyComponent that returns a
 
 Note that to use JSX in your React code, you'll need to set up a build process that transpiles your JSX code into plain JavaScript using a tool like Babel.
 
+#### JavaScript inside JSX
+
+To write JavaScript inside JSX, you can use curly braces `{}` to escape into JavaScript mode. For example:
+
+```
+import React from 'react';
+
+function App() {
+  const name = 'John';
+
+  return (
+    <div>
+      <h1>Hello, {name}!</h1>
+      <p>The current date is {new Date().toLocaleDateString()}.</p>
+    </div>
+  );
+}
+
+export default App;
+```
+
+In this example, we have a `const` variable called `name` that is set to the string value 'John'. We then use curly braces to embed the `name` variable and a `new Date()` call inside the JSX code. This will cause the `name` variable and the current date to be interpolated into the resulting HTML output.
+
+The resulting HTML output would look something like:
+
+```
+<div>
+  <h1>Hello, John!</h1>
+  <p>The current date is 5/3/2023.</p>
+</div>
+```
+
 ## 2.3 Set up a React Environment Locally
 
 To set up a React environment locally, you will need to:
