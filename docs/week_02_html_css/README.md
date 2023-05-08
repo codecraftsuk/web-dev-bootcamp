@@ -220,3 +220,124 @@ CSS comments are used to provide explanations or notes in the code. They are ign
 ``` css
 /* This is a comment */
 ```
+
+# 3. Step-by-Step Guide
+
+Now that you've learned the basics of HTML and CSS in section 1 and 2, it's time to put your knowledge into practice! Follow this step-by-step guide to create your own webpage from scratch. We'll walk you through the process of setting up your HTML document, adding content, and styling your page with CSS. By the end of this guide, you'll have the foundational skills you need to create a simple but functional webpage. So roll up your sleeves and let's get started!
+
+## 3.1 Setting Up Your Text Editor
+
+Start by opening a text editor like Notepad or Visual Studio Code.
+
+1. Open up a directory in which you want to create this website and run the following command in the terminal:
+
+    ```bash
+    code .
+    ```
+    This will open up the directory in Visual Studio Code.
+
+2. Create a new file and save it as `index.html`.
+
+![Alt text](../_media/week_02_html_css/walk-through-1.png)
+
+> Go to File > New File or you can click the new file icon on the Explorer panel in Visual Studio Code.
+
+![Alt text](../_media/week_02_html_css/walk-through-2.png)
+
+![Alt text](../_media/week_02_html_css/walk-through-3.png)
+## 3.2 Basic HTML Structure
+
+In the new file, create the basic structure of an HTML document by typing the following code:
+
+```html 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My First Webpage</title>
+</head>
+<body>
+	
+</body>
+</html>
+```
+
+This code defines the document type, creates the main HTML container, and sets up the head and body sections of the file.
+
+## 3.3 Creating HTML Content
+
+Inside the body tags, add some content to your webpage. This could include text, images, or links.
+
+For example, you could add a heading and a paragraph like this:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My First Webpage</title>
+</head>
+<body>
+	<h1>Welcome to my first webpage</h1>
+	<p>This is my first attempt at creating a webpage using HTML and CSS.</p>
+</body>
+</html>
+```
+
+## 3.4 Saving and Previewing Your HTML File
+
+Save your HTML file with a descriptive name and the .html extension, such as "index.html".
+
+![Alt text](../_media/week_02_html_css/walk-through-4.png)
+
+> Go to File > Save or Ctrl + S to save the file.
+
+Open the file in your web browser to see how it looks so far.
+
+![Alt text](../_media/week_02_html_css/walk-through-5.png)
+
+> Right-click on the file and select "Open with" and then choose your web browser. You could also use a Visual Studio Code extension [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+It should display the heading and paragraph you added in step 3.3.
+
+![Alt text](../_media/week_02_html_css/walk-through-6.png)
+
+## 3.5 Linking to a CSS File
+
+Now let's add some style to our webpage using CSS. In the same directory as your HTML file, create a new file and save it with a .css extension, such as "style.css".
+
+![Alt text](../_media/week_02_html_css/walk-through-7.png)
+
+## 3.6 Basic CSS Syntax
+
+In the head section of your HTML file, link to your CSS file by adding the following code:
+
+```html
+<head>
+	<title>My First Webpage</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+```
+
+This code tells the browser to load your CSS file and apply its styles to your HTML content.
+
+## 3.7 Changing Background Color with CSS
+
+Open your CSS file and add some basic styles to your webpage. For example, you could change the background color of your webpage by typing the following code:
+
+```css
+body {
+	background-color: #524bc1;
+}
+```
+This code sets the background color of the body section to a CodeCrafts purple color.
+
+## 3.8 Saving and Previewing Your CSS File
+
+Save your CSS file and refresh your HTML file in the browser to see the changes. Your webpage should now have a CodeCrafts purple background color.
+
+![Alt text](../_media/week_02_html_css/walk-through-8.png)
+
+## 3.9 Adding More HTML Content
+
+Experiment with adding more HTML content and CSS styles to your webpage. You could try adding more headings, paragraphs, images, or links, and experimenting with different CSS properties like font size, color, and spacing.
+
+That's it! By following these steps, you should now have a basic webpage created using HTML and CSS.
