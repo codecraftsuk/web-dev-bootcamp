@@ -62,7 +62,7 @@ In this demo, we will create a Todo application which allows the user to have CR
     django-admin startproject todoproject
     ```
 
-    TWhen you run the command `django-admin startproject todoproject`, it creates a new directory called `todoproject` (the name you provide as an argument) in your current working directory. The myproject directory contains the necessary files and directories for a basic Django project, such as `manage.py`, `settings.py`, and `urls.py`.
+    When you run the command `django-admin startproject todoproject`, it creates a new directory called `todoproject` (the name you provide as an argument) in your current working directory. The myproject directory contains the necessary files and directories for a basic Django project, such as `manage.py`, `settings.py`, and `urls.py`.
 
     - `manage.py` is a Python script that is used to run various commands related to your project, such as starting the development server, creating database tables, and running tests.
 
