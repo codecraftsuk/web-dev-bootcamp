@@ -100,11 +100,51 @@ This relational database structure allows us to perform various operations. For 
 
 We will focus on relational databases because they offer the opportunity to learn how to query data using SQL, which is a widely used and powerful language for database management. Additionally, understanding relational databases is valuable for working with frameworks like Django, as they utilize structured relational tables to organize and manipulate data efficiently.
 
+# 1.6 Database Management Systems (DBMS)
+
+A DBMS is software that enables the creation, management, and manipulation of databases. It provides an interface for users to interact with the database, perform queries, and manage data.
+
+Some popular DBMSs include MySQL, Postgres, Oracle Database, Microsoft SQL Server, SQLite, and MongoDB.
+
+DBMSs handle tasks such as data storage, data retrieval, data security, concurrency control, and query optimization.
+
 
 # 2. SQL Fundamentals
 
-## 2.1
+We will be learning SQL with a particular focus on utilising PostgreSQL as our database management system.
 
+## 2.1 Downloading Postgres
+
+Postgres can be downloaded by following the instructions below:
+
+1. Visit the official PostgreSQL website at https://www.postgresql.org/.
+
+2. On the homepage, locate the "Download" button and click on it.
+
+3. You will be redirected to the download page. Here, you will see different versions of PostgreSQL available for various operating systems.
+
+4. Choose the appropriate version for your operating system. For example, if you're using Windows, select the Windows version; if you're using macOS, select the macOS version, and so on.
+
+5. Once you have selected the version for your operating system, you will see a list of available installers.
+
+6. Click on the installer that matches your system architecture (32-bit or 64-bit). If you're unsure, you can usually find this information in your system settings.
+
+7. The download will begin automatically. Depending on your internet connection speed, it may take a few moments to complete.
+
+8. Once the download is finished, locate the downloaded installer file on your computer.
+
+9. Double-click on the installer file to start the installation process.
+
+10. Follow the on-screen instructions provided by the installer. You may need to accept the license agreement, choose an installation location, and configure additional settings.
+
+11. During the installation, you will be prompted to set a password for the default database superuser, usually named "postgres." Make sure to choose a strong password and remember it for future use.
+
+12. Complete the installation by following the remaining steps in the installer. If prompted about applications you would like to install, under Database Server, select the intalled one and continue.
+
+13. After the installation is complete, you should find PostgreSQL installed on your computer.
+
+14. You can now launch the PostgreSQL command-line tool (psql) or use graphical interfaces like pgAdmin or DBeaver to interact with the PostgreSQL database.
+ 
 ## 2.2
 
 ## 2.3
