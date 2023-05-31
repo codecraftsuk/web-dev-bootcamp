@@ -314,7 +314,7 @@ Arrow function expressions are a more concise way to create functions in JavaScr
 
 In this example, `multiplyNumbers` is a function that takes two arguments (`num1` and `num2`) and returns their product. This function is created using an arrow function expression.
 
-<!-- 
+
 ## 5.4 Function Parameters:
 
 JavaScript functions can accept parameters, which are values that can be passed to the function when it is called. These parameters are listed within the parentheses that follow the function name. Here is an example:
@@ -350,7 +350,7 @@ function sayHello(name) {
   console.log("Hello, " + name + "!");
 }
 ```
-In this example, the `sayHello` function is invoked with the parameter `name`. The `sayHello` function is invoked using the function name followed by a set of parentheses. -->
+In this example, the `sayHello` function is invoked with the parameter `name`. The `sayHello` function is invoked using the function name followed by a set of parentheses.
 
 # 6. Arrays
 
