@@ -420,12 +420,598 @@ You can remove elements from an array using the pop method, which removes the la
 
 # 7. Objects
 
+In JavaScript, objects are used to store multiple values as properties. Objects consist of key-value pairs, where the key is a unique identifier (also known as a property name), and the value can be any valid JavaScript data type.
+
+## 7.1 Creating an Object
+To create an object in JavaScript, you can use either object literal notation or the new keyword with the object constructor. Here are examples of both approaches:
+
+### 7.1.1 Object literal notation
+```js
+var person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+```
+### 7.1.2 Object Constructor
+```js
+var person = new Object();
+person.name = "John";
+person.age = 30;
+person.city = "New York";
+```
+
+## 7.2 Accessing Object Properties:
+You can access properties of an object using dot notation or square bracket notation. Here are examples of both approaches:
+
+### 7.2.1 Dot notation
+```js
+console.log(person.name); // Output: John
+console.log(person.age); // Output: 30
+```
+
+### 7.2.2 Square bracket notation
+```js
+console.log(person["name"]); // Output: John
+console.log(person["age"]); // Output: 30
+```
+
+### 7.2.3 Updating Object Properties
+You can update the value of an object property by assigning a new value to it. Here is an example:
+```js
+person.age = 35;
+console.log(person.age); // Output: 35
+```
+
+### 7.2.4 Adding New Properties
+You can add new properties to an object by assigning a value to a new key. Here is an example:
+```js
+person.gender = "Male";
+console.log(person.gender); // Output: Male
+```
+
+### 7.2.5 Deleting Properties
+You can delete properties from an object using the delete keyword. Here is an example:
+```js
+delete person.city;
+console.log(person.city); // Output: undefined
+```
+### 7.2.6 Object Methods
+In JavaScript, objects can also contain methods, which are functions assigned as properties. Here is an example:
+```js
+var person = {
+  name: "John",
+  age: 30,
+  greet: function() {
+    console.log("Hello, my name is " + this.name);
+  }
+};
+
+person.greet(); // Output: Hello, my name is John
+```
+In this example, `greet` is a method of the `person` object that logs a greeting to the console.
 
 # 8. Scope and Closures
-# 9. Es6 Features (Let/const, Arrow Functions, Template Literals)
-# 10. Asynchronous Javascript (Callbacks, Promises, Async/await)
-# 11. Dom Manipulation (Selecting Elements, Event Listeners, Modifying Elements)
-# 12. Jquery (Selectors, Dom Manipulation, Events)
+
+## 8.1 Scope
+Scope refers to the accessibility and visibility of variables, functions, and objects in some particular part of your code during runtime.
+
+1. Global Scope
+Variables declared outside of any function have global scope and can be accessed from anywhere in the code.
+
+2. Local Scope
+Variables declared inside a function have local scope and can only be accessed within that function.
+
+3.  Block Scope (ES6)
+Variables declared with `let` and `const` keywords in block statements (e.g., `if`, `for`, `while`) have block scope and can only be accessed within that block.
+
+## 8.2 Closures
+A closure is a combination of a function and the lexical environment within which that function was declared. It allows a function to access variables from an outer (enclosing) function even after the outer function has finished executing.
+
+Closures are created in JavaScript when a nested function references variables from its outer function. Here's an example:
+```js
+function outerFunction() {
+  var outerVariable = "I'm from the outer function";
+
+  function innerFunction() {
+    console.log(outerVariable);
+  }
+
+  return innerFunction;
+}
+
+var closure = outerFunction();
+closure(); // Output: I'm from the outer function
+```
+
+In this example, the `outerFunction` returns the `innerFunction`, which is then assigned to the `closure` variable. Even though the `outerFunction` has finished executing, the `closure` can still access the `outerVariable` because of the closure's reference to the lexical environment of the `outerFunction`.
+
+Closures are powerful as they allow for maintaining private data within a function and enable data encapsulation.
+
+It's important to note that closures can also lead to memory leaks if not handled properly. When a closure holds references to variables or objects, those variables or objects may not be garbage collected, potentially causing memory consumption issues.
+
+Understanding scope and closures is crucial for writing clean, efficient, and bug-free JavaScript code.
+
+# 9. ES6 Features
+
+## 9.1 let and const
+
+### 9.1.1 let
+- Introduced in ES6, `let` allows you to declare block-scoped variables that are limited to the block in which they are declared.
+- Variables declared with `let` can be reassigned new values.
+- Example:
+```js
+let count = 5;
+if (true) {
+  let count = 10;
+  console.log(count); // Output: 10
+}
+console.log(count); // Output: 5
+```
+
+### 9.1.2 const
+- `const` also introduces block-scoped variables, but they are read-only and cannot be reassigned once defined.
+- `const` is useful for declaring constants or values that should not be modified.
+- Example:
+```js
+const PI = 3.14159;
+console.log(PI); // Output: 3.14159
+// Trying to reassign a const variable will result in an error
+PI = 3.14; // Error: Assignment to constant variable.
+```
+
+## 9.2 Arrow Functions
+Arrow functions provide a concise syntax for writing anonymous functions in JavaScript.
+
+- Arrow functions have a shorter syntax compared to traditional function expressions.
+- They do not bind their own `this` value but inherit it from the enclosing scope.
+- They are not suited for functions that require their own `this` value or use the `arguments` object.
+- Example:
+
+```js
+// Traditional function expression
+function add(a, b) {
+  return a + b;
+}
+// Arrow function
+const add = (a, b) => a + b;
+```
+
+## 9.3 Template Literals
+Template literals provide an improved way to work with strings in JavaScript, allowing for multi-line strings and string interpolation.
+
+- Template literals are enclosed within backticks (``) instead of single or double quotes.
+- They can span multiple lines without the need for escape characters.
+- Variables and expressions can be directly embedded using `${}`.
+- Example:
+```js
+const name = "John";
+const age = 30;
+const message = `My name is ${name} and I'm ${age} years old.`;
+console.log(message);
+// Output: My name is John and I'm 30 years old.
+```
+
+ES6 features like let/const, arrow functions, and template literals enhance the readability and functionality of JavaScript code.
+
+# 10. Asynchronous Javascript
+
+## 10.1 Callbacks
+Callbacks are a traditional way of handling asynchronous operations in JavaScript. A callback is a function passed as an argument to another function and is executed once the asynchronous operation is complete.
+
+- Callbacks can be used to handle asynchronous tasks such as API calls, file operations, and event handling.
+- Callbacks can be nested, resulting in a callback hell or pyramid of doom, which can make code difficult to read and maintain.
+- Example:
+
+```js
+function fetchData(callback) {
+  // Simulating an asynchronous API call
+  setTimeout(() => {
+    const data = { id: 1, name: "John" };
+    callback(data);
+  }, 1000);
+}
+
+function displayData(data) {
+  console.log(data);
+}
+
+fetchData(displayData);
+// Output: { id: 1, name: 'John' }
+```
+
+## 10.2 Promises
+Promises were introduced in ES6 as a way to improve asynchronous programming. A promise is an object that represents the eventual completion (or failure) of an asynchronous operation and allows chaining of multiple asynchronous operations.
+
+- Promises have three states: pending, fulfilled, and rejected.
+- Promises provide methods like `then()` and `catch()` to handle success and failure cases respectively.
+- Promises can be chained together using `then()` to perform sequential asynchronous operations.
+- Example:
+
+```js
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    // Simulating an asynchronous API call
+    setTimeout(() => {
+      const data = { id: 1, name: "John" };
+      resolve(data);
+      // or reject(error) in case of failure
+    }, 1000);
+  });
+}
+
+fetchData()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+```
+
+## 10.3 Async/await
+Async/await is a syntactic sugar built on top of promises, introduced in ES8 (ES2017), to further simplify asynchronous programming. It allows writing asynchronous code in a more synchronous style.
+
+- The `async` keyword is used to declare an asynchronous function.
+- The `await` keyword is used to pause the execution of an async function until a promise is fulfilled or rejected.
+- Async functions always return a promise, which resolves with the value returned by the function or rejects with an error thrown.
+- Example:
+
+```js
+async function fetchData() {
+  return new Promise((resolve, reject) => {
+    // Simulating an asynchronous API call
+    setTimeout(() => {
+      const data = { id: 1, name: "John" };
+      resolve(data);
+      // or reject(error) in case of failure
+    }, 1000);
+  });
+}
+
+async function displayData() {
+  try {
+    const data = await fetchData();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+displayData();
+```
+> Asynchronous JavaScript with callbacks, promises, and async/await allows for efficient handling of asynchronous tasks, making the code more readable and maintainable.
+
+# 11. Dom Manipulation 
+
+## 11.1 DOM (Document Object Model)
+The DOM represents the structure of an HTML document as a tree-like structure, where each element is a node. JavaScript can be used to interact with the DOM, allowing you to select elements, modify their properties, and respond to events.
+
+## 11.2 Selecting Elements
+JavaScript provides several methods to select elements from the DOM:
+
+### 11.2.1 getElementById()
+- Selects an element based on its unique id attribute.
+```js
+var element = document.getElementById("myElement");
+```
+
+### 11.2.2 getElementsByClassName()
+- Selects elements based on their class names.
+```js
+var elements = document.getElementsByClassName("myClass");
+```
+
+### 11.2.3 getElementsByTagName()
+- Selects elements based on their tag names.
+```js
+var elements = document.getElementsByTagName("div");
+```
+
+### 11.2.4 querySelector()
+- Selects the first element that matches a CSS selector.
+```js
+var element = document.querySelector(".myClass");
+```
+
+### 11.2.5 querySelectorAll()
+- Selects all elements that match a CSS selector.
+```js
+var elements = document.querySelectorAll("div");
+```
+
+## 11.3 Event Listeners
+Event listeners allow you to respond to user interactions and other events on selected elements:
+
+### 11.3.1 addEventListener()
+- Attaches an event listener to an element.
+```js
+element.addEventListener("click", handleClick);
+```
+
+### 11.3.2 removeEventListener()
+- Removes an event listener from an element.
+```js
+element.removeEventListener("click", handleClick);
+```
+
+## 11.4 Modifying Elements
+Once you have selected an element, you can modify its properties, contents, or attributes:
+
+### 11.4.1 Changing Text Content
+
+- innerHTML: Modifies the HTML content of an element.
+```js
+element.innerHTML = "<strong>New content</strong>";
+```
+
+- textContent: Modifies the text content of an element.
+```js
+element.textContent = "New content";
+```
+
+### 11.4.2 Modifying Attributes
+
+- getAttribute(): Retrieves the value of an attribute.
+```js
+var value = element.getAttribute("attributeName");
+```
+
+- setAttribute(): Sets the value of an attribute.
+```js
+element.setAttribute("attributeName", "attributeValue");
+```
+
+### 11.4.3 Styling Elements
+
+- style.property: Modifies the CSS styles of an element.
+```js
+element.style.color = "red";
+element.style.backgroundColor = "#f1f1f1";
+```
+
+### 11.4.4 Adding/Removing CSS Classes
+
+- classList.add(): Adds a CSS class to an element.
+```js
+element.classList.add("newClass");
+```
+
+- classList.remove(): Removes a CSS class from an element.
+```js
+element.classList.remove("oldClass");
+```
+
+> DOM manipulation allows you to dynamically update the content and appearance of your web page, providing interactivity and responsiveness to user actions.
+
+# 12. Jquery
+
+## 12.1 Selectors
+jQuery provides a simplified syntax for selecting elements from the DOM using CSS-style selectors:
+
+### 12.1.1 Select by Tag Name
+```js
+$("div"); // Selects all <div> elements
+```
+
+### 12.1.2 Select by ID
+```js
+$("#myElement"); // Selects the element with ID "myElement"
+```
+
+### 12.1.3 Select by Class
+```js
+$(".myClass"); // Selects all elements with class "myClass"
+```
+
+### 12.1.4 Select by Attribute
+```js
+$("input[type='text']"); // Selects all <input> elements of type "text"
+```
+
+## 12.2 DOM Manipulation
+jQuery provides methods for manipulating the DOM elements that have been selected:
+
+### 12.2.1 Changing Text Content
+```js
+$("#myElement").text("New text content"); // Sets the text content
+```
+
+### 12.2.2 Modifying HTML
+```js
+$("#myElement").html("<strong>New content</strong>"); // Sets the HTML content
+```
+
+### 12.2.3 Modifying Attributes
+```js
+$("#myElement").attr("attributeName", "attributeValue"); // Sets the attribute value
+var value = $("#myElement").attr("attributeName"); // Retrieves the attribute value
+```
+
+### 12.2.4 Styling Elements
+```js
+$("#myElement").css("color", "red"); // Sets the CSS property
+```
+
+## 12.3 Events
+jQuery makes it easy to handle events and attach event handlers to elements:
+
+### 12.3.1 Adding an Event Handler
+```js
+$("#myElement").click(function() {
+  // Event handler code
+});
+```
+
+### 12.3.2 Removing an Event Handler
+```js
+$("#myElement").off("click"); // Removes the event handler
+```
+
+### 12.3.3 Shortcut Event Methods
+```js
+$("#myElement").click(function() {
+  // Click event handler code
+});
+
+$("#myElement").hover(
+  function() {
+    // Mouseenter event handler code
+  },
+  function() {
+    // Mouseleave event handler code
+  }
+);
+```
+
+jQuery simplifies many common tasks associated with DOM manipulation and event handling, making it easier to write concise and efficient code.
+
+> Note: It's important to ensure that you have included the jQuery library in your HTML file using a script tag before using jQuery methods.
+
 # 13. Http Requests and Apis
+
+## 13.1 HTTP Requests
+HTTP (Hypertext Transfer Protocol) is the protocol used for communication between a client (such as a web browser) and a server. In web development, HTTP requests are commonly used to retrieve data from or send data to a server.
+
+## 13.1.1 HTTP Methods
+- GET: Retrieves data from a server.
+- POST: Sends data to a server to create a new resource.
+- PUT: Sends data to a server to update an existing resource.
+- DELETE: Deletes a resource on a server.
+- There are other HTTP methods like PATCH, HEAD, OPTIONS, etc., but these four are the most commonly used.
+
+## 13.1.2 Request Headers
+- Headers provide additional information about the request or the client.
+- Common headers include Content-Type (specifying the format of the request body), Authorization (for authentication), and User-Agent (providing information about the client making the request).
+
+## 13.1.3 Request Body
+- Some HTTP methods, like POST and PUT, allow sending data in the request body.
+- The request body can contain various formats such as JSON, form data, or XML, depending on the Content-Type header.
+
+## 13.2 APIs (Application Programming Interfaces)
+APIs provide a way for different software applications to communicate with each other. They define the rules and protocols for interacting with a particular system or service.
+
+## 13.2.1 RESTful APIs
+- Representational State Transfer (REST) is an architectural style for designing networked applications.
+- RESTful APIs use HTTP methods and URLs to perform CRUD (Create, Read, Update, Delete) operations on resources.
+- Resources are represented by URLs, and data is typically exchanged in JSON format.
+
+## 13.2.2 API Documentation
+- API documentation provides information about how to use an API, including available endpoints, request/response formats, authentication methods, and error handling.
+- API documentation is usually provided by the API provider and serves as a reference for developers using the API.
+
+## 13.2.3 Making HTTP Requests to APIs
+- In JavaScript, you can use the built-in fetch() function or libraries like Axios or jQuery's $.ajax() to make HTTP requests to APIs.
+- You specify the HTTP method, URL, headers, and request body (if needed) to interact with the API endpoints.
+
+## 13.2.4 Handling API Responses
+- API responses usually include a status code (e.g., 200 for success, 404 for not found, etc.) and a response body containing the requested data or an error message.
+- You can handle the response in your JavaScript code and process the data accordingly.
+
+APIs allow developers to leverage the functionality and data of external systems, services, or platforms, making it easier to integrate different components and build more powerful applications.
+
+When working with HTTP requests and APIs, it's important to follow best practices, handle errors gracefully, and ensure data security.
+
 # 14. Error Handling and Debugging
-# 15. Javascript Frameworks/libraries (React, Angular, Vue, Etc.)
+
+## 14.1 Error Handling
+Error handling is an essential part of writing robust JavaScript code. It involves identifying and handling errors that may occur during the execution of your code.
+
+### 14.1.1 try...catch Statement
+- The try...catch statement allows you to catch and handle exceptions (errors) that occur within a secific block of code.
+- The try block contains the code that might throw an exception, and the catch block handles the eception if one occurs.
+- Example:
+```js
+try {
+  // Code that might throw an exception
+} catch (error) {
+  // Handle the exception
+}
+```
+
+### 14.1.2 throw Statement
+- The throw statement allows you to manually throw custom exceptions.
+-You can throw different types of objects, such as Error objects or custom objects, to provide maningful information about the error.
+- Example:
+```js
+function divide(a, b) {
+  if (b === 0) {
+    throw new Error("Divide by zero error");
+  }
+  return a / b;
+}
+```
+### 14.1.3 Error Types
+- JavaScript provides built-in error types such as Error, SyntaxError, TypeError, and more.
+
+- These error types provide useful information about the error and can be caught and handled accordingly.
+
+## 14.2 Debugging
+Debugging is the process of identifying and fixing errors, bugs, and unexpected behavior in your code. It helps you understand how your code is executing and find issues that may cause incorrect results.
+
+### 14.2.1 Console Logging
+- Console logging is a simple and effective way to debug code by logging information to the browser's console.
+- You can use console.log() to print values, object properties, or messages to the console for inspection.
+- Example:
+ ```js
+console.log("Hello, world!");
+console.log(variableName);
+```
+
+## 14.3 Breakpoints
+- Breakpoints allow you to pause the execution of your code at specific lines, allowing you to inspect the state of variables and step through the code line by line.
+- Most modern web browsers provide developer tools with built-in support for breakpoints.
+
+## 14.4 Debugging Tools
+- Developer tools in web browsers offer various features for debugging, including console logging, breakpoints, step-through execution, variable inspection, and more.
+- These tools provide an interactive environment to analyze and debug your code effectively.
+
+## 14.5 Reading Error Messages
+- When an error occurs, JavaScript often provides an error message that can help identify the issue.
+- The error message typically includes information about the error type, the line number where the error occurred, and sometimes a stack trace.
+
+> Effective error handling and debugging practices can save significant time and effort in identifying and resolving issues in your code, ensuring smoother execution and better code quality.
+
+# 15. Javascript Frameworks/libraries
+
+## React
+- React is a widely used JavaScript library for building user interfaces.
+- It follows a component-based architecture, where UIs are divided into reusable and self-contained components.
+- React uses a virtual DOM (Document Object Model) for efficient updates and rendering.
+- React supports server-side rendering, making it suitable for both web and mobile app development.
+
+## Angular
+- Angular is a comprehensive JavaScript framework for building web applications.
+- It provides a full-featured development platform with features like data binding, dependency injection, routing, and more.
+- Angular follows the Model-View-Controller (MVC) architectural pattern.
+It includes a powerful command-line interface (CLI) for scaffolding and managing projects.
+
+## Vue
+- Vue is a progressive JavaScript framework for building user interfaces.
+- It is known for its simplicity, flexibility, and ease of integration with existing projects.
+- Vue uses a virtual DOM and reactive data binding for efficient updates.
+- It allows building small, reusable components and provides advanced features like routing and state management.
+
+## Ember
+- Ember is a JavaScript framework for creating ambitious web applications.
+- It emphasizes convention over configuration and includes many built-in features to handle common web development tasks.
+- Ember follows the convention of "convention over configuration" and provides a set of best practices for structuring and organizing code.
+
+## jQuery
+- jQuery is a fast, small, and feature-rich JavaScript library.
+- It simplifies DOM manipulation, event handling, and AJAX interactions across different browsers.
+- jQuery is widely used for its concise syntax and wide range of plugins available for various functionalities.
+
+## Backbone.js
+- Backbone.js is a lightweight JavaScript framework that provides structure to web applications.
+- It offers models, views, and collections for building structured client-side applications.
+- Backbone.js emphasizes the separation of concerns and allows flexibility in choosing additional libraries or tools.
+
+## Express.js
+- Express.js is a popular Node.js web application framework.
+- It simplifies the creation of server-side applications and APIs.
+- Express.js provides a minimalist, unopinionated approach, allowing developers to have more control over their application's architecture.
+
+These frameworks and libraries help streamline development, provide structure, and offer various features and tools to build robust and efficient JavaScript applications.
+
+> Note: Each framework and library has its own documentation and learning resources available, which provide in-depth guidance on their features, usage, and best practices.
